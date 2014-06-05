@@ -27,7 +27,7 @@
           <h4 align="right">Приоритет:</h4>
         </div>
         <div class="col-lg-9">
-          <%= f.text_field :priority, :type => "text", :class => "form-control", :placeholder => "Укажите приоритет" %>
+          <%= f.select :priority, ["Высокий", "Обычный", "Низкий"], {}, {:class => "form-control"} %>          
         </div>
       </div>
       
@@ -94,7 +94,7 @@
           <%= link_to 'Назад', cases_path, :class => "btn btn-default col-lg-12" %>
         </div>      
         <div class="col-lg-2">
-          <%= f.submit 'Создать сценарий', :class => "btn btn-success col-lg-12" %>
+          <%= f.submit 'Сохранить сценарий', :class => "btn btn-success col-lg-12" %>
         </div>       
       </div>
     </div>

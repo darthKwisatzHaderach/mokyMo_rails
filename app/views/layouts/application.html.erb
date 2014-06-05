@@ -3,8 +3,7 @@
 <head>
   <title>Snowball</title>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -23,12 +22,12 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="/">Сводная информация</a></li>
+	        <li class="active"><a href="<%= root_path %>">Сводная информация</a></li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Документация <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="#">Требования</a></li>
-	            <li><a href="cases">Тестовые сценарии</a></li>
+	            <li><a href="<%= cases_path %>">Тестовые сценарии</a></li>
 	            <li><a href="#">Тест-комплекты</a></li>
 	          </ul>
 	        </li>
@@ -61,8 +60,10 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="container container-fluid">
+	<div id="main_container" class="container container-fluid">
 		<%= yield %>
 	</div>	
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

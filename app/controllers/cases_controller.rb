@@ -10,6 +10,7 @@ class CasesController < ApplicationController
   # GET /cases/1
   # GET /cases/1.json
   def show
+    @cases = Case.all
   end
 
   # GET /cases/new
@@ -69,6 +70,6 @@ class CasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def case_params
-      params[:case]
+      params.require(:case).permit(:title, :date, :priority, :planned_duration, :tags, :objective, :test_data, :preconditions, :comment)      
     end
 end

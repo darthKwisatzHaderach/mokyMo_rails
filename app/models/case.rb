@@ -1,2 +1,2 @@
-class Case < ActiveRecord::Base
+class Case < ActiveRecord::Base	
 end

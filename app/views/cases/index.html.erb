@@ -1,51 +1,25 @@
 <div class="row">
-  <div class="col-lg-4">
-    <div id="tree"></div>
+  <div class="col-lg-3">
+    <%= link_to 'Добавить тестовый сценарий', new_case_path, :class => "btn btn-default col-lg-12" %>    
   </div>
-  <div class="col-lg-8">
-
+  <div class="col-lg-9">
+    <table class="table table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Название сценария</th>
+          <th>Приоритет</th>
+          <th>Время выполнения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cases.each do |c| %>
+          <tr>
+            <td><%= c.title %></td>
+            <td><%= c.priority %></td>
+            <td><%= c.planned_duration %></td>
+          </tr>          
+        <% end %>        
+      </tbody>
+    </table>    
   </div>
 </div>
-
-<%= link_to 'New Case', new_case_path %>
-
-<script type="text/javascript">
-  function getTree() {
-    var data = [
-      {
-        text: "Parent 1"
-        nodes: [
-          {
-            text: "Child 1"
-            nodes: [
-              {
-                text: "Grandchild 1"
-              },
-              {
-                text: "Grandchild 2"
-              }
-            ]
-          },
-          {
-            text: "Child 2"
-          }
-        ]
-      },
-      {
-        text: "Parent 2"
-      },
-      {
-        text: "Parent 3"
-      },
-      {
-        text: "Parent 4"
-      },
-      {
-        text: "Parent 5"
-      }
-    ];
-      return data;
-  }
-
-  $('#tree').treeview({data: getTree()});
-</script>
