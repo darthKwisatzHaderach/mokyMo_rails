@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605051643) do
+ActiveRecord::Schema.define(version: 20140606095702) do
 
   create_table "cases", force: true do |t|
     t.datetime "created_at"
@@ -25,6 +25,23 @@ ActiveRecord::Schema.define(version: 20140605051643) do
     t.text     "test_data"
     t.text     "preconditions"
     t.text     "comment"
+    t.integer  "suite_id"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suites", force: true do |t|
+    t.string   "title"
+    t.datetime "datetime"
+    t.string   "priority"
+    t.string   "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
 end

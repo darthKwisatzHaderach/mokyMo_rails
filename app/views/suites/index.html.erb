@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-lg-3">
+    <%= link_to 'Добавить тест-комплект', new_suite_path, :class => "btn btn-default col-lg-12" %>    
+  </div>
+  <div class="col-lg-9">
+    <table class="table table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Название тест-комплекта</th>
+          <th>Приоритет</th>
+          <th>Время выполнения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @suites.each do |s| %>
+          <tr>
+            <td><%= s.title %></td>
+            <td><%= s.priority %></td>
+            <td></td>
+          </tr>          
+        <% end %>        
+      </tbody>
+    </table>    
+  </div>
+</div>

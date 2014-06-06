@@ -21,13 +21,22 @@
           <%= f.text_field :title, :type => "text", :class => "form-control", :placeholder => "Название тестового сценария" %>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <h4 align="right">Тест-комплект:</h4>
+        </div>
+        <div class="col-lg-9">
+          <%= f.select :suite_id, @suites_list, {}, {:class => "form-control"} %>          
+        </div>
+      </div>
       
       <div class="row">
         <div class="col-lg-3">
           <h4 align="right">Приоритет:</h4>
         </div>
         <div class="col-lg-9">
-          <%= f.select :priority, ["Высокий", "Обычный", "Низкий"], {}, {:class => "form-control"} %>          
+          <%= f.select :priority, [["Высокий", "high"], ["Обычный", "normal"], ["Низкий", "low"]], {}, {:class => "form-control"} %>          
         </div>
       </div>
       

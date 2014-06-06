@@ -10,16 +10,18 @@ class CasesController < ApplicationController
   # GET /cases/1
   # GET /cases/1.json
   def show
-    @cases = Case.all
+    @cases = Case.all    
   end
 
   # GET /cases/new
-  def new
-    @case = Case.new
+  def new    
+    @case = Case.new  
+    @suites_list = suites_list  
   end
 
   # GET /cases/1/edit
   def edit
+    @suites_list = suites_list  
   end
 
   # POST /cases
@@ -70,6 +72,15 @@ class CasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def case_params
-      params.require(:case).permit(:title, :date, :priority, :planned_duration, :tags, :objective, :test_data, :preconditions, :comment)      
+      params.require(:case).permit(:title, :date, :priority, :planned_duration, :tags, :objective, :test_data, :preconditions, :comment, :suite_id)      
+    end
+
+    def suites_list
+      suites_list = []
+      suites = Suite.all
+      suites.each do |suite|
+        suites_list << [suite.title, suite.id]
+      end
+      return suites_list
     end
 end
