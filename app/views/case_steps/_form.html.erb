@@ -1,0 +1,46 @@
+<%= form_for @case_step, url: {:action => 'create', :controller => 'case_steps'} do |f| %>
+  <% if @case_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case_step.errors.count, "error") %> prohibited this case_step from being saved:</h2>
+
+      <ul>
+      <% @case_step.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-3">
+        <h4 align="right">Шаг:</h4>
+      </div>
+      <div class="col-lg-9">
+        <%= f.text_field :step, :type => "text", :class => "form-control", :placeholder => "Опишите шаг" %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-3">
+        <h4 align="right">Ожидаемый результат:</h4>
+      </div>
+      <div class="col-lg-9">
+        <%= f.text_field :step_result, :type => "text", :class => "form-control", :placeholder => "Опишите ожидаемый результат" %>
+      </div>
+    </div>
+    
+    <%= f.hidden_field :case_id, :value => params[:case_id] %>
+
+    <div class="row">
+      <div class="col-lg-8">                    
+      </div>      
+      <div class="col-lg-2">          
+        <%= link_to 'Назад', case_case_steps_path, :class => "btn btn-default col-lg-12" %>
+      </div>      
+      <div class="col-lg-2">
+        <%= f.submit 'Сохранить', :class => "btn btn-success col-lg-12" %>
+      </div>       
+    </div>
+  </div>
+<% end %>

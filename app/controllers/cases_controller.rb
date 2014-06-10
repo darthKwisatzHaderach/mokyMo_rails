@@ -13,6 +13,11 @@ class CasesController < ApplicationController
     @cases = Case.all    
   end
 
+  def case_with_steps    
+    @case = Case.where(:id => params[:id]).first
+    @steps = CaseStep.where(:case_id => @case.id)
+  end
+
   # GET /cases/new
   def new    
     @case = Case.new  
@@ -31,7 +36,7 @@ class CasesController < ApplicationController
 
     respond_to do |format|
       if @case.save
-        format.html { redirect_to @case, notice: 'Case was successfully created.' }
+        format.html { redirect_to new_case_case_step_path(@case.id) }
         format.json { render :show, status: :created, location: @case }
       else
         format.html { render :new }
@@ -45,7 +50,7 @@ class CasesController < ApplicationController
   def update
     respond_to do |format|
       if @case.update(case_params)
-        format.html { redirect_to @case, notice: 'Case was successfully updated.' }
+        format.html { redirect_to edit_case_case_step_path(@case.id) }
         format.json { render :show, status: :ok, location: @case }
       else
         format.html { render :edit }

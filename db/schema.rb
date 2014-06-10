@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606095702) do
+ActiveRecord::Schema.define(version: 20140609063608) do
+
+  create_table "case_steps", force: true do |t|
+    t.text     "step"
+    t.text     "step_result"
+    t.integer  "case_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cases", force: true do |t|
     t.datetime "created_at"
