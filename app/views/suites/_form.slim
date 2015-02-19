@@ -1,0 +1,30 @@
+- form_for(@suite) do |f|
+  - if @suite.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@suite.errors.count, "error")} prohibited this suite from being saved:
+      ul
+      - @suite.errors.full_messages.each do |message|
+        li = message
+    div.col-lg-12
+      div.row
+        div.col-lg-3
+          h4 align="right" Название:
+        div.col-lg-9
+          = f.text_field :title, type: "text", class: "form-control", placeholder: "Название комплекта тестовых сценариев"
+      div.row
+        div.col-lg-3
+          h4 align="right" Приоритет:
+        div.col-lg-9
+          = f.select :priority, ["Высокий", "Обычный", "Низкий"], {}, {class: "form-control"}
+      div.row
+        div.col-lg-3
+          h4 align="right" Тэги:
+        div.col-lg-9
+          = f.text_field :tags, type: "text", class: "form-control", placeholder: "Укажите тэги для сценария, если они нужны"
+      = f.hidden_field :datetime, value: DateTime.now 
+      div.row
+        div.col-lg-8
+        div.col-lg-2
+          = link_to 'Назад', suites_path, class: "btn btn-default col-lg-12"
+        div.col-lg-2
+          = f.submit 'Сохранить', class: "btn btn-success col-lg-12"

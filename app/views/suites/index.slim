@@ -1,0 +1,16 @@
+div.row
+  div.col-lg-3
+    = link_to 'Добавить тест-комплект', new_suite_path, class: "btn btn-default col-lg-12"
+  div.col-lg-9
+    table.table.table-condensed.table-hover
+      thead
+        tr
+          th Название тест-комплекта
+          th Приоритет
+          th Время выполнения
+      tbody
+        - @suites.each do |s|
+          tr
+            td = s.title
+            td = s.priority
+            td
