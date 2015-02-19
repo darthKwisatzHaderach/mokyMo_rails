@@ -1,0 +1,25 @@
+- form_for @case_step, url: {:action => 'create', :controller => 'case_steps'} do |f|
+  - if @case_step.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@case_step.errors.count, "error")} prohibited this case_step from being saved:
+      ul
+        - @case_step.errors.full_messages.each do |message|
+          li = message
+  div.col-lg-12
+    div.row
+      div.col-lg-3
+        h4 align="right" Шаг:      
+      div.col-lg-9
+        = f.text_field :step, type: "text", class: "form-control", placeholder: "Опишите шаг"    
+    div.row
+      div.col-lg-3
+        h4 align="right" Ожидаемый результат:
+      div.col-lg-9
+        = f.text_field :step_result, type: "text", class: "form-control", placeholder: "Опишите ожидаемый результат"    
+    = f.hidden_field :case_id, value: params[:case_id]
+    div.row
+      div.col-lg-8
+      div.col-lg-2
+        = link_to 'Назад', case_case_steps_path, class: "btn btn-default col-lg-12"
+      div.col-lg-2
+        = f.submit 'Сохранить', class: "btn btn-success col-lg-12"

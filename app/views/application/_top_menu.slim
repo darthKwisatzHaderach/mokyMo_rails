@@ -1,0 +1,58 @@
+nav.navbar-inverse.navbar-default role="navigation"
+  div.container-fluid
+    /! Brand and toggle get grouped for better mobile display
+    div.navbar-header
+      button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    /! Collect the nav links, forms, and other content for toggling
+    div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a href="#{root_path}" Сводная информация
+        li.dropdown
+          a.dropdown-toggle href="#" data-toggle="dropdown"
+            |Документация 
+            b.caret
+          ul.dropdown-menu
+            li
+              a href="#" Требования
+            li
+              a href="#{suites_path}" Тест-комплекты
+            li
+              a href="#{cases_path}" Тестовые сценарии          
+        li.dropdown
+          a.dropdown-toggle href="#" data-toggle="dropdown"
+            |Тестирование
+            b.caret
+          ul.dropdown-menu
+            li
+              a href="#" Объект тестирования
+            li
+              a href="#" Вид тестирования
+            li.divider
+            li
+              a href="#" Выполнение тестирования          
+        li
+          a href="#" Формирование отчетов
+        li
+          a href="/admin" Администрирование
+      ul.nav.navbar-nav.navbar-right
+        li
+          a href="#" Дмитрий Тонкушин
+        li class="dropdown"
+          a.dropdown-toggle href="#" data-toggle="dropdown"
+            |Подсистема мониторинга
+            b.caret
+          ul.dropdown-menu
+            li
+              a href="#" Action
+            li
+              a href="#" Another action
+            li
+              a href="#" Something else here
+            li.divider
+            li
+              a href="#" Separated link
