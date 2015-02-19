@@ -1,0 +1,72 @@
+div#case_progress.row
+  div.wizard col-lg-12 align="center"
+    a 
+      span.badge 1
+      |Создание тестового сценария
+    a 
+      span.badge 2
+      |Описание шагов и ожидаемого результата
+    a.current
+      span.badge.badge-inverse 3
+      |Предпросмотр сценария
+div.row
+    div.col-lg-12
+      div.row
+        div.col-lg-3
+          h4 align="right" Название:
+        div.col-lg-9
+          h4 = @case.title
+      div.row
+        div.col-lg-3
+          h4 align="right" Тест-комплект:
+        div.col-lg-9
+          h4 = @case.suite.title
+      div.row
+        div.col-lg-3
+          h4 align="right" Приоритет:
+        div.col-lg-9
+          h4 = @case.priority
+      div.row
+        div.col-lg-3
+          h4 align="right" Планируемое время (мин):
+        div.col-lg-9
+          h4 = @case.planned_duration
+      div.row
+        div.col-lg-3
+          h4 align="right" Тэги:
+        div.col-lg-9
+          h4 = @case.tags
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Описание функциональности:
+        div.col-lg-9
+          h4 = @case.objective
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Тестовые данные:
+        div.col-lg-9
+          h4 = @case.test_data
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Предусловия:
+        div.col-lg-9
+          h4 = @case.preconditions
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Комментарий:
+        div.col-lg-9
+          h4 = @case.comment
+      div.row style="padding-bottom:5px"
+        div.col-lg-12
+          table.table.table-condensed
+            thead
+              tr
+                th №
+                th Шаг
+                th Ожидаемый результат
+            tbody
+              - @steps.each_with_index do |s, index|
+                tr
+                  td = (index + 1)
+                  td = s.step
+                  td = s.step_result

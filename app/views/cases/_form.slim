@@ -1,0 +1,63 @@
+div.row
+  - form_for(@case) do |f|
+    - if @case.errors.any?
+      div#error_explanation
+        h2 #{pluralize(@case.errors.count, "error")} prohibited this case from being saved:
+        ul
+          - @case.errors.full_messages.each do |message|
+            li = message
+    div.col-lg-12
+      div.row
+        div.col-lg-3
+          h4 align="right" Название:
+        div.col-lg-9
+          = f.text_field :title, type: "text", class: "form-control", placeholder: "Название тестового сценария"
+      div.row
+        div.col-lg-3
+          h4 align="right" Тест-комплект:
+        div.col-lg-9
+          = f.select :suite_id, @suites_list, {}, {class: "form-control"}      
+      div.row
+        div.col-lg-3
+          h4 align="right" Приоритет:
+        div.col-lg-9
+          = f.select :priority, [["Высокий", "high"], ["Обычный", "normal"], ["Низкий", "low"]], {}, {class: "form-control"}
+      div.row
+        div.col-lg-3
+          h4 align="right" Планируемое время (мин):
+        div.col-lg-9
+          = f.text_field :planned_duration, type: "text", class: "form-control", placeholder: "Укажите планируемое время выполнения тестового сценария в минутах"
+      div.row
+        div.col-lg-3
+          h4 align="right" Тэги:
+        div.col-lg-9
+          = f.text_field :tags, type: "text", class: "form-control", placeholder: "Укажите тэги для сценария, если они нужны"
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Описание функциональности:
+        div.col-lg-9
+          = f.text_area :objective, type: "text", class: "form-control", placeholder: "Описание тестируемой функциональности (например, ссылка на спецификацию)"
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Тестовые данные:
+        div.col-lg-9
+          = f.text_area :test_data, type: "text", class: "form-control", placeholder: "Например, аторизационные данные"
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Предусловия:
+        div.col-lg-9
+          = f.text_area :preconditions, type: "text", class: "form-control", placeholder: "Какие шаги нужно выполнить перед выполнением тестового сценария"      
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Комментарий:
+        div.col-lg-9
+          = f.text_area :comment, type: "text", class: "form-control", placeholder: "Любая другая информация связанная с тестовым сценарием"
+
+      = f.hidden_field :date, value: DateTime.now
+      
+      div.row
+        div.col-lg-8
+        div.col-lg-2
+          = link_to 'Назад', cases_path, class: "btn btn-default col-lg-12"
+        div.col-lg-2
+          = f.submit 'Сохранить сценарий', class: "btn btn-success col-lg-12"
