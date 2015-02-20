@@ -2,10 +2,10 @@
 html
 head
   title MokyMo
+  script type="text/javascript" src="https://www.google.com/jsapi"
   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
   = csrf_meta_tags
-  script type="text/javascript" src="https://www.google.com/jsapi"
-	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
 body
   = render 'top_menu'
   div#main_container.container.container-fluid
