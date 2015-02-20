@@ -631,3 +631,1855 @@ Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:29:
 
 
 Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:29:11 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-20 16:35:25 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (21.1ms)
+  Rendered application/_top_menu.slim (9.0ms)
+Completed 200 OK in 111ms (Views: 96.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:35:42 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (7.0ms)
+  Rendered suites/new.slim within layouts/application (10.2ms)
+  Rendered application/_top_menu.slim (0.3ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (5.8ms)
+  Rendered suites/new.slim within layouts/application (9.0ms)
+  Rendered application/_top_menu.slim (9.9ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:35:46 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (7.9ms)
+  Rendered suites/new.slim within layouts/application (12.6ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:12 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (1.0ms)
+  Rendered suites/new.slim within layouts/application (1.6ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:36:14 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:36:40 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (16.3ms)
+  Rendered suites/new.slim within layouts/application (17.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:37:27 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:38:24 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (9.7ms)
+  Rendered suites/new.slim within layouts/application (10.4ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:40 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:41:41 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (1.6ms)
+  Rendered suites/new.slim within layouts/application (2.3ms)
+  Rendered application/_top_menu.slim (0.1ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:24 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:42:25 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (1.5ms)
+  Rendered suites/new.slim within layouts/application (2.2ms)
+  Rendered application/_top_menu.slim (0.1ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:42:36 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (1.2ms)
+  Rendered suites/new.slim within layouts/application (1.7ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:42:46 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:42:47 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:42:47 +0500
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:42:55 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCase Load (0.2ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (12.5ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:42:55 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.6ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-02-20 16:42:55 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.1ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-02-20 16:42:55 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:42:59 +0500
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCase Load (0.2ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (7.5ms)
+  Rendered application/_top_menu.slim (0.1ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.7ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-02-20 16:43:01 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCase Load (0.2ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (1.3ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-02-20 16:43:03 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:43:51 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCase Load (0.2ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (1.4ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.2ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-02-20 16:43:52 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCase Load (0.3ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (1.3ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:53 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-02-20 16:43:54 +0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/dmitriy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (7.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:47:44 +0500
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:47:50 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCase Load (0.2ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (1.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:47:50 +0500
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-20 16:47:51 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCase Load (0.2ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (1.2ms)
+  Rendered application/_top_menu.slim (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-20 16:47:52 +0500
