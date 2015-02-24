@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'projects/list' => 'projects#list'
   resources :projects
   resources :suites
   resources :cases do
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#index'  
-  
   get 'admin' => 'admin#index'
 
   # Example of regular route:

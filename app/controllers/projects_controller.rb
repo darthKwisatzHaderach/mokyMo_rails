@@ -3,6 +3,12 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   # GET /projects.json
+
+  def list
+    @projects = Project.all
+    render :json => @projects
+  end
+
   def index
     @projects = Project.all
   end
