@@ -9,5 +9,6 @@ class ApplicationController < ActionController::Base
   def current_state
   	@project = CurrentState.first.project
   	@component = CurrentState.first.component
+  	@current_state = CurrentState.first
   end
 end

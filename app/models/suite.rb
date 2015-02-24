@@ -1,4 +1,4 @@
 class Suite < ActiveRecord::Base
 	has_many :cases
-	belongs_to :project
+	belongs_to :component
 end

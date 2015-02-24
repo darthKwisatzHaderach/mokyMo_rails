@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :case_steps
   end
 
+  resources :current_state
+
   get '/cases/case_with_steps/:id' => 'cases#case_with_steps', :as => 'case_with_steps'
 
   # The priority is based upon order of creation: first created -> highest priority.

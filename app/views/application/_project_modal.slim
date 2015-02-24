@@ -1,24 +1,24 @@
-/! Modal
-div#myModal.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-  div.modal-dialog
-    div.modal-content
-      div.modal-header
-        button.close type="button" data-dismiss="modal" aria-label="Close"
-          span aria-hidden="true" &times;
-        h4#myModalLabel.modal-title Выберите проект и компонент
-      div.modal-body style="min-height: 120px;"
-      	div.row
-      	  div.col-lg-3
-      	  	h4 Проект:
-          div.col-lg-9
-            div.btn-group
-              select#projects.form-control
-        div.row
-      	  div.col-lg-3
-      	  	h4 Компонент:
-          div.col-lg-9
-            div.btn-group
-              select#components.form-control
-      div.modal-footer
-        button.btn.btn-default type="button" data-dismiss="modal" Закрыть
-        button.btn.btn-primary type="button" Выбрать
+= form_for @current_state do |f|
+  div#myModal.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    div.modal-dialog
+      div.modal-content
+        div.modal-header
+          button.close type="button" data-dismiss="modal" aria-label="Close"
+            span aria-hidden="true" &times;
+          h4#myModalLabel.modal-title Выберите проект и компонент
+        div.modal-body style="min-height: 120px;"
+      	  div.row
+      	    div.col-lg-3
+      	  	  h4 Проект:
+            div.col-lg-9
+              div.btn-group
+                = f.select :project, [], {}, {id: "projects", class: "form-control"}
+          div.row
+      	    div.col-lg-3
+      	  	  h4 Компонент:
+            div.col-lg-9
+              div.btn-group
+                = f.select :component, [], {}, {id: "components", class: "form-control"}
+        div.modal-footer
+          button.btn.btn-default type="button" data-dismiss="modal" Закрыть
+          = f.submit 'Выбрать', class: "button btn btn-primary"
