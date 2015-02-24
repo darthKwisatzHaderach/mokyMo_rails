@@ -5,8 +5,13 @@ class ProjectsController < ApplicationController
   # GET /projects.json
 
   def list
-    @projects = Project.all
-    render :json => @projects
+    projects = Project.all
+    render json: projects
+  end
+
+  def components
+    components = Components.where(project_id: params[:id])
+    render json: components
   end
 
   def index

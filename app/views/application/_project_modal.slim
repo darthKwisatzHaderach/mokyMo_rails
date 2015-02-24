@@ -6,13 +6,19 @@ div#myModal.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel
         button.close type="button" data-dismiss="modal" aria-label="Close"
           span aria-hidden="true" &times;
         h4#myModalLabel.modal-title Выберите проект и компонент
-      div.modal-body style="min-height: 150px;"
-        div.col-lg-4
-          div.btn-group
-            button#dep.btn.btn-default.dropdown-toggle.projects type="button" data-toggle="dropdown" style="margin-right: 20px;"
-              |Проект
-              span.caret
-            ul#drop class="dropdown-menu" role="menu"            
+      div.modal-body style="min-height: 120px;"
+      	div.row
+      	  div.col-lg-3
+      	  	h4 Проект:
+          div.col-lg-9
+            div.btn-group
+              select#projects.form-control
+        div.row
+      	  div.col-lg-3
+      	  	h4 Компонент:
+          div.col-lg-9
+            div.btn-group
+              select#components.form-control
       div.modal-footer
         button.btn.btn-default type="button" data-dismiss="modal" Закрыть
         button.btn.btn-primary type="button" Выбрать

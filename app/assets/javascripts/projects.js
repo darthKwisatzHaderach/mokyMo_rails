@@ -1,4 +1,4 @@
-$(document).on("click", ".projects", function () {
+$(document).on("click", "#projects-button", function () {
     $.ajax({
         type: "GET",
         url: "/projects/list",
@@ -8,13 +8,14 @@ $(document).on("click", ".projects", function () {
             var data = [];
             projects.forEach(function (project) {
                 data.push({
+                    id: project.id,
                     title: project.title,
                 });
             });            
             for(i=0;i<projects.length;i++){
-                Dropdown+="<li><a name='" + data[i].title + "' href='#' class='deplink'>" + data[i].title + "</a></li>";
+                Dropdown+="<option class='option' value='" + data[i].id + "'>" + data[i].title + "</option>";
             }
-            document.getElementById('drop').innerHTML = Dropdown;
+            document.getElementById('projects').innerHTML = Dropdown;
         },
         error: function (e) {
             alert(e);

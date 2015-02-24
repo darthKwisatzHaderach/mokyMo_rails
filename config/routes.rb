@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'projects/list' => 'projects#list'
+  get 'project/:id/components' => 'projects#components'
   resources :projects
   resources :suites
   resources :cases do
