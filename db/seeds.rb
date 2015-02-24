@@ -47,3 +47,5 @@ Components.create(id: 27, title: "Документация", project_id: 9)
 Components.create(id: 28, title: "Web-приложение", project_id: 10)
 Components.create(id: 29, title: "Мобильное приложение", project_id: 10)
 Components.create(id: 30, title: "Документация", project_id: 10)
+
+CurrentState.create(id: 1, project: "IT-Пром", component: "Web-приложение")

@@ -12770,3 +12770,880 @@ Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +050
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (18.4ms)
+  Rendered application/_top_menu.slim (8.3ms)
+  Rendered application/_project_modal.slim (24.9ms)
+Completed 200 OK in 137ms (Views: 121.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:21 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-24 16:18:23 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (21.1ms)
+  Rendered suites/new.slim within layouts/application (25.7ms)
+  Rendered application/_top_menu.slim (8.2ms)
+  Rendered application/_project_modal.slim (6.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/suites" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+Processing by SuitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DnqB3gNPEhvYoo1WHCeiEPqT55zxTEJBIsJoBwfTTk=", "suite"=>{"title"=>"Тест", "priority"=>"Высокий", "tags"=>"", "datetime"=>"2015-02-24T16:18:23+05:00"}, "commit"=>"Сохранить"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suites" ("created_at", "datetime", "priority", "tags", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-02-24 11:18:32.482562"], ["datetime", "2015-02-24 11:18:23.000000"], ["priority", "Высокий"], ["tags", ""], ["title", "Тест"], ["updated_at", "2015-02-24 11:18:32.482562"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/suites/1
+Completed 302 Found in 13ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/suites/1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+Processing by SuitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuite Load (0.2ms)[0m  SELECT  "suites".* FROM "suites"  WHERE "suites"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/show.slim within layouts/application (6.3ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.1ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 16:18:32 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 16:18:37 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  Rendered suites/index.slim within layouts/application (5.4ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.0ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (7.9ms)[0m  [1mDROP TABLE "case_steps"[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "case_steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "step" text, "step_result" text, "case_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (8.0ms)[0m  [1mDROP TABLE "cases"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "date" time, "priority" varchar(255), "planned_duration" integer, "tags" varchar(255), "objective" text, "test_data" text, "preconditions" text, "comment" text, "suite_id" integer) 
+  [1m[36m (6.4ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "project_id" integer) 
+  [1m[36m (7.9ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (7.8ms)[0m  [1mDROP TABLE "suites"[0m
+  [1m[35m (8.1ms)[0m  CREATE TABLE "suites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "datetime" datetime, "priority" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCurrentStates (20150224121512)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "current_states" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project" varchar(255), "component" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224121512"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:25:55.523686"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 12:25:55.523708"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:25:55.536943"], ["id", 2], ["title", "АСУ ТП ДГ"], ["updated_at", "2015-02-24 12:25:55.536965"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:25:55.545273"], ["id", 3], ["title", "Управление производством"], ["updated_at", "2015-02-24 12:25:55.545293"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:25:55.553396"], ["id", 4], ["title", "IT-Пром"], ["updated_at", "2015-02-24 12:25:55.553426"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:25:55.561667"], ["id", 5], ["title", "Интернет-магазин: керамика"], ["updated_at", "2015-02-24 12:25:55.561697"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:25:55.570010"], ["id", 6], ["title", "Визитка для завода"], ["updated_at", "2015-02-24 12:25:55.570031"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:25:55.578059"], ["id", 7], ["title", "ИС ТНТ МИВ"], ["updated_at", "2015-02-24 12:25:55.578077"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:25:55.585986"], ["id", 8], ["title", "ODesk"], ["updated_at", "2015-02-24 12:25:55.586006"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:25:55.593889"], ["id", 9], ["title", "Free-lance"], ["updated_at", "2015-02-24 12:25:55.593910"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:25:55.601917"], ["id", 10], ["title", "Инфраструктура"], ["updated_at", "2015-02-24 12:25:55.601938"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 1], ["project_id", 1], ["title", "Web-приложение"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 2], ["project_id", 1], ["title", "Мобильное приложение"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 3], ["project_id", 1], ["title", "Документация"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 4], ["project_id", 2], ["title", "Web-приложение"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 5], ["project_id", 2], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 6], ["project_id", 3], ["title", "Мобильное приложение"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 7], ["project_id", 3], ["title", "Web-приложение"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 8], ["project_id", 4], ["title", "Web-приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 9], ["project_id", 4], ["title", "Мобильное приложение"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 10], ["project_id", 5], ["title", "Web-приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 11], ["project_id", 5], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 12], ["project_id", 5], ["title", "Документация"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 13], ["project_id", 6], ["title", "Web-приложение"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 14], ["project_id", 6], ["title", "Мобильное приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 15], ["project_id", 6], ["title", "Документация"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 16], ["project_id", 6], ["title", "Desktop-приложение"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 17], ["project_id", 6], ["title", "Сервис"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 18], ["project_id", 7], ["title", "Web-приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 19], ["project_id", 7], ["title", "Мобильное приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 20], ["project_id", 7], ["title", "Документация"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 21], ["project_id", 8], ["title", "Web-приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 22], ["project_id", 8], ["title", "Мобильное приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 23], ["project_id", 8], ["title", "Документация"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 24], ["project_id", 8], ["title", "Desktop-приложение"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 25], ["project_id", 9], ["title", "Web-приложение"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 26], ["project_id", 9], ["title", "Мобильное приложение"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 27], ["project_id", 9], ["title", "Документация"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 28], ["project_id", 10], ["title", "Web-приложение"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 29], ["project_id", 10], ["title", "Мобильное приложение"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 30], ["project_id", 10], ["title", "Документация"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:05.967389"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 12:26:05.967411"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: projects.id: INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (6.7ms)[0m  [1mDROP TABLE "case_steps"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "case_steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "step" text, "step_result" text, "case_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (6.4ms)[0m  [1mDROP TABLE "cases"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "date" time, "priority" varchar(255), "planned_duration" integer, "tags" varchar(255), "objective" text, "test_data" text, "preconditions" text, "comment" text, "suite_id" integer) 
+  [1m[36m (7.8ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "project_id" integer) 
+  [1m[36m (6.6ms)[0m  [1mDROP TABLE "current_states"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "current_states" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project" varchar(255), "component" varchar(255)) 
+  [1m[36m (6.5ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (7.9ms)[0m  [1mDROP TABLE "suites"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "suites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "datetime" datetime, "priority" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:26:29.836290"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 12:26:29.836317"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:29.849211"], ["id", 2], ["title", "АСУ ТП ДГ"], ["updated_at", "2015-02-24 12:26:29.849237"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:26:29.857168"], ["id", 3], ["title", "Управление производством"], ["updated_at", "2015-02-24 12:26:29.857189"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:29.864937"], ["id", 4], ["title", "IT-Пром"], ["updated_at", "2015-02-24 12:26:29.864960"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:26:29.873014"], ["id", 5], ["title", "Интернет-магазин: керамика"], ["updated_at", "2015-02-24 12:26:29.873032"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:29.881216"], ["id", 6], ["title", "Визитка для завода"], ["updated_at", "2015-02-24 12:26:29.881238"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:26:29.889466"], ["id", 7], ["title", "ИС ТНТ МИВ"], ["updated_at", "2015-02-24 12:26:29.889486"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:29.897443"], ["id", 8], ["title", "ODesk"], ["updated_at", "2015-02-24 12:26:29.897463"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 12:26:29.905396"], ["id", 9], ["title", "Free-lance"], ["updated_at", "2015-02-24 12:26:29.905420"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 12:26:29.913534"], ["id", 10], ["title", "Инфраструктура"], ["updated_at", "2015-02-24 12:26:29.913553"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 1], ["project_id", 1], ["title", "Web-приложение"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 2], ["project_id", 1], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 3], ["project_id", 1], ["title", "Документация"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 4], ["project_id", 2], ["title", "Web-приложение"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 5], ["project_id", 2], ["title", "Мобильное приложение"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 6], ["project_id", 3], ["title", "Мобильное приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 7], ["project_id", 3], ["title", "Web-приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 8], ["project_id", 4], ["title", "Web-приложение"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 9], ["project_id", 4], ["title", "Мобильное приложение"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 10], ["project_id", 5], ["title", "Web-приложение"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 11], ["project_id", 5], ["title", "Мобильное приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 12], ["project_id", 5], ["title", "Документация"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 13], ["project_id", 6], ["title", "Web-приложение"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 14], ["project_id", 6], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 15], ["project_id", 6], ["title", "Документация"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 16], ["project_id", 6], ["title", "Desktop-приложение"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 17], ["project_id", 6], ["title", "Сервис"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 18], ["project_id", 7], ["title", "Web-приложение"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 19], ["project_id", 7], ["title", "Мобильное приложение"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 20], ["project_id", 7], ["title", "Документация"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 21], ["project_id", 8], ["title", "Web-приложение"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 22], ["project_id", 8], ["title", "Мобильное приложение"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 23], ["project_id", 8], ["title", "Документация"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 24], ["project_id", 8], ["title", "Desktop-приложение"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 25], ["project_id", 9], ["title", "Web-приложение"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 26], ["project_id", 9], ["title", "Мобильное приложение"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 27], ["project_id", 9], ["title", "Документация"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 28], ["project_id", 10], ["title", "Web-приложение"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 29], ["project_id", 10], ["title", "Мобильное приложение"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 30], ["project_id", 10], ["title", "Документация"]]
+  [1m[35m (7.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "current_states" ("component", "id", "project") VALUES (?, ?, ?)  [["component", "Web-приложение"], ["id", 1], ["project", "IT-Пром"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:28:35 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant ApplicationController::CurrentStates):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 17:29:14 +0500
+
+ActionController::RoutingError (uninitialized constant ApplicationController::CurrentStates):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/main_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:31:59 +0500
+
+ActionController::RoutingError (uninitialized constant ApplicationController::Projects):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.3ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:32:00 +0500
+
+ActionController::RoutingError (uninitialized constant ApplicationController::Projects):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.3ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (12.9ms)
+  Rendered application/_top_menu.slim (9.1ms)
+  Rendered application/_project_modal.slim (11.1ms)
+Completed 200 OK in 117ms (Views: 104.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:23 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:42:50 +0500
+
+SyntaxError (/home/dmitriy/RubymineProjects/mokyMo/app/controllers/application_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:43:20 +0500
+
+SyntaxError (/home/dmitriy/RubymineProjects/mokyMo/app/controllers/application_controller.rb:5: syntax error, unexpected ':', expecting keyword_end
+  before_filter: current_state
+                ^):
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:43:21 +0500
+
+SyntaxError (/home/dmitriy/RubymineProjects/mokyMo/app/controllers/application_controller.rb:5: syntax error, unexpected ':', expecting keyword_end
+  before_filter: current_state
+                ^):
+  app/controllers/suites_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:46:37 +0500
+Processing by SuitesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ApplicationController::CurrentStates):
+  app/controllers/application_controller.rb:10:in `current_state'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:47:12 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 7ms
+
+NameError (uninitialized constant ApplicationController::CurrentStates):
+  app/controllers/application_controller.rb:11:in `current_state'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:47:19 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `title' for #<CurrentState:0x00000005c76eb0>):
+  app/controllers/application_controller.rb:10:in `current_state'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  Rendered suites/index.slim within layouts/application (0.8ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.0ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:33 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (1.0ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.0ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:37 +0500
