@@ -12272,3 +12272,501 @@ Processing by ProjectsController#components as JSON
   Parameters: {"id"=>"1"}
   [1m[36mComponents Load (0.2ms)[0m  [1mSELECT "components".* FROM "components"  WHERE "components"."project_id" = 1[0m
 Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.slim within layouts/application (20.6ms)
+  Rendered application/_top_menu.slim (27.6ms)
+  Rendered application/_project_modal.slim (5.2ms)
+Completed 200 OK in 153ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 15:38:56 +0500
+
+
+Started GET "/projects/list" for 127.0.0.1 at 2015-02-24 15:38:58 +0500
+Processing by ProjectsController#list as JSON
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:00:16.061702"], ["id", 10], ["title", "Городской портал"], ["updated_at", "2015-02-24 11:00:16.061736"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (22.9ms)
+  Rendered application/_top_menu.slim (30.5ms)
+  Rendered application/_project_modal.slim (5.1ms)
+Completed 200 OK in 153ms (Views: 138.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 16:08:21 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-24 16:08:26 +0500
+Processing by SuitesController#new as HTML
+  Rendered suites/_form.slim (20.1ms)
+  Rendered suites/new.slim within layouts/application (25.0ms)
+  Rendered application/_top_menu.slim (8.0ms)
+  Rendered application/_project_modal.slim (5.2ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 16:08:33 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  Rendered suites/index.slim within layouts/application (6.8ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.0ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (8.8ms)[0m  [1mDROP TABLE "case_steps"[0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "case_steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "step" text, "step_result" text, "case_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (6.6ms)[0m  [1mDROP TABLE "cases"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "date" time, "priority" varchar(255), "planned_duration" integer, "tags" varchar(255), "objective" text, "test_data" text, "preconditions" text, "comment" text, "suite_id" integer) 
+  [1m[36m (6.5ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "project_id" integer) 
+  [1m[36m (6.7ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (7.9ms)[0m  [1mDROP TABLE "suites"[0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "suites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "datetime" datetime, "priority" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:34.217276"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 11:10:34.217303"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:34.229445"], ["id", 2], ["title", "АСУ ТП ДГ"], ["updated_at", "2015-02-24 11:10:34.229466"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:34.237739"], ["id", 3], ["title", "Управление производством"], ["updated_at", "2015-02-24 11:10:34.237758"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:34.245650"], ["id", 4], ["title", "IT-Пром"], ["updated_at", "2015-02-24 11:10:34.245677"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:34.253982"], ["id", 5], ["title", "Интернет-магазин: керамика"], ["updated_at", "2015-02-24 11:10:34.254001"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:34.262156"], ["id", 6], ["title", "Визитка для завода"], ["updated_at", "2015-02-24 11:10:34.262179"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:34.270347"], ["id", 7], ["title", "ИС ТНТ МИВ"], ["updated_at", "2015-02-24 11:10:34.270368"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:34.278355"], ["id", 8], ["title", "ODesk"], ["updated_at", "2015-02-24 11:10:34.278385"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:34.288092"], ["id", 9], ["title", "Free-lance"], ["updated_at", "2015-02-24 11:10:34.288118"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:34.297809"], ["id", 10], ["title", "Инфраструктура"], ["updated_at", "2015-02-24 11:10:34.297835"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (7.9ms)[0m  [1mDROP TABLE "case_steps"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "case_steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "step" text, "step_result" text, "case_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (7.8ms)[0m  [1mDROP TABLE "cases"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "date" time, "priority" varchar(255), "planned_duration" integer, "tags" varchar(255), "objective" text, "test_data" text, "preconditions" text, "comment" text, "suite_id" integer) 
+  [1m[36m (6.3ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "project_id" integer) 
+  [1m[36m (7.8ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (6.7ms)[0m  [1mDROP TABLE "suites"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "suites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "datetime" datetime, "priority" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:46.964298"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 11:10:46.964323"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:46.977258"], ["id", 2], ["title", "АСУ ТП ДГ"], ["updated_at", "2015-02-24 11:10:46.977280"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:46.986670"], ["id", 3], ["title", "Управление производством"], ["updated_at", "2015-02-24 11:10:46.986693"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:46.996641"], ["id", 4], ["title", "IT-Пром"], ["updated_at", "2015-02-24 11:10:46.996666"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:47.005398"], ["id", 5], ["title", "Интернет-магазин: керамика"], ["updated_at", "2015-02-24 11:10:47.005414"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:47.013110"], ["id", 6], ["title", "Визитка для завода"], ["updated_at", "2015-02-24 11:10:47.013123"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:47.020968"], ["id", 7], ["title", "ИС ТНТ МИВ"], ["updated_at", "2015-02-24 11:10:47.020982"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:47.029178"], ["id", 8], ["title", "ODesk"], ["updated_at", "2015-02-24 11:10:47.029190"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:10:47.037954"], ["id", 9], ["title", "Free-lance"], ["updated_at", "2015-02-24 11:10:47.037976"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:10:47.045680"], ["id", 10], ["title", "Инфраструктура"], ["updated_at", "2015-02-24 11:10:47.045696"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (6.7ms)[0m  [1mDROP TABLE "case_steps"[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "case_steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "step" text, "step_result" text, "case_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (6.8ms)[0m  [1mDROP TABLE "cases"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "date" time, "priority" varchar(255), "planned_duration" integer, "tags" varchar(255), "objective" text, "test_data" text, "preconditions" text, "comment" text, "suite_id" integer) 
+  [1m[36m (6.5ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "project_id" integer) 
+  [1m[36m (7.5ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (7.6ms)[0m  [1mDROP TABLE "suites"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "suites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "datetime" datetime, "priority" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime, "project_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:11:06.978906"], ["id", 1], ["title", "Городской портал"], ["updated_at", "2015-02-24 11:11:06.978932"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:11:06.993118"], ["id", 2], ["title", "АСУ ТП ДГ"], ["updated_at", "2015-02-24 11:11:06.993137"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:11:07.001900"], ["id", 3], ["title", "Управление производством"], ["updated_at", "2015-02-24 11:11:07.001924"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:11:07.009828"], ["id", 4], ["title", "IT-Пром"], ["updated_at", "2015-02-24 11:11:07.009848"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:11:07.017869"], ["id", 5], ["title", "Интернет-магазин: керамика"], ["updated_at", "2015-02-24 11:11:07.017895"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:11:07.027650"], ["id", 6], ["title", "Визитка для завода"], ["updated_at", "2015-02-24 11:11:07.027677"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:11:07.036830"], ["id", 7], ["title", "ИС ТНТ МИВ"], ["updated_at", "2015-02-24 11:11:07.036855"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:11:07.044847"], ["id", 8], ["title", "ODesk"], ["updated_at", "2015-02-24 11:11:07.044860"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-24 11:11:07.053435"], ["id", 9], ["title", "Free-lance"], ["updated_at", "2015-02-24 11:11:07.053457"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "id", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-24 11:11:07.061682"], ["id", 10], ["title", "Инфраструктура"], ["updated_at", "2015-02-24 11:11:07.061703"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 1], ["project_id", 1], ["title", "Web-приложение"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 2], ["project_id", 1], ["title", "Мобильное приложение"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 3], ["project_id", 1], ["title", "Документация"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 4], ["project_id", 2], ["title", "Web-приложение"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 5], ["project_id", 2], ["title", "Мобильное приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 6], ["project_id", 3], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 7], ["project_id", 3], ["title", "Web-приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 8], ["project_id", 4], ["title", "Web-приложение"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 9], ["project_id", 4], ["title", "Мобильное приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 10], ["project_id", 5], ["title", "Web-приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 11], ["project_id", 5], ["title", "Мобильное приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 12], ["project_id", 5], ["title", "Документация"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 13], ["project_id", 6], ["title", "Web-приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 14], ["project_id", 6], ["title", "Мобильное приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 15], ["project_id", 6], ["title", "Документация"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 16], ["project_id", 6], ["title", "Desktop-приложение"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 17], ["project_id", 6], ["title", "Сервис"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 18], ["project_id", 7], ["title", "Web-приложение"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 19], ["project_id", 7], ["title", "Мобильное приложение"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 20], ["project_id", 7], ["title", "Документация"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 21], ["project_id", 8], ["title", "Web-приложение"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 22], ["project_id", 8], ["title", "Мобильное приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 23], ["project_id", 8], ["title", "Документация"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 24], ["project_id", 8], ["title", "Desktop-приложение"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 25], ["project_id", 9], ["title", "Web-приложение"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 26], ["project_id", 9], ["title", "Мобильное приложение"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 27], ["project_id", 9], ["title", "Документация"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 28], ["project_id", 10], ["title", "Web-приложение"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)  [["id", 29], ["project_id", 10], ["title", "Мобильное приложение"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "components" ("id", "project_id", "title") VALUES (?, ?, ?)[0m  [["id", 30], ["project_id", 10], ["title", "Документация"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered suites/index.slim within layouts/application (18.9ms)
+  Rendered application/_top_menu.slim (7.7ms)
+  Rendered application/_project_modal.slim (28.2ms)
+Completed 200 OK in 146ms (Views: 134.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-24 16:11:13 +0500

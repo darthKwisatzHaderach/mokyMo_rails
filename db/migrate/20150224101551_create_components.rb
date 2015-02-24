@@ -4,5 +4,6 @@ class CreateComponents < ActiveRecord::Migration
       t.string :title
       t.integer :project_id
     end
+    add_column :suites, :component_id, :integer
   end
 end
