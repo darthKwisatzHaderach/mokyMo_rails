@@ -1,5 +1,4 @@
 # MokyMo: test manager
-========
 
 MokyMo is a simple test manager. MokyMo allows you to create test suites and test cases.
 
