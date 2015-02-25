@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   private
 
   def current_state
-  	@project = Project.where(id: CurrentState.first.project).first.title
-  	@component = CurrentState.first.component
+  	@project_state = Project.where(id: CurrentState.first.project).first.title
+  	@component_state = CurrentState.first.component
   	@current_state = CurrentState.first
   end
 end

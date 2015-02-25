@@ -11,14 +11,12 @@
       	    div.col-lg-3
       	  	  h4 Проект:
             div.col-lg-9
-              div.btn-group
-                = f.select :project, [], {}, {id: "projects", class: "form-control"}
+              = f.select :project, [], {}, {id: "projects", class: "form-control"}
           div.row
       	    div.col-lg-3
       	  	  h4 Компонент:
             div.col-lg-9
-              div.btn-group
-                = f.select :component, [], {}, {id: "components", class: "form-control"}
+              = f.select :component, [], {}, {id: "components", class: "form-control"}
         div.modal-footer
           button.btn.btn-default type="button" data-dismiss="modal" Закрыть
           = f.submit 'Выбрать', class: "button btn btn-primary"

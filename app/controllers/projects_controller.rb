@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
 
   def components
-    components = Components.where(project_id: params[:id])
+    components = Component.where(project_id: params[:id])
     render json: components
   end
 

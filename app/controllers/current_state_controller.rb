@@ -1,11 +1,12 @@
 class CurrentStateController < ApplicationController
+  before_action :set_current_state, only: [:show, :edit, :update, :destroy]
 
   def show
   	@current_state = CurrentState.first
   end
 
   def create
-    @current_state = CurrentState.new(project_params)
+    @current_state = CurrentState.new(current_state_params)
 
     respond_to do |format|
       if @current_state.save
@@ -22,7 +23,7 @@ class CurrentStateController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
-      if @current_state.update(project_params)
+      if @current_state.update(current_state_params)
         format.html { redirect_to root_path, notice: 'CurrentState was successfully updated.' }
         format.json { render :root, status: :ok, location: @current_state }
       else
@@ -44,12 +45,12 @@ class CurrentStateController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_project
+    def set_current_state
       @current_state = CurrentState.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
+    def current_state_params
       params.require(:current_state).permit(:project)            
     end
 end

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :current_state
+  resources :components
 
   get '/cases/case_with_steps/:id' => 'cases#case_with_steps', :as => 'case_with_steps'
 

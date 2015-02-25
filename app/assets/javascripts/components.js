@@ -1,6 +1,6 @@
 $(document).on("mouseover", "#components", function () {    
     var projects_select = document.getElementById("projects");
-    id = projects_select.options[projects_select.selectedIndex ].value
+    var id = projects_select.options[projects_select.selectedIndex].value;
     $.ajax({
         type: "GET",
         url: "/project/" + id + "/components",

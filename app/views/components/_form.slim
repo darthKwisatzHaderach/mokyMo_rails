@@ -1,0 +1,24 @@
+= form_for(@component) do |f|
+  - if @component.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@component.errors.count, "error")} prohibited this component from being saved:
+      ul
+      - @component.errors.full_messages.each do |message|
+        li = message
+  div.col-lg-12
+    div.row
+      div.col-lg-3
+        h4 align="right" Название компонента:
+      div.col-lg-9
+        = f.text_field :title, type: "text", class: "form-control", placeholder: "Название компонента"
+    div.row
+      div.col-lg-3
+        h4 align="right" Проект:
+      div.col-lg-9
+        = f.select :project_id, @projects.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
+    div.row
+      div.col-lg-8
+      div.col-lg-2
+        = link_to 'Назад', admin_path, class: "btn btn-default col-lg-12"
+      div.col-lg-2
+        = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
