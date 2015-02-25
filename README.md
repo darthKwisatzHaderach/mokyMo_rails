@@ -15,3 +15,4 @@ rails s
 
 ## Use
 Open browser. Go to http://localhost:3000.
+![](http://s1077.photobucket.com/user/datonkushin/media/mokyMo_zpstibxcbpi.png)
