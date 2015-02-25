@@ -16,6 +16,7 @@ class ComponentsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @projects = Project.all
   end
 
   # POST /projects
@@ -25,7 +26,7 @@ class ComponentsController < ApplicationController
 
     respond_to do |format|
       if @component.save
-        format.html { redirect_to @component, notice: 'Component was successfully created.' }
+        format.html { redirect_to @component, notice: 'Компонент успешно добавлен.' }
         format.json { render :show, status: :created, location: @component }
       else
         format.html { render :new }
@@ -39,7 +40,7 @@ class ComponentsController < ApplicationController
   def update
     respond_to do |format|
       if @component.update(component_params)
-        format.html { redirect_to @component, notice: 'Component was successfully updated.' }
+        format.html { redirect_to @component, notice: 'Компонент успешно обновлен.' }
         format.json { render :show, status: :ok, location: @component }
       else
         format.html { render :edit }
@@ -53,7 +54,7 @@ class ComponentsController < ApplicationController
   def destroy
     @component.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Component was successfully destroyed.' }
+      format.html { redirect_to projects_url, notice: 'Компонент успешно удален.' }
       format.json { head :no_content }
     end
   end
@@ -66,6 +67,6 @@ class ComponentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def component_params
-      params.require(:component).permit(:title)            
+      params.require(:component).permit(:title, :project_id)
     end	
 end

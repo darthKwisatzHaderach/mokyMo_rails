@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def current_state
-  	@project_state = Project.where(id: CurrentState.first.project).first.title
-  	@component_state = CurrentState.first.component
-  	@current_state = CurrentState.first
+  def current_state    
+    @project_state = CurrentState.first.project
+    @component_state = CurrentState.first.component
+    @current_state = CurrentState.first
   end
 end
