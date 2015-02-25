@@ -12,3 +12,6 @@ rake db:create
 rake db:setup
 rails s
 ```
+
+## Use
+Open browser. Go to http://localhost:3000.

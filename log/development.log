@@ -31826,3 +31826,93 @@ Processing by AdminController#index as HTML
   Rendered application/_top_menu.slim (0.1ms)
   Rendered application/_project_modal.slim (0.7ms)
 Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  Rendered main/index.slim within layouts/application (13.7ms)
+  Rendered application/_top_menu.slim (27.8ms)
+  Rendered application/_project_modal.slim (10.4ms)
+Completed 200 OK in 146ms (Views: 127.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 17:30:37 +0500
