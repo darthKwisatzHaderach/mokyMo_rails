@@ -13,7 +13,7 @@ $(document).on("click", "#projects-button", function () {
                 });
             });            
             for(i=0;i<projects.length;i++){
-                Dropdown+="<option class='option' value='" + data[i].id + "'>" + data[i].title + "</option>";
+                Dropdown+="<option value='" + data[i].id + "'>" + data[i].title + "</option>";
             }
             document.getElementById('projects').innerHTML = Dropdown;
         },
