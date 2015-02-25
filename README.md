@@ -16,6 +16,5 @@ rails s
 ## Use
 
 Open browser. Go to http://localhost:3000.
-==========
 
 ![alt tag](http://i1077.photobucket.com/albums/w471/datonkushin/mokyMo_zpstibxcbpi.png)
