@@ -1,5 +1,5 @@
 = form_for @current_state do |f|
-  div#myModal.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  div#project-modal.modal.fade tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
     div.modal-dialog
       div.modal-content
         div.modal-header
@@ -19,4 +19,4 @@
               = f.select :component, [], {}, {id: "components", class: "form-control"}
         div.modal-footer
           button.btn.btn-default type="button" data-dismiss="modal" Закрыть
-          = f.submit 'Выбрать', class: "button btn btn-primary"
+          = f.submit 'Выбрать', id: "select-project", class: "button btn btn-primary"

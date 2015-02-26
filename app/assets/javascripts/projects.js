@@ -12,7 +12,8 @@ $(document).on("click", "#projects-button", function () {
                     title: project.title,
                 });
             });            
-            for(i=0;i<projects.length;i++){
+            Dropdown+="<option value='none'>Выберите проект</option>";
+            for(i=0;i<projects.length;i++){                
                 Dropdown+="<option value='" + data[i].id + "'>" + data[i].title + "</option>";
             }
             document.getElementById('projects').innerHTML = Dropdown;

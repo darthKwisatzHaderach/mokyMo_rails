@@ -1,4 +1,4 @@
-$(document).on("mouseover", "#components", function () {    
+$(document).on("click", "#projects", function () {    
     var projects_select = document.getElementById("projects");
     var id = projects_select.options[projects_select.selectedIndex].value;
     $.ajax({
@@ -14,7 +14,8 @@ $(document).on("mouseover", "#components", function () {
                     title: component.title,
                 });
             });            
-            for(i=0;i<components.length;i++){
+            Dropdown+="<option value='none'>Выберите компонент</option>";
+            for(i=0;i<components.length;i++){                
                 Dropdown+="<option value='" + data[i].id + "'>" + data[i].title + "</option>";
             }
             document.getElementById('components').innerHTML = Dropdown;
