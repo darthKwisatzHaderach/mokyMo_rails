@@ -9,6 +9,8 @@ div.row
           th Приоритет
           th Время выполнения
           th Тест-комплект
+          th
+          th
       tbody
         - @suites.each do |s|
           tr
@@ -16,3 +18,9 @@ div.row
             td = s.priority
             td
             td =s.component.title
+            th              
+              =link_to edit_suite_path(s)
+                span.glyphicon.glyphicon-pencil
+            th
+              =link_to suite_path(s), method: "delete"
+                span.glyphicon.glyphicon-remove

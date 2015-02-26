@@ -38062,3 +38062,820 @@ Processing by SuitesController#index as HTML
   Rendered application/_top_menu.slim (0.2ms)
   Rendered application/_project_modal.slim (1.0ms)
 Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (25.6ms)
+  Rendered application/_top_menu.slim (7.7ms)
+  Rendered application/_project_modal.slim (10.5ms)
+Completed 200 OK in 168ms (Views: 139.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:52 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:39:53 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:41:03 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (27.2ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"suites"} missing required keys: [:id]):
+    20:             td =s.component.title
+    21:             th
+    22:               span.glyphicon.glyphicon-pencil
+    23:                 =link_to edit_suite_path
+    24:             th
+    25:               span.glyphicon.glyphicon-remove
+    26:                 =link_to
+  app/views/suites/index.slim:23:in `block in _app_views_suites_index_slim__848228614172909935_49676580'
+  app/views/suites/index.slim:15:in `_app_views_suites_index_slim__848228614172909935_49676580'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.1ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (7.6ms)
+  Rendered application/_top_menu.slim (7.5ms)
+  Rendered application/_project_modal.slim (12.5ms)
+Completed 200 OK in 124ms (Views: 121.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:29 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:41:30 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (8.9ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (1.4ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:41:51 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:41:52 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:42:17 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.3ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `destroy_suite_path' for #<#<Class:0x00000005f29018>:0x0000000296a1c0>):
+    24:             th
+    25:               =link_to
+    26:                 span.glyphicon.glyphicon-remove                
+    27:                   =link_to destroy_suite_path(s)
+  app/views/suites/index.slim:27:in `block (2 levels) in _app_views_suites_index_slim__848228614172909935_21691420'
+  app/views/suites/index.slim:25:in `block in _app_views_suites_index_slim__848228614172909935_21691420'
+  app/views/suites/index.slim:15:in `_app_views_suites_index_slim__848228614172909935_21691420'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.3ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:42:25 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `delete_suite_path' for #<#<Class:0x00000005f29018>:0x00000005c67c80>):
+    24:             th
+    25:               =link_to
+    26:                 span.glyphicon.glyphicon-remove                
+    27:                   =link_to delete_suite_path(s)
+  app/views/suites/index.slim:27:in `block (2 levels) in _app_views_suites_index_slim__848228614172909935_48443840'
+  app/views/suites/index.slim:25:in `block in _app_views_suites_index_slim__848228614172909935_48443840'
+  app/views/suites/index.slim:15:in `_app_views_suites_index_slim__848228614172909935_48443840'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:10 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined local variable or method `destroy' for #<#<Class:0x00000005f29018>:0x00000005608c90>):
+    24:             th
+    25:               =link_to
+    26:                 span.glyphicon.glyphicon-remove                
+    27:                   =link_to suite_path(s), method: destroy
+  app/views/suites/index.slim:27:in `block (2 levels) in _app_views_suites_index_slim__848228614172909935_45103980'
+  app/views/suites/index.slim:25:in `block in _app_views_suites_index_slim__848228614172909935_45103980'
+  app/views/suites/index.slim:15:in `_app_views_suites_index_slim__848228614172909935_45103980'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:18 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x00000005f29018>:0x000000051abb20>):
+    24:             th
+    25:               =link_to
+    26:                 span.glyphicon.glyphicon-remove                
+    27:                   =link_to suite_path(s), method: delete
+  app/views/suites/index.slim:27:in `block (2 levels) in _app_views_suites_index_slim__848228614172909935_42816100'
+  app/views/suites/index.slim:25:in `block in _app_views_suites_index_slim__848228614172909935_42816100'
+  app/views/suites/index.slim:15:in `_app_views_suites_index_slim__848228614172909935_42816100'
+
+
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/dmitriy/.rvm/gems/ruby-2.1.0@snowball/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.7ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (15.5ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:22 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:43:23 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:38 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (7.5ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:43:39 +0500
+
+
+Started GET "/suites/1/edit" for 127.0.0.1 at 2015-02-26 14:43:42 +0500
+Processing by SuitesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT  "suites".* FROM "suites"  WHERE "suites"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components"  WHERE "components"."id" = 1[0m
+  Rendered suites/_form.slim (11.1ms)
+  Rendered suites/edit.slim within layouts/application (16.3ms)
+  Rendered application/_top_menu.slim (8.9ms)
+  Rendered application/_project_modal.slim (6.5ms)
+Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:45 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.3ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (8.8ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/suites/1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+Processing by SuitesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5DnqB3gNPEhvYoo1WHCeiEPqT55zxTEJBIsJoBwfTTk=", "id"=>"1"}
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.1ms)[0m  [1mSELECT  "suites".* FROM "suites"  WHERE "suites"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "suites" WHERE "suites"."id" = ?[0m  [["id", 1]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/suites
+Completed 302 Found in 14ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.1ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (1.5ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-26 14:43:47 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-02-26 14:44:26 +0500
