@@ -1,4 +1,4 @@
-div.row
+div.bord.row
 	h4#notice = notice
     div.col-lg-12
       div.row
@@ -17,8 +17,13 @@ div.row
         div.col-lg-9
           h4 = @suite.tags
       div.row
+        div.col-lg-3
+          h4 align="right" Компонент:
+        div.col-lg-9
+          h4 = @suite.component.title
+      div.row
         div.col-lg-8
         div.col-lg-2
-          = link_to 'Назад', suites_path, class: "btn btn-default col-lg-12"
+          = link_to 'Тест-комплекты', suites_path, class: "btn btn-default col-lg-12"
         div.col-lg-2
           = link_to 'Редактировать', edit_suite_path(@suite), class: "btn btn-default col-lg-12"

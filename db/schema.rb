@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224121512) do
+ActiveRecord::Schema.define(version: 106) do
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -22,10 +22,7 @@ ActiveRecord::Schema.define(version: 20150224121512) do
   end
 
   create_table "cases", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "title"
-    t.time     "date"
     t.string   "priority"
     t.integer  "planned_duration"
     t.string   "tags"
@@ -34,6 +31,8 @@ ActiveRecord::Schema.define(version: 20150224121512) do
     t.text     "preconditions"
     t.text     "comment"
     t.integer  "suite_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "components", force: true do |t|
@@ -47,19 +46,16 @@ ActiveRecord::Schema.define(version: 20150224121512) do
   end
 
   create_table "projects", force: true do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title"
   end
 
   create_table "suites", force: true do |t|
     t.string   "title"
-    t.datetime "datetime"
     t.string   "priority"
     t.string   "tags"
+    t.integer  "component_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "project_id"
   end
 
 end

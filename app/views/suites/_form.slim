@@ -21,6 +21,11 @@
         h4 align="right" Тэги:
       div.col-lg-9
         = f.text_field :tags, type: "text", class: "form-control", placeholder: "Укажите тэги для сценария, если они нужны"
+    div.row
+      div.col-lg-3
+        h4 align="right" Компонент:
+      div.col-lg-9
+        = f.select :component_id, @components.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
     = f.hidden_field :datetime, value: DateTime.now 
     div.row
       div.col-lg-8

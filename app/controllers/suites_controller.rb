@@ -15,10 +15,12 @@ class SuitesController < ApplicationController
   # GET /suites/new
   def new
     @suite = Suite.new
+    @components = Component.where(id: Project.where(id: CurrentState.first.project).first)
   end
 
   # GET /suites/1/edit
   def edit
+    @components = Component.where(id: Project.where(id: CurrentState.first.project).first)
   end
 
   # POST /suites
@@ -28,7 +30,7 @@ class SuitesController < ApplicationController
 
     respond_to do |format|
       if @suite.save
-        format.html { redirect_to @suite, notice: 'Suite was successfully created.' }
+        format.html { redirect_to @suite, notice: 'Тест-комплект успешно создан.' }
         format.json { render :show, status: :created, location: @suite }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class SuitesController < ApplicationController
   def update
     respond_to do |format|
       if @suite.update(suite_params)
-        format.html { redirect_to @suite, notice: 'Suite was successfully updated.' }
+        format.html { redirect_to @suite, notice: 'Тест-комплект успешно обновлен.' }
         format.json { render :show, status: :ok, location: @suite }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class SuitesController < ApplicationController
   def destroy
     @suite.destroy
     respond_to do |format|
-      format.html { redirect_to suites_url, notice: 'Suite was successfully destroyed.' }
+      format.html { redirect_to suites_url, notice: 'Тест-комплект успешно удален.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +71,6 @@ class SuitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def suite_params
-      params.require(:suite).permit(:title, :datetime, :priority, :tags)            
+      params.require(:suite).permit(:title, :priority, :tags, :component_id)            
     end
 end
