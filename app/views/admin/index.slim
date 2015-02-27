@@ -1,8 +1,9 @@
-div.row
+div.bord.row
   div.col-lg-3
     = link_to 'Добавить проект', new_project_path, class: "btn btn-default col-lg-12", style: "margin-bottom: 10px;"
     = link_to 'Добавить компонент', new_component_path, class: "btn btn-default col-lg-12", style: "margin-bottom: 10px;"
   div.col-lg-9
+    h3 Проекты
     table.table.table-condensed.table-hover
       thead
         tr
@@ -16,4 +17,19 @@ div.row
                 span.glyphicon.glyphicon-pencil
             td
               =link_to project_path(p), method: "delete"
+                span.glyphicon.glyphicon-remove
+    h3 Компоненты проекта "#{@project_state}"
+    table.table.table-condensed.table-hover
+      thead
+        tr
+          th Название компонента
+      tbody
+        - @components.each do |c|
+          tr
+            td = c.title
+            td              
+              =link_to edit_component_path(c)
+                span.glyphicon.glyphicon-pencil
+            td
+              =link_to component_path(c), method: "delete"
                 span.glyphicon.glyphicon-remove

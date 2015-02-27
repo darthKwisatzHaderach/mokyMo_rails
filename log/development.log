@@ -44764,3 +44764,1283 @@ Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 16:57:48 +050
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 16:57:48 +0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:17:18 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AdminController#index as HTML
+  [1m[35mCurrentState Load (0.1ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered admin/index.slim within layouts/application (17.5ms)
+  Rendered application/_top_menu.slim (26.8ms)
+  Rendered application/_project_modal.slim (11.4ms)
+Completed 200 OK in 170ms (Views: 144.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:17:19 +0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+Processing by AdminController#index as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components"  WHERE "components"."project_id" = 1
+  Rendered admin/index.slim within layouts/application (11.5ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (1.1ms)
+Completed 200 OK in 36ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:21:58 +0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+Processing by AdminController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components"  WHERE "components"."project_id" = 1
+  Rendered admin/index.slim within layouts/application (14.1ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:22:11 +0500
+
+
+Started GET "/components/1/edit" for 127.0.0.1 at 2015-02-27 17:22:20 +0500
+Processing by ComponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered components/_form.slim (7.8ms)
+  Rendered components/edit.slim within layouts/application (12.5ms)
+  Rendered application/_top_menu.slim (8.6ms)
+  Rendered application/_project_modal.slim (6.0ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:22:26 +0500
+Processing by AdminController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components"  WHERE "components"."project_id" = 1
+  Rendered admin/index.slim within layouts/application (19.6ms)
+  Rendered application/_top_menu.slim (0.3ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-27 17:22:33 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCase Load (0.3ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (15.1ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (1.0ms)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCase Load (0.1ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (5.5ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:22:52 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-27 17:22:56 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.1ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (25.4ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+Processing by SuitesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (6.4ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:10 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:23:11 +0500
+
+
+Started GET "/suites/new" for 127.0.0.1 at 2015-02-27 17:23:12 +0500
+Processing by SuitesController#new as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components"  WHERE "components"."project_id" = 1[0m
+  Rendered suites/_form.slim (9.7ms)
+  Rendered suites/new.slim within layouts/application (14.3ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-27 17:23:13 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (13.3ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-27 17:23:17 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCase Load (0.2ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (6.5ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (1.1ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cases/new" for 127.0.0.1 at 2015-02-27 17:23:18 +0500
+Processing by CasesController#new as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.1ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  Rendered cases/_form.slim (15.5ms)
+  Rendered cases/new.slim within layouts/application (21.8ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cases/new" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+Processing by CasesController#new as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.1ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered cases/_form.slim (10.6ms)
+  Rendered cases/new.slim within layouts/application (17.1ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:32 +0500
+
+
+Started GET "/cases/new" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+Processing by CasesController#new as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mSuite Load (0.2ms)[0m  [1mSELECT "suites".* FROM "suites"[0m
+  Rendered cases/_form.slim (1.8ms)
+  Rendered cases/new.slim within layouts/application (7.0ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:46 +0500
+
+
+Started GET "/cases/new" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+Processing by CasesController#new as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.1ms)[0m  SELECT "suites".* FROM "suites"
+  Rendered cases/_form.slim (1.8ms)
+  Rendered cases/new.slim within layouts/application (12.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:23:56 +0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:24:09 +0500
+Processing by AdminController#index as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components"  WHERE "components"."project_id" = 1
+  Rendered admin/index.slim within layouts/application (3.7ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:24:09 +0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-02-27 17:24:13 +0500
+Processing by AdminController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components"  WHERE "components"."project_id" = 1
+  Rendered admin/index.slim within layouts/application (4.3ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+Processing by CasesController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCase Load (0.2ms)[0m  [1mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.slim within layouts/application (1.2ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:24:16 +0500
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-27 17:24:18 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (1.9ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (1.0ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/suites" for 127.0.0.1 at 2015-02-27 17:24:50 +0500
+Processing by SuitesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mSuite Load (0.2ms)[0m  SELECT "suites".* FROM "suites"
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT  "components".* FROM "components"  WHERE "components"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered suites/index.slim within layouts/application (2.0ms)
+  Rendered application/_top_menu.slim (0.3ms)
+  Rendered application/_project_modal.slim (1.5ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+Processing by CasesController#index as HTML
+  [1m[35mCurrentState Load (0.2ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCase Load (0.2ms)[0m  SELECT "cases".* FROM "cases"
+  Rendered cases/index.slim within layouts/application (1.1ms)
+  Rendered application/_top_menu.slim (0.1ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2015-02-27 17:24:52 +0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 17:24:54 +0500
+Processing by MainController#index as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  Rendered main/index.slim within layouts/application (12.4ms)
+  Rendered application/_top_menu.slim (0.3ms)
+  Rendered application/_project_modal.slim (1.0ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 17:24:55 +0500
+Processing by MainController#index as HTML
+  [1m[36mCurrentState Load (0.1ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  Rendered main/index.slim within layouts/application (0.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.9ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+Processing by MainController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  Rendered main/index.slim within layouts/application (0.0ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+Processing by MainController#index as HTML
+  [1m[36mCurrentState Load (0.2ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = 1  ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "current_states".* FROM "current_states"   ORDER BY "current_states"."id" ASC LIMIT 1
+  Rendered main/index.slim within layouts/application (6.7ms)
+  Rendered application/_top_menu.slim (0.2ms)
+  Rendered application/_project_modal.slim (0.8ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/case_steps.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/cases.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/suites.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/bootstrap-treeview.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:56 +0500
+
+
+Started GET "/assets/case_steps.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/cases.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/column_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/modal.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/pie_chart.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/suites.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-27 17:24:57 +0500
