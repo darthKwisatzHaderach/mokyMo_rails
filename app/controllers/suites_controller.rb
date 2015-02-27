@@ -15,12 +15,12 @@ class SuitesController < ApplicationController
   # GET /suites/new
   def new
     @suite = Suite.new
-    @components = Component.where(id: Project.where(id: CurrentState.first.project).first)
+    @components = Component.where(project_id: Project.where(id: CurrentState.first.project).first)
   end
 
   # GET /suites/1/edit
   def edit
-    @components = Component.where(id: Project.where(id: CurrentState.first.project).first)
+    @components = Component.where(project_id: Project.where(id: CurrentState.first.project).first)
   end
 
   # POST /suites
