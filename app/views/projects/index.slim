@@ -6,7 +6,15 @@ div.bord.row
       thead
         tr
           th Название проекта
+          th
+          th
       tbody
         - @projects.each do |p|
           tr
             td = p.title
+            td              
+              =link_to edit_project_path(p)
+                span.glyphicon.glyphicon-pencil
+            td
+              =link_to project_path(p), method: "delete"
+                span.glyphicon.glyphicon-remove
