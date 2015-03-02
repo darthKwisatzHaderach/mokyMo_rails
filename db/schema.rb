@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 106) do
+ActiveRecord::Schema.define(version: 107) do
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(version: 106) do
     t.text     "test_data"
     t.text     "preconditions"
     t.text     "comment"
+    t.integer  "suite_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "check_lists", force: true do |t|
+    t.string   "title"
+    t.string   "priority"
+    t.integer  "planned_duration"
+    t.string   "tags"
+    t.text     "description"
     t.integer  "suite_id"
     t.datetime "created_at"
     t.datetime "updated_at"

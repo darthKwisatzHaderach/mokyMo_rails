@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'projects/list' => 'projects#list'
   get 'project/:id/components' => 'projects#components'
   resources :projects
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :current_state
   resources :components
+  resources :check_lists
 
   get '/cases/case_with_steps/:id' => 'cases#case_with_steps', :as => 'case_with_steps'
 
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'main#index'  
+  root 'main#index'
   get 'admin' => 'admin#index'
 
   # Example of regular route:

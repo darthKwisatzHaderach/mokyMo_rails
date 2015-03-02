@@ -1,0 +1,39 @@
+div.bord.row
+	h4#notice = notice
+    div.col-lg-12
+      div.row
+        div.col-lg-3
+          h4 align="right" Название:
+        div.col-lg-9
+          h4 = @check_list.title
+      div.row
+        div.col-lg-3
+          h4 align="right" Тест-комплект:
+        div.col-lg-9
+          h4 = @check_list.inspect
+      div.row
+        div.col-lg-3
+          h4 align="right" Приоритет:
+        div.col-lg-9
+          h4 = @check_list.priority
+      div.row
+        div.col-lg-3
+          h4 align="right" Планируемое время (мин):
+        div.col-lg-9
+          h4 = @check_list.planned_duration
+      div.row
+        div.col-lg-3
+          h4 align="right" Тэги:
+        div.col-lg-9
+          h4 = @check_list.tags      
+      div.row style="padding-bottom:5px"
+        div.col-lg-3
+          h4 align="right" Описание:
+        div.col-lg-9
+          h4 = @check_list.description      
+      div.row
+        div.col-lg-6
+        div.col-lg-2
+          = link_to 'Назад', check_lists_path, class: "btn btn-default col-lg-12"
+        div.col-lg-2
+          = link_to 'Редактировать', edit_check_list_path(@check_list), class: "btn btn-default col-lg-12"        

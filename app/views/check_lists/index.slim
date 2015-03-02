@@ -1,0 +1,20 @@
+div.bord.row
+  div.col-lg-3
+    = link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"
+  div.col-lg-9
+    table.table.table-condensed
+      thead
+        tr
+          th Название чек-листа
+          th Приоритет
+          th Время выполнения
+          th
+          th
+      tbody
+        - @check_lists.each do |c|
+          tr
+            td = c.title
+            td = c.priority
+            td = c.planned_duration
+            td = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
+            td = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}

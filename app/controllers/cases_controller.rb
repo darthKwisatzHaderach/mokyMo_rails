@@ -10,23 +10,23 @@ class CasesController < ApplicationController
   # GET /cases/1
   # GET /cases/1.json
   def show
-    @cases = Case.all    
+    @cases = Case.all
   end
 
-  def case_with_steps    
+  def case_with_steps
     @case = Case.where(:id => params[:id]).first
     @steps = CaseStep.where(:case_id => @case.id)
   end
 
   # GET /cases/new
-  def new    
-    @case = Case.new  
-    @suites_list = suites_list  
+  def new
+    @case = Case.new
+    @suites_list = suites_list
   end
 
   # GET /cases/1/edit
   def edit
-    @suites_list = suites_list  
+    @suites_list = suites_list
   end
 
   # POST /cases
