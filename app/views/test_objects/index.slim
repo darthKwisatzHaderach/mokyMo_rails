@@ -1,0 +1,21 @@
+div.bord.row
+  h3 align="center" style="margin-top: 0px;" Объекты тестирования
+  div.col-lg-3
+    = link_to 'Добавить объект тестирования', new_test_object_path, class: "btn btn-default col-lg-12"
+  div.col-lg-9
+    table.table.table-condensed
+      thead
+        tr
+          th Название объекта тестирования
+          th Версия
+          th Проект
+          th
+          th
+      tbody
+        - @test_objects.each do |c|
+          tr
+            td = c.name
+            td = c.version
+            td = c.project.title
+            td = link_to '', edit_test_object_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
+            td = link_to '', test_object_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить объект тестирования \"" + c.name + "\"?"}

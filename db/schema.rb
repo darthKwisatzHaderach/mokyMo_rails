@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 107) do
+ActiveRecord::Schema.define(version: 108) do
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -67,6 +67,12 @@ ActiveRecord::Schema.define(version: 107) do
     t.integer  "component_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "test_objects", force: true do |t|
+    t.string  "name"
+    t.string  "version"
+    t.integer "project_id"
   end
 
 end
