@@ -14,10 +14,10 @@ div.bord.row
             td = p.title
             td              
               =link_to edit_project_path(p)
-                span.glyphicon.glyphicon-pencil
+                span.glyphicon.glyphicon-pencil.edit-case
             td
               =link_to project_path(p), method: "delete"
-                span.glyphicon.glyphicon-remove
+                span.glyphicon.glyphicon-remove.edit-case
     h3 Компоненты проекта "#{@project_state}"
     table.table.table-condensed.table-hover
       thead
@@ -29,7 +29,7 @@ div.bord.row
             td = c.title
             td              
               =link_to edit_component_path(c)
-                span.glyphicon.glyphicon-pencil
+                span.glyphicon.glyphicon-pencil.edit-case
             td
               =link_to component_path(c), method: "delete"
-                span.glyphicon.glyphicon-remove
+                span.glyphicon.glyphicon-remove.edit-case

@@ -2,7 +2,7 @@ class CheckListsController < ApplicationController
   before_action :set_check_list, only: [:show, :edit, :update, :destroy]
 
   def index
-  	@check_lists = CheckList.all
+    @check_lists = CheckList.all
   end
 
   def show
@@ -11,11 +11,12 @@ class CheckListsController < ApplicationController
   # GET /projects/new
   def new
     @check_list = CheckList.new
-    @suites_list = suites_list
+    @suites_list = Suite.where(component_id: @component_state)
   end
 
   # GET /projects/1/edit
   def edit
+    @suites_list = Suite.where(component_id: @component_state)
   end
 
   # POST /projects
@@ -53,7 +54,7 @@ class CheckListsController < ApplicationController
   def destroy
     @check_list.destroy
     respond_to do |format|
-      format.html { redirect_to chek_lists_url, notice: 'Чек-лист успешно удален.' }
+      format.html { redirect_to check_lists_url, notice: 'Чек-лист успешно удален.' }
       format.json { head :no_content }
     end
   end
@@ -66,15 +67,6 @@ class CheckListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def check_list_params
-      params.require(:check_list).permit(:title)
-    end
-
-    def suites_list
-      suites_list = []
-      suites = Suite.all
-      suites.each do |suite|
-        suites_list << [suite.title, suite.id]
-      end
-      return suites_list
+      params.require(:check_list).permit(:title, :priority, :planned_duration, :tags, :description, :suite_id)
     end
 end

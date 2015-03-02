@@ -16,7 +16,7 @@ div.row
         div.col-lg-3
           h4 align="right" Тест-комплект:
         div.col-lg-9
-          = f.select :suite_id, @suites_list, {}, {class: "form-control"}      
+          = f.select :suite_id, @suites_list.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}      
       div.row
         div.col-lg-3
           h4 align="right" Приоритет:
