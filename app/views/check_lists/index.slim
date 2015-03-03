@@ -1,21 +1,26 @@
-div.bord.row
-  h3 align="center" style="margin-top: 0px;" Чек-листы
-  div.col-lg-3
-    = link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"
-  div.col-lg-9
-    table.table.table-condensed
-      thead
-        tr
-          th Название чек-листа
-          th Приоритет
-          th Время выполнения
-          th
-          th
-      tbody
-        - @check_lists.each do |c|
-          tr
-            td = c.title
-            td = c.priority
-            td = c.planned_duration
-            td = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
-            td = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}
+div.bord.row  
+  div.row
+    div.col-lg-10
+      h3 align="center" style="margin-top: 0px;" Чек-листы
+    div.col-lg-2
+      = link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"
+  div.row
+    div.col-lg-11
+      - @suites_list.each do |s|
+        h3 style="margin-left: 20px;" = s.title
+        table.table.table-condensed style="margin-left: 40px;"
+          thead
+            tr
+              th.col-lg-6 Название чек-листа
+              th.col-lg-2 Приоритет
+              th.col-lg-2 Время выполнения
+              th.col-lg-1
+              th.col-lg-1
+          tbody
+            - s.check_lists.each do |c|
+              tr
+                td = c.title
+                td = c.priority
+                td = c.planned_duration
+                td = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
+                td = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}
