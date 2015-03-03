@@ -1,21 +1,24 @@
-div.bord.row
-  h3 align="center" style="margin-top: 0px;" Тестовые сценарии
-  div.col-lg-3
-    = link_to 'Добавить тестовый сценарий', new_case_path, class: "btn btn-default col-lg-12"
-  div.col-lg-9
-    table.table.table-condensed.table-hover
-      thead
-        tr
-          th Название сценария
-          th Приоритет
-          th Время выполнения
-          th
-          th
-      tbody
-        - @cases.each do |c|
+div.bord.row  
+  div.row
+    div.col-lg-9
+      h3 align="center" style="margin-top: 0px;" Тестовые сценарии
+    div.col-lg-3
+      = link_to 'Добавить тестовый сценарий', new_case_path, class: "btn btn-default col-lg-12"
+  div.row    
+    div.col-lg-12
+      table.table.table-condensed.table-hover
+        thead
           tr
-            td = c.title
-            td = c.priority
-            td = c.planned_duration
-            td = link_to '', edit_case_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
-            td = link_to '', case_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить тестовый сценарий \"" + c.title + "\"?"}
+            th Название сценария
+            th Приоритет
+            th Время выполнения
+            th
+            th
+        tbody
+          - @cases.each do |c|
+            tr
+              td = c.title
+              td = c.priority
+              td = c.planned_duration
+              td = link_to '', edit_case_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
+              td = link_to '', case_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить тестовый сценарий \"" + c.title + "\"?"}
