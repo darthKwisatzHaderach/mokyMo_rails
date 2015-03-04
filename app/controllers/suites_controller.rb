@@ -4,7 +4,7 @@ class SuitesController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-    @suites = Suite.all
+    @suites = Suite.where(component_id: @component_state)
   end
 
   # GET /suites/1

@@ -21,7 +21,6 @@ div.bord-nontop.row
             th Название тест-комплекта
             th Приоритет
             th Время выполнения
-            th Компонент
             th
             th
         tbody
@@ -30,7 +29,6 @@ div.bord-nontop.row
               td = s.title
               td = s.priority
               td
-              td = s.component.title
               td              
                 = link_to edit_suite_path(s)
                   span.glyphicon.glyphicon-pencil.edit-case
