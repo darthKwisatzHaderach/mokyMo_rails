@@ -4,7 +4,7 @@ class TestObjectsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-    @test_objects = TestObject.all
+    @test_objects = TestObject.where(project_id: @current_state.project)
   end
 
   # GET /suites/1

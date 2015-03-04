@@ -1,21 +1,36 @@
-div.bord.row
-  h3 align="center" style="margin-top: 0px;" Объекты тестирования
-  div.col-lg-3
-    = link_to 'Добавить объект тестирования', new_test_object_path, class: "btn btn-default col-lg-12"
-  div.col-lg-9
-    table.table.table-condensed.table-hover
-      thead
-        tr
-          th Название объекта тестирования
-          th Версия
-          th Проект
-          th
-          th
-      tbody
-        - @test_objects.each do |c|
+div.row
+  ul.nav.nav-tabs
+    li.active role="presentation"
+      a href="#{test_objects_path}" Объекты тестирования
+    li role="presentation"
+      a href="#{components_path}" Компоненты
+    li role="presentation"
+      a href="#{projects_path}" Проеткы
+
+div.bord-nontop.row
+  div.row
+    div.col-lg-9
+      h3 align="center" style="margin-top: 0px;" Объекты тестирования
+    div.col-lg-3
+      = link_to 'Добавить объект тестирования', new_test_object_path, class: "btn btn-default col-lg-12"
+  div.row
+    div.col-lg-12
+      table.table.table-condensed.table-hover
+        thead
           tr
-            td = c.name
-            td = c.version
-            td = c.project.title
-            td = link_to '', edit_test_object_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
-            td = link_to '', test_object_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить объект тестирования \"" + c.name + "\"?"}
+            th Название объекта тестирования
+            th Версия
+            th Проект
+            th
+            th
+        tbody
+          - @test_objects.each do |c|
+            tr
+              td = c.name
+              td = c.version
+              td = c.project.title
+              td = link_to '', edit_test_object_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
+              td = link_to '', test_object_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить объект тестирования \"" + c.name + "\"?"}
+
+script
+  |$('a[href="/admin"]').parent().addClass('active');

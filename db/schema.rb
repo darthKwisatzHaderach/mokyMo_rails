@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 108) do
   end
 
   create_table "current_states", force: true do |t|
-    t.string "project"
-    t.string "component"
+    t.integer "project"
+    t.integer "component"
   end
 
   create_table "projects", force: true do |t|

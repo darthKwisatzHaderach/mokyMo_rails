@@ -2,7 +2,7 @@ class ComponentsController < ApplicationController
   before_action :set_component, only: [:show, :edit, :update, :destroy]
 
   def index
-    @component = Component.all
+    @components = Component.all
   end
 
   def show
