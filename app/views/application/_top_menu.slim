@@ -12,31 +12,10 @@ nav.navbar-inverse.navbar-default role="navigation"
       ul#navigation.nav.navbar-nav
         li
           a href="#{root_path}" Сводная информация
-        li.dropdown
-          a.dropdown-toggle href="#" data-toggle="dropdown"
-            |Документация 
-            b.caret
-          ul.dropdown-menu
-            li
-              a href="#" Требования
-            li
-              a href="#{suites_path}" Тест-комплекты
-            li
-              a href="#{cases_path}" Тестовые сценарии          
-            li
-              a href="#{check_lists_path}" Чек-листы   
-        li.dropdown
-          a.dropdown-toggle href="#" data-toggle="dropdown"
-            |Тестирование
-            b.caret
-          ul.dropdown-menu
-            li
-              a href="#{test_objects_path}" Объект тестирования
-            li
-              a href="#" Вид тестирования
-            li.divider
-            li
-              a href="#" Выполнение тестирования          
+        li
+          a href="/docs" Документация
+        li
+          a href="#" Тестирование
         li
           a href="#" Отчетность
         li

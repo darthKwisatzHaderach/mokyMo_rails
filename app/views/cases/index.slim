@@ -1,4 +1,13 @@
-div.bord.row  
+div.row
+  ul.nav.nav-tabs
+    li role="presentation"
+      a href="#{check_lists_path}" Чек-листы
+    li.active role="presentation"
+      a href="#{cases_path}" Тестовые сценарии
+    li role="presentation"
+      a href="#{suites_path}" Тест-комплекты
+
+div.bord-nontop.row
   div.row
     div.col-lg-9
       h3 align="center" style="margin-top: 0px;" Тестовые сценарии
@@ -20,3 +29,6 @@ div.bord.row
               td = c.priority
               td = link_to '', edit_case_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
               td = link_to '', case_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить тестовый сценарий \"" + c.title + "\"?"}
+
+script
+  |$('a[href="/docs"]').parent().addClass('active');

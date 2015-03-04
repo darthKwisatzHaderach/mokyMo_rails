@@ -1,4 +1,13 @@
-div.bord.row  
+div.row
+  ul.nav.nav-tabs
+    li role="presentation"
+      a href="#{check_lists_path}" Чек-листы
+    li role="presentation"
+      a href="#{cases_path}" Тестовые сценарии
+    li.active role="presentation"
+      a href="#{suites_path}" Тест-комплекты
+
+div.bord-nontop.row
   div.row
     div.col-lg-9
       h3 align="center" style="margin-top: 0px;" Тест-комплекты
@@ -28,3 +37,6 @@ div.bord.row
               td
                 = link_to suite_path(s), method: "delete"
                   span.glyphicon.glyphicon-remove.edit-case
+
+script
+  |$('a[href="/docs"]').parent().addClass('active');
