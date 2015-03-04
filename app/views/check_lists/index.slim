@@ -11,9 +11,8 @@ div.bord.row
         table.table.table-condensed.table-hover
           thead
             tr
-              th.col-lg-6 Название чек-листа
+              th.col-lg-8 Название чек-листа
               th.col-lg-2 Приоритет
-              th.col-lg-2 Время выполнения
               th.col-lg-1
               th.col-lg-1
           tbody
@@ -21,6 +20,5 @@ div.bord.row
               tr
                 td = c.title
                 td = c.priority
-                td = c.planned_duration
                 td = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
                 td = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}

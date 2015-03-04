@@ -11,7 +11,6 @@ div.bord.row
           tr
             th Название сценария
             th Приоритет
-            th Время выполнения
             th
             th
         tbody
@@ -19,6 +18,5 @@ div.bord.row
             tr
               td = c.title
               td = c.priority
-              td = c.planned_duration
               td = link_to '', edit_case_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
               td = link_to '', case_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить тестовый сценарий \"" + c.title + "\"?"}

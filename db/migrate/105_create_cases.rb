@@ -3,7 +3,6 @@ class CreateCases < ActiveRecord::Migration
     create_table :cases do |t|
       t.string :title
       t.string :priority
-      t.integer :planned_duration
       t.string :tags
       t.text :objective
       t.text :test_data

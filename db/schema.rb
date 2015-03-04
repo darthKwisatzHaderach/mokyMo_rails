@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 108) do
   create_table "cases", force: true do |t|
     t.string   "title"
     t.string   "priority"
-    t.integer  "planned_duration"
     t.string   "tags"
     t.text     "objective"
     t.text     "test_data"
@@ -38,7 +37,6 @@ ActiveRecord::Schema.define(version: 108) do
   create_table "check_lists", force: true do |t|
     t.string   "title"
     t.string   "priority"
-    t.integer  "planned_duration"
     t.string   "tags"
     t.text     "description"
     t.integer  "suite_id"

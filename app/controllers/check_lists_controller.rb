@@ -67,6 +67,6 @@ class CheckListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def check_list_params
-      params.require(:check_list).permit(:title, :priority, :planned_duration, :tags, :description, :suite_id)
+      params.require(:check_list).permit(:title, :priority, :tags, :description, :suite_id)
     end
 end

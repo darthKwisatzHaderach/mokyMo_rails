@@ -3,7 +3,6 @@ class CreateCheckLists < ActiveRecord::Migration
     create_table :check_lists do |t|
       t.string :title
       t.string :priority
-      t.integer :planned_duration
       t.string :tags
       t.text :description
       t.belongs_to :suite
