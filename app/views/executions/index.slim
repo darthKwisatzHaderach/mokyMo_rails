@@ -1,0 +1,30 @@
+div.bord.row
+  div.row
+    div.col-lg-9
+      h3 align="center" style="margin-top: 0px;" Тестирования
+    div.col-lg-3
+      = link_to 'Добавить тестирование', new_execution_path, class: "btn btn-default col-lg-12", style: "margin-bottom: 10px;"
+  div.row
+    div.col-lg-12
+      table.table.table-condensed.table-hover
+        thead
+          tr
+            th Объект тестирования
+            th Версия
+            th Тип
+            th Статус
+            th
+            th
+        tbody
+          - @executions.each do |e|
+            tr
+              td = e.test_object.name
+              td = e.test_object.version
+              td = e.execution_types.name
+              td = e.status
+              td              
+                =link_to edit_component_path(e)
+                  span.glyphicon.glyphicon-pencil.edit-case
+              td
+                =link_to component_path(e), method: "delete"
+                  span.glyphicon.glyphicon-remove.edit-case

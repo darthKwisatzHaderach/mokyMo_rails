@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 111) do
   create_table "executions", force: true do |t|
     t.integer  "test_object_id"
     t.integer  "execution_types_id"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

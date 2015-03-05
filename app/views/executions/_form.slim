@@ -15,7 +15,7 @@
       div.col-lg-3
         h4 align="right" Тип:
       div.col-lg-9
-        = f.select :type, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
+        = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
     div.row
       div.col-lg-8
       div.col-lg-2

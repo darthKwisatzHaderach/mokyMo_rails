@@ -4,11 +4,14 @@ class ExecutionsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
+  	@executions = Execution.all
   end
 
   # GET /suites/1
   # GET /suites/1.json
   def show
+  	@types = ExecutionTypes.all
+    @test_objects = TestObject.where(project_id: @current_state.project)
   end
 
   # GET /suites/new
@@ -42,7 +45,7 @@ class ExecutionsController < ApplicationController
   # PATCH/PUT /suites/1.json
   def update
     respond_to do |format|
-      if @execution.update(test_object_params)
+      if @execution.update(execution_params)
         format.html { redirect_to @execution, notice: 'Тестирование успешно обновлено.' }
         format.json { render :show, status: :ok, location: @execution }
       else
@@ -69,7 +72,7 @@ class ExecutionsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def executions_params
-      params.require(:execution).permit(:test_object_id, :type)
+    def execution_params
+      params.require(:execution).permit(:test_object_id, :execution_types_id)
     end
 end
