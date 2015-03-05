@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 108) do
+ActiveRecord::Schema.define(version: 111) do
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -54,8 +54,28 @@ ActiveRecord::Schema.define(version: 108) do
     t.integer "component"
   end
 
+  create_table "execution_types", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "executions", force: true do |t|
+    t.integer  "test_object_id"
+    t.integer  "execution_types_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", force: true do |t|
     t.string "title"
+  end
+
+  create_table "results", force: true do |t|
+    t.boolean  "results"
+    t.text     "comment"
+    t.integer  "execution_id"
+    t.integer  "check_list_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "suites", force: true do |t|

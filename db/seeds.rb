@@ -100,3 +100,8 @@ CheckList.create(id: 5, title: "Авторизация", priority: "high", tags:
 CheckList.create(id: 6, title: "Загрузка файла", priority: "normal", tags: "rest", description: "Заходим на главную страницу, нажимаем кнопку 'Загрузить'. Начинается загрузка файла.", suite_id: 2)
 CheckList.create(id: 7, title: "Регистрация заявления", priority: "normal", tags: "rest", description: "Открываем форму регистрации заявления, заполняем все поля и нажимаем 'Сохранить'. Заявление создано.", suite_id: 3)
 CheckList.create(id: 8, title: "Удаление заявления", priority: "normal", tags: "rest", description: "Нажимаем 'x' рядом с заявлением. Заявление удален.", suite_id: 3)
+
+ExecutionTypes.create(id: 1, name: "Регрессионное тестирование")
+ExecutionTypes.create(id: 2, name: "Полное функциональное тестирование")
+ExecutionTypes.create(id: 3, name: "Smoke тестирование")
+ExecutionTypes.create(id: 4, name: "Нагрузочное тестирование")
