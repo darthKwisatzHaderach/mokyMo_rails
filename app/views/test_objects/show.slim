@@ -1,0 +1,24 @@
+div.bord.row
+	h4#notice = notice
+    div.col-lg-12
+      div.row
+        div.col-lg-3
+          h4 align="right" Название объекта тестирования:
+        div.col-lg-9
+          h4 = @test_object.name
+      div.row
+        div.col-lg-3
+          h4 align="right" Версия:
+        div.col-lg-9
+          h4 = @test_object.version
+      div.row
+        div.col-lg-3
+          h4 align="right" Проект:
+        div.col-lg-9
+          h4 = @test_object.project.title
+      div.row
+        div.col-lg-8
+        div.col-lg-2
+          = link_to 'Тест-комплекты', "/admin", class: "btn btn-default col-lg-12"
+        div.col-lg-2
+          = link_to 'Редактировать', edit_test_object_path(@test_object), class: "btn btn-default col-lg-12"

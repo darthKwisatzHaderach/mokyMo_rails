@@ -1,0 +1,29 @@
+= form_for(@test_object) do |f|
+  - if @test_object.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@test_object.errors.count, "error")} prohibited this test_object from being saved:
+      ul
+      - @test_object.errors.full_messages.each do |message|
+        li = message
+  div.col-lg-12
+    div.row
+      div.col-lg-4
+        h4 align="right" Название объекта тестирования:
+      div.col-lg-8
+        = f.text_field :name, type: "text", class: "form-control", placeholder: "Название объекта тестирования"
+    div.row
+      div.col-lg-4
+        h4 align="right" Версия:
+      div.col-lg-8
+        = f.text_field :version, type: "text", class: "form-control", placeholder: "Версия продукта"
+    div.row
+      div.col-lg-4
+        h4 align="right" Проект:
+      div.col-lg-8
+        = f.select :project_id, @projects.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
+    div.row
+      div.col-lg-8
+      div.col-lg-2
+        = link_to 'Назад', "/admin", class: "btn btn-default col-lg-12"
+      div.col-lg-2
+        = f.submit 'Сохранить', class: "btn btn-success col-lg-12"

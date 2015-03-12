@@ -15,10 +15,12 @@ class TestObjectsController < ApplicationController
   # GET /suites/new
   def new
     @test_object = TestObject.new
+    @projects = Project.all
   end
 
   # GET /suites/1/edit
   def edit
+    @projects = Project.all
   end
 
   # POST /suites
@@ -69,6 +71,6 @@ class TestObjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def test_object_params
-      params.require(:test_object).permit(:title, :version, :project_id)            
+      params.require(:test_object).permit(:name, :version, :project_id)
     end
 end
