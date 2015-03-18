@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :check_lists
   resources :test_objects
   resources :executions
+  resources :reports
 
   get '/cases/case_with_steps/:id' => 'cases#case_with_steps', :as => 'case_with_steps'
 
