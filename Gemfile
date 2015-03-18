@@ -32,6 +32,7 @@ gem 'slim'
 # gem 'bcrypt', '~> 3.1.7'
 # PDF Generator
 gem 'prawn'
+gem 'prawn-table'
 # Use unicorn as the app server
 # gem 'unicorn'
 

@@ -1,7 +1,9 @@
 #encoding: utf-8
+require 'prawn/table'
 
 class ReportsController < ApplicationController
-  def show  	
+  def show
+  	array = [["Название", "Описание"]]
     @check_lists = CheckList.all
     respond_to do |format|
       format.html
@@ -9,10 +11,9 @@ class ReportsController < ApplicationController
         pdf = Prawn::Document.new
           @check_lists.each do |list|
           	pdf.font "/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf"
-          	pdf.text "#{list.title}".encode('utf-8')          	
-          	pdf.text "#{list.description}".encode('utf-8')
-          	pdf.text " "
-          end
+          	array << ["#{list.title}", "#{list.description}"]
+          end        
+        pdf.table(array)
         send_data pdf.render, filename: "list.pdf", type: "application/pdf", disposition: "inline"
       end
     end
