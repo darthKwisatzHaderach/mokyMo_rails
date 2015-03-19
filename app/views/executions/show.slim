@@ -1,3 +1,45 @@
 div.bord.row
-  h2 Тестирование
-  = render 'form'
+  h3 Тестирование
+  div.col-lg-12
+    div.row
+      div.col-lg-3
+        h4 align="right" Объект тестирования:
+      div.col-lg-9
+        h4 = @execution.test_object.name
+    div.row
+      div.col-lg-3
+        h4 align="right" Версия:
+      div.col-lg-9
+        h4 = @execution.test_object.version
+    div.row
+      div.col-lg-3
+        h4 align="right" Тип:
+      div.col-lg-9
+        h4 = @execution.execution_types.name
+
+  h3 Сценарии
+  div.col-lg-12
+    - @execution.test_object.project.components.each do |component|
+      - component.suites.each do |s|
+        h3 = s.title
+        table.table.table-condensed.table-hover
+          thead
+            tr
+              th.col-lg-8 Название чек-листа
+              th.col-lg-2 Приоритет
+              th.col-lg-2 Результат
+          tbody
+            - s.check_lists.each do |c|
+              tr
+                td = c.title
+                td = c.priority
+                td  
+                  div.checkbox style="margin: 0px"
+				    label
+				      input id="#{s.id}#{c.id}" type="checkbox" Выполнен
+
+script
+	|$("tr").click(function() {
+	|    var checkbox = $(this).find("input[type='checkbox']");
+	|    checkbox.attr('checked', !checkbox.attr('checked'));
+	|});

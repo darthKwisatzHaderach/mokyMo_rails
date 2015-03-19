@@ -16,15 +16,15 @@ div.bord.row
             th
             th
         tbody
-          - @executions.each do |e|
-            tr
-              td = e.test_object.name
-              td = e.test_object.version
-              td = e.execution_types.name
-              td = e.status
-              td              
-                =link_to edit_component_path(e)
-                  span.glyphicon.glyphicon-pencil.edit-case
-              td
-                =link_to component_path(e), method: "delete"
-                  span.glyphicon.glyphicon-remove.edit-case
+          - @executions.each do |e|            
+              tr onclick="window.document.location='#{execution_path(e)}';"
+                td = e.test_object.name
+                td = e.test_object.version
+                td = e.execution_types.name
+                td = e.status
+                td              
+                  =link_to edit_component_path(e)
+                    span.glyphicon.glyphicon-pencil.edit-case
+                td
+                  =link_to component_path(e), method: "delete"
+                    span.glyphicon.glyphicon-remove.edit-case

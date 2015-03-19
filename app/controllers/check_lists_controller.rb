@@ -1,7 +1,7 @@
 class CheckListsController < ApplicationController
   before_action :set_check_list, only: [:show, :edit, :update, :destroy]
 
-  def index    
+  def index
     @suites_list = Suite.where(component_id: @component_state)
   end
 

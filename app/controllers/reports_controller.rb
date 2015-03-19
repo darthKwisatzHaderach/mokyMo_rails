@@ -1,5 +1,4 @@
 #encoding: utf-8
-require 'prawn/table'
 
 class ReportsController < ApplicationController
   def show
@@ -14,6 +13,7 @@ class ReportsController < ApplicationController
           	pdf.font "/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf"
           	array << ["#{index+1}", "#{list.title}", "#{list.description}", "#{list.suite.title}", "#{list.priority}"]
           end        
+        pdf.text "#{@project_state}: чек-листы", align: :center, size: 16        
         pdf.table(array, :column_widths => [25, 100, 230, 120, 65])
         send_data pdf.render, filename: "list.pdf", type: "application/pdf", disposition: "inline"
       end
