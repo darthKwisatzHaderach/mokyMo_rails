@@ -22,16 +22,18 @@ div.bord.row
     - @execution.test_object.project.components.each do |component|
       - component.suites.each do |s|
         h3 = s.title
-        table.table.table-condensed.table-hover
+        table.table.table-bordered.table-hover
           thead
             tr
-              th.col-lg-8 Название чек-листа
-              th.col-lg-2 Приоритет
-              th.col-lg-2 Результат
+              th.col-lg-3 Название чек-листа
+              th.col-lg-7 Описание
+              th.col-lg-1 Приоритет
+              th.col-lg-1 Результат
           tbody
             - s.check_lists.each do |c|
               tr
                 td = c.title
+                td = c.description
                 td = c.priority
                 td  
                   div.checkbox style="margin: 0px"
