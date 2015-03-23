@@ -20,11 +20,13 @@
       div.col-lg-3
         h4 align="right" Чек-листы:
       div.col-lg-9
-        = f.fields_for :results, @execution.results.build do |result|          
+        ul style="list-style-type: none;"
           - @component.suites.each do |s|
             - s.check_lists.each do |l|
-              = result.label :title, l.title
-              = result.check_box :check_list_id, {:multiple => true}, "#{l.id}", nil
+              = f.fields_for :results, @execution.results.build do |result|                      
+                li
+                  = result.check_box :check_list_id, {:multiple => true}, "#{l.id}", nil
+                  = result.label :title, l.title                  
     div.row
       div.col-lg-8
       div.col-lg-2
