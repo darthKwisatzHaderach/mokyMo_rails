@@ -74,6 +74,6 @@ class ExecutionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def execution_params
-      params.require(:execution).permit(:test_object_id, :execution_types_id, results_attributes: [:check_list_id])
+      params.require(:execution).permit(:test_object_id, :execution_types_id, results_attributes: [:check_list])
     end
 end
