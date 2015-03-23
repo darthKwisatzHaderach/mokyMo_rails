@@ -19,12 +19,6 @@ class ExecutionsController < ApplicationController
     @execution = Execution.new
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
-    @suites = Suite.where(component_id: @current_state.component)
-    puts @suites[0].id
-    @check_lists = []
-    @suites.each do |suite|
-      @check_lists << CheckList.where(suite_id: suite.id)
-    end
     @component = Component.find_by(id: @current_state.component)
   end
 

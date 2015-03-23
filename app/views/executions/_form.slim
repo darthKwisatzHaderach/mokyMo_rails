@@ -20,12 +20,11 @@
       div.col-lg-3
         h4 align="right" Чек-листы:
       div.col-lg-9
-        = f.fields_for :results do |result|
-          = @component.suites.each do |s|
-            = s.check_lists.each do |l|
-              = label :title, l.title
-              = check_box("eula", "accepted", { class: 'eula_check' }, "#{l.id}", "no")
-              //= check_box_tag :check_list_ids, l.id
+        = f.fields_for :results, @execution.results.build do |result|          
+          - @component.suites.each do |s|
+            - s.check_lists.each do |l|
+              = result.label :title, l.title
+              = result.check_box :check_list_id, {:multiple => true}, "#{l.id}", nil
     div.row
       div.col-lg-8
       div.col-lg-2
