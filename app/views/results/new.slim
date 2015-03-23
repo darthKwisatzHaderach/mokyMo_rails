@@ -1,0 +1,24 @@
+= form_for(@result) do |f|
+  - if @result.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@result.errors.count, "error")} prohibited this result from being saved:
+      ul
+      - @result.errors.full_messages.each do |message|
+        li = message
+  div.col-lg-12
+    div.row
+      div.col-lg-3
+        h4 align="right" Объект тестирования:
+      div.col-lg-9
+        = f.select :test_object_id, @test_objects.all.collect {|t| [ "#{t.name}: версия #{t.version}", t.id ]}, {}, {class: "form-control"}
+    div.row
+      div.col-lg-3
+        h4 align="right" Тип:
+      div.col-lg-9
+        = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
+    div.row
+      div.col-lg-8
+      div.col-lg-2
+        = link_to 'Назад', executions_path, class: "btn btn-default col-lg-12"
+      div.col-lg-2
+        = f.submit 'Сохранить', class: "btn btn-success col-lg-12"

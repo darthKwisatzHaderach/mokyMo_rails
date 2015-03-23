@@ -17,6 +17,16 @@
       div.col-lg-9
         = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
     div.row
+      div.col-lg-3
+        h4 align="right" Чек-листы:
+      div.col-lg-9
+        = f.fields_for :results do |result|
+          = @component.suites.each do |s|
+            = s.check_lists.each do |l|
+              = label :title, l.title
+              = check_box("eula", "accepted", { class: 'eula_check' }, "#{l.id}", "no")
+              //= check_box_tag :check_list_ids, l.id
+    div.row
       div.col-lg-8
       div.col-lg-2
         = link_to 'Назад', executions_path, class: "btn btn-default col-lg-12"

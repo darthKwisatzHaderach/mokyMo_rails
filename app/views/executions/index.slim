@@ -23,8 +23,8 @@ div.bord.row
                 td = e.execution_types.name
                 td = e.status
                 td              
-                  =link_to edit_component_path(e)
+                  =link_to edit_execution_path(e)
                     span.glyphicon.glyphicon-pencil.edit-case
                 td
-                  =link_to component_path(e), method: "delete"
+                  =link_to execution_path(e), method: "delete"
                     span.glyphicon.glyphicon-remove.edit-case
