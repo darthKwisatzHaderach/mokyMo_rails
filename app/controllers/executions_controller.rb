@@ -16,8 +16,7 @@ class ExecutionsController < ApplicationController
 
   # GET /suites/new
   def new
-    @execution = Execution.new
-    @execution.results.build
+    @execution = Execution.new    
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
     @component = Component.find_by(id: @current_state.component)

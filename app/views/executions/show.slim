@@ -17,29 +17,32 @@ div.bord.row
       div.col-lg-9
         h4 = @execution.execution_types.name
 
-  h3 Сценарии
-  div.col-lg-12
-    - @execution.test_object.project.components.each do |component|
-      - component.suites.each do |s|
-        h3 = s.title
-        table.table.table-bordered.table-hover
-          thead
-            tr
-              th.col-lg-3 Название чек-листа
-              th.col-lg-7 Описание
-              th.col-lg-1 Приоритет
-              th.col-lg-1 Результат
-          tbody
-            - s.check_lists.each do |c|
+  = form_for(@execution) do |f|      
+    h3 Сценарии
+    div.col-lg-12
+      - @execution.test_object.project.components.each do |component|
+        - component.suites.each do |s|
+          h3 = s.title
+          table.table.table-bordered.table-hover
+            thead
               tr
-                td = c.title
-                td = c.description
-                td = c.priority
-                td  
-                  div.checkbox style="margin: 0px"
-				    label
-				      input id="#{c.id}" type="checkbox" Выполнен
-
+                th.col-lg-3 Название чек-листа
+                th.col-lg-6 Описание
+                th.col-lg-1 Приоритет
+                th.col-lg-2 Результат
+            tbody
+              - s.check_lists.each do |c|
+                tr
+                  td = c.title
+                  td = c.description
+                  td = c.priority
+                  td                                  
+                    = f.fields_for :results, Result.where(check_list_id: c.id, execution_id: @execution.id) do |result|
+                      = result.hidden_field :results, value: false
+                      = result.check_box :results, {style: "float: left; margin-right: 2px;"}, true, false                
+                      div Выполнен
+  				      /input id="#{c.id}" type="checkbox" Выполнен
+    = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
 script
 	|$("tr").click(function() {
 	|    var checkbox = $(this).find("input[type='checkbox']");
