@@ -17,6 +17,7 @@ class ExecutionsController < ApplicationController
   # GET /suites/new
   def new
     @execution = Execution.new
+    @execution.results.build
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
     @component = Component.find_by(id: @current_state.component)
@@ -74,6 +75,6 @@ class ExecutionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def execution_params
-      params.require(:execution).permit(:test_object_id, :execution_types_id, results_attributes: [:check_list])
+      params.require(:execution).permit!#(:test_object_id, :execution_types_id, results_attributes: [:id, :_destroy, :check_list_id])
     end
 end

@@ -17,16 +17,15 @@
       div.col-lg-9
         = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
     div.row
-      div.col-lg-3
-        h4 align="right" Чек-листы:
-      div.col-lg-9
-        ul style="list-style-type: none;"
-          - @component.suites.each do |s|
+      div.col-lg-12
+        h4 align="center" Список чек-листов для выполнения        
+        - @component.suites.each do |s|            
+          h4 = s.title
+          div style="padding-left: 25px;"
             - s.check_lists.each do |l|
-              = f.fields_for :results, @execution.results.build do |result|                      
-                li
-                  = result.check_box :check_list_id, {:multiple => true}, "#{l.id}", nil
-                  = result.label :title, l.title                  
+              = f.fields_for :results, @execution.results.build(check_list: l) do |result|                                      
+                = result.check_box :check_list_id, {multiple: true, style: "float: left; margin-right: 2px;"}, "#{l.id}", nil
+                div = l.title                                
     div.row
       div.col-lg-8
       div.col-lg-2
