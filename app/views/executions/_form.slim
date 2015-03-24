@@ -24,8 +24,9 @@
           div style="padding-left: 25px;"
             - s.check_lists.each do |l|
               = f.fields_for :results, @execution.results.build(check_list: l) do |result|                                      
-                = result.check_box :check_list_id, {multiple: true, style: "float: left; margin-right: 2px;"}, "#{l.id}", nil
-                div = l.title                                
+                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil
+                //= result.text_field :check_list_id, type: "text", class: "form-control"
+                div = l.title                
     div.row
       div.col-lg-8
       div.col-lg-2
