@@ -7,6 +7,20 @@ class ResultsController < ApplicationController
   	@results = Result.all
   end
 
+  def results_by_versions
+    test_objects = TestObject.where(project_id: @current_state.project)
+    results = []
+    test_objects.each do |t|
+      t.executions.each do |e|        
+        pass = e.results.select{|item| item[:results] == true}.count
+        fail = e.results.select{|item| item[:results] == false}.count
+        result = ["#{t.version}", pass, fail]
+        results << result
+      end
+    end    
+    render json: results
+  end
+
   # GET /suites/1
   # GET /suites/1.json
   def show

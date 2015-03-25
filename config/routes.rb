@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get 'admin' => 'admin#index'
   get 'docs' => 'check_lists#index'
 
+  get 'results-by-versions' => 'results#results_by_versions'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
