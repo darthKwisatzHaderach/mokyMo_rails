@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'docs' => 'check_lists#index'
 
   get 'results-by-versions' => 'results#results_by_versions'
+  get 'last-execution' => 'results#last_execution'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

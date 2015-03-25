@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 111) do
 
   create_table "results", force: true do |t|
     t.boolean  "results"
+    t.boolean  "implemented"
     t.text     "comment"
     t.integer  "execution_id"
     t.integer  "check_list_id"

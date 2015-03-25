@@ -14,11 +14,23 @@ class ResultsController < ApplicationController
       t.executions.each do |e|        
         pass = e.results.select{|item| item[:results] == true}.count
         fail = e.results.select{|item| item[:results] == false}.count
-        result = ["#{t.version}", pass, fail]
+        not_implemented = e.results.select{|item| item[:implemented] == false}.count
+        result = ["#{t.version}", pass, fail, not_implemented]
         results << result
       end
-    end    
+    end
     render json: results
+  end
+
+  def last_execution
+    test_objects = TestObject.where(project_id: @current_state.project)
+    test_object = test_objects.last
+    execution = test_objects.last.executions.last
+    pass = execution.results.select{|item| item[:results] == true}.count
+    fail = execution.results.select{|item| item[:results] == false}.count
+    not_implemented = e.results.select{|item| item[:implemented] == false}.count
+    result = ["#{test_object.version}", pass, fail, not_implemented]
+    render json: result
   end
 
   # GET /suites/1

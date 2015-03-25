@@ -39,12 +39,15 @@ div.bord.row
                   td                                  
                     = f.fields_for :results, Result.where(check_list_id: c.id, execution_id: @execution.id) do |result|
                       = result.hidden_field :results, value: false
-                      = result.check_box :results, {style: "float: left; margin-right: 2px;"}, true, false                
+                      = result.hidden_field :implemented, value: true
+                      = result.check_box :results, {style: "float: left; margin-right: 2px;"}, true, false
                       div Выполнен
+                      = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
+                      div Не запускался
   				      /input id="#{c.id}" type="checkbox" Выполнен
     = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
-script
-	|$("tr").click(function() {
-	|    var checkbox = $(this).find("input[type='checkbox']");
-	|    checkbox.attr('checked', !checkbox.attr('checked'));
-	|});
+//script
+//	|$("tr").click(function() {
+//	|    var checkbox = $(this).find("input[type='checkbox']");
+//	|    checkbox.attr('checked', !checkbox.attr('checked'));
+//	|});

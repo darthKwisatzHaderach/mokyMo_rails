@@ -4,9 +4,9 @@ $.ajax({
         dataType: 'json',
         success: function (versions) {                        
             var data = [];  
-            data[0] = ['Версия', 'Выполнено', 'Провалено'];                      
+            data[0] = ['Версия', 'Выполнено', 'Провалено', 'Не выполнялось'];                      
             versions.forEach(function (version) {
-                data.push([version[0], version[1], version[2]]);
+                data.push([version[0], version[1], version[2], version[3]]);
             });                                    
             google.load("visualization", "1", {packages:["corechart"]});
               google.setOnLoadCallback(drawChart);
