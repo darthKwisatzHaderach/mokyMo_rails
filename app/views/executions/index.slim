@@ -21,7 +21,12 @@ div.bord.row
                 td = e.test_object.name
                 td = e.test_object.version
                 td = e.execution_types.name
-                td = e.status
+                - if e.results.select{|item| item[:implemented] == nil}.count > 1
+                  td 
+                    span.label.label-default Не выполнялось
+                - else
+                  td 
+                    span.label.label-success Выполнено
                 td              
                   =link_to edit_execution_path(e)
                     span.glyphicon.glyphicon-pencil.edit-case

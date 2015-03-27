@@ -11,7 +11,7 @@ class ResultsController < ApplicationController
     test_objects = TestObject.where(project_id: @current_state.project)
     results = []
     test_objects.each do |t|
-      t.executions.each do |e|        
+      t.executions.each do |e|
         pass = e.results.select{|item| item[:results] == true}.count
         fail = e.results.select{|item| item[:results] == false}.count
         not_implemented = e.results.select{|item| item[:implemented] == false}.count
@@ -24,12 +24,12 @@ class ResultsController < ApplicationController
 
   def last_execution
     test_objects = TestObject.where(project_id: @current_state.project)
-    test_object = test_objects.last
-    execution = test_objects.last.executions.last
+    test_object = test_objects.last    
+    execution = test_object.executions.last    
     pass = execution.results.select{|item| item[:results] == true}.count
     fail = execution.results.select{|item| item[:results] == false}.count
-    not_implemented = e.results.select{|item| item[:implemented] == false}.count
-    result = ["#{test_object.version}", pass, fail, not_implemented]
+    not_implemented = execution.results.select{|item| item[:implemented] == false}.count
+    result = [['Выполнено', pass], ["Не выполнено", fail], ["Не запускалось", not_implemented]]
     render json: result
   end
 
