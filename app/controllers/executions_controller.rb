@@ -4,7 +4,7 @@ class ExecutionsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-  	@executions = Execution.all
+  	@executions = Execution.all.order('created_at DESC')
   end
 
   # GET /suites/1
@@ -33,7 +33,7 @@ class ExecutionsController < ApplicationController
 
     respond_to do |format|
       if @execution.save
-        format.html { redirect_to @execution, notice: 'Тестирование успешно создано.' }
+        format.html { redirect_to executions_path, notice: 'Тестирование успешно создано.' }
         format.json { render :show, status: :created, location: @execution }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class ExecutionsController < ApplicationController
   def update
     respond_to do |format|
       if @execution.update(execution_params)
-        format.html { redirect_to @execution, notice: 'Тестирование успешно обновлено.' }
+        format.html { redirect_to result_path(@execution.id), notice: 'Тестирование успешно обновлено.' }
         format.json { render :show, status: :ok, location: @execution }
       else
         format.html { render :edit }

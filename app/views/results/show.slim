@@ -1,0 +1,39 @@
+div.bord.row
+  h3 Тестирование
+  div.col-lg-12
+    div.row
+      div.col-lg-3
+        h4 align="right" Объект тестирования:
+      div.col-lg-9
+        h4 = @execution.test_object.name
+    div.row
+      div.col-lg-3
+        h4 align="right" Версия:
+      div.col-lg-9
+        h4 = @execution.test_object.version
+    div.row
+      div.col-lg-3
+        h4 align="right" Тип:
+      div.col-lg-9
+        h4 = @execution.execution_types.name
+
+  
+    h3 Сценарии
+    div.col-lg-12
+      table.table.table-bordered.table-hover
+        thead
+          tr
+            th.col-lg-3 Название чек-листа
+            th.col-lg-6 Описание
+            th.col-lg-1 Приоритет
+            th.col-lg-2 Результат
+        tbody
+          - @execution.results.each do |r|          	
+            tr
+              td = r.check_list.title
+              td = r.check_list.description
+              td = r.check_list.priority
+              - if r.results == true
+                td Выполнен
+              - else
+                td.danger Провален

@@ -38,6 +38,7 @@ class ResultsController < ApplicationController
   def show
   	@types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
+    @execution = Execution.find_by_id(params[:id])
   end
 
   # GET /suites/new
