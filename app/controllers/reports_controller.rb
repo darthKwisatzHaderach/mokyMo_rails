@@ -19,4 +19,8 @@ class ReportsController < ApplicationController
       end
     end
   end
+
+  def index
+    @executions = Execution.all.order('created_at DESC')
+  end
 end

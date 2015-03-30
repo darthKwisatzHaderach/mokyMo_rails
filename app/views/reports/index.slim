@@ -1,5 +1,38 @@
 div.bord.row
-	div.col-lg-6
-		h4 Экспортировать чек-листы
-	div.col-lg-6
-		= link_to("Экспорт", "/reports/check-lists.pdf", {class: "btn btn-default col-lg-12"})
+  div.col-lg-6
+	h4 Экспортировать чек-листы
+  div.col-lg-6
+	= link_to("Экспорт", "/reports/check-lists.pdf", {class: "btn btn-default col-lg-12"})
+
+p
+p
+  div.row  	
+    div.col-lg-12
+      h3 align="center" style="margin-top: 0px;" Тестирования
+      table.table.table-condensed.table-hover
+        thead
+          tr
+            th Объект тестирования
+            th Версия
+            th Тип
+            th Статус
+            th
+            th
+        tbody
+          - @executions.each do |e|            
+              tr onclick="window.document.location='#{result_path(e.id)}';"
+                td = e.test_object.name
+                td = e.test_object.version
+                td = e.execution_types.name
+                - if e.results.select{|item| item[:implemented] == nil}.count > 1
+                  td 
+                    span.label.label-default Не выполнялось
+                - else
+                  td 
+                    span.label.label-success Выполнено
+                td              
+                  =link_to edit_execution_path(e)
+                    span.glyphicon.glyphicon-pencil.edit-case
+                td
+                  =link_to execution_path(e), method: "delete"
+                    span.glyphicon.glyphicon-remove.edit-case

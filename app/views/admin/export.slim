@@ -1,0 +1,19 @@
+div.row
+  ul.nav.nav-tabs
+    li role="presentation"
+      a href="#{test_objects_path}" Объекты тестирования
+    li role="presentation"
+      a href="#{components_path}" Компоненты
+    li role="presentation"
+      a href="#{projects_path}" Проеткы
+    li.active role="presentation"
+      a href="/admin/export" Экспорт
+
+div.bord-nontop.row
+  div.col-lg-6
+	h4 Экспортировать чек-листы
+  div.col-lg-6
+	= link_to("Экспорт", "/reports/check-lists.pdf", {class: "btn btn-default col-lg-12"})
+
+script
+  |$('a[href="/admin"]').parent().addClass('active');

@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   resources :executions
   resources :reports
   resources :results
-  get "/reports/check-lists.pdf" => "reports#show"
+  get '/reports/check-lists.pdf' => 'reports#show'
 
   get '/cases/case_with_steps/:id' => 'cases#case_with_steps', :as => 'case_with_steps'
+
+  get '/admin/export' => 'admin#export'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
