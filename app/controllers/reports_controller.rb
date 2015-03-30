@@ -23,4 +23,22 @@ class ReportsController < ApplicationController
   def index
     @executions = Execution.all.order('created_at DESC')
   end
+
+  def execution
+    array = [["№", "Название", "Описание", "Комплект", "Приоритет"]]
+    @execution = Execution.find_by_id(params[:id])    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = Prawn::Document.new
+          @execution.results.each_with_index do |r, index|
+            pdf.font "/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf"
+            array << ["#{index+1}", "#{r.title}", "#{r.description}", "#{r.suite.title}", "#{r.priority}"]
+          end        
+        pdf.text "#{@project_state}: чек-листы", align: :center, size: 16        
+        pdf.table(array, :column_widths => [25, 100, 230, 120, 65])
+        send_data pdf.render, filename: "r.pdf", type: "application/pdf", disposition: "inline"
+      end
+    end
+  end
 end
