@@ -4,7 +4,7 @@ class ResultsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-  	@results = Result.all
+    @results = Result.all
   end
 
   def results_by_versions
@@ -12,9 +12,9 @@ class ResultsController < ApplicationController
     results = []
     test_objects.each do |t|
       t.executions.each do |e|
-        pass = e.results.select{|item| item[:results] == true}.count
-        fail = e.results.select{|item| item[:results] == false}.count
-        not_implemented = e.results.select{|item| item[:implemented] == false}.count
+        pass = e.results.select { |item| item[:results] == true }.count
+        fail = e.results.select { |item| item[:results] == false }.count
+        not_implemented = e.results.select { |item| item[:implemented] == false }.count
         result = ["#{t.version}", pass, fail, not_implemented]
         results << result
       end
@@ -23,32 +23,56 @@ class ResultsController < ApplicationController
   end
 
   def last_execution
-    test_objects = TestObject.where(project_id: @current_state.project)
-    test_object = test_objects.last    
-    execution = test_object.executions.last    
-    pass = execution.results.select{|item| item[:results] == true}.count
-    fail = execution.results.select{|item| item[:results] == false}.count
-    not_implemented = execution.results.select{|item| item[:implemented] == false}.count
-    result = [['Выполнено', pass], ["Не выполнено", fail], ["Не запускалось", not_implemented]]
+    test_object = TestObject.where(project_id: @current_state.project).last
+    execution = test_object.executions.last
+    r = execution.results
+    pass = r.select { |item| item[:results] == true }.count
+    fail = r.select { |item| item[:results] == false }.count
+    not_implemented = r.select { |item| item[:implemented] == false }.count
+    result = [
+      ['Выполнено', pass],
+      ['Не выполнено', fail],
+      ['Не запускалось', not_implemented]
+    ]
     render json: result
   end
 
   # GET /suites/1
   # GET /suites/1.json
   def show
-    @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)
     @execution = Execution.find_by_id(params[:id])
-    array = [['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат']]
-    @execution = Execution.find_by_id(params[:id])
+    r = @execution.results
+    array = [
+      ['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат']
+    ]
+    pass = r.select { |item| item[:results] == true }.count
+    fail = r.select { |item| item[:results] == false }.count
+    not_implemented = r.select { |item| item[:implemented] == false }.count
     respond_to do |format|
       format.html
       format.pdf do
         pdf = Prawn::Document.new(page_layout: :landscape)
-        @execution.results.each_with_index do |r, index|
+        r.each_with_index do |result, index|
+          if result.results == true
+            res = 'Выполнен'
+          else
+            res = 'Провален'
+          end
           pdf.font '/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf'
-          array << ["#{index+1}", "#{r.check_list.title}", "#{r.check_list.description}", "#{r.check_list.suite.title}", "#{r.check_list.priority}", "#{r.results}"]
+          array << [
+            "#{index + 1}",
+            "#{result.check_list.title}",
+            "#{result.check_list.description}",
+            "#{result.check_list.suite.title}",
+            "#{result.check_list.priority}",
+            "#{res}"
+          ]
         end
+        pdf.text 'Отчет о тестировании', align: :center, size: 16        
+        pdf.text "Выполнены успешно: #{pass}"
+        pdf.text "Провалены: #{fail}"
+        pdf.text "Не запускались: #{not_implemented}"
+        pdf.text "Всего: #{pass + fail}"
         pdf.text "#{@project_state}: чек-листы", align: :center, size: 16
         pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
         send_data pdf.render, filename: 'r.pdf', type: 'application/pdf', disposition: 'inline'
