@@ -26,10 +26,11 @@ div.bord.row
           table.table.table-bordered.table-hover
             thead
               tr
-                th.col-lg-3 Название чек-листа
-                th.col-lg-6 Описание
+                th.col-lg-2 Название чек-листа
+                th.col-lg-5 Описание
                 th.col-lg-1 Приоритет
                 th.col-lg-2 Результат
+                th.col-lg-2 Комментарий
             tbody
               - s.check_lists.each do |c|
                 tr
@@ -44,6 +45,7 @@ div.bord.row
                       div Выполнен
                       = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
                       div Не запускался
+                      td = result.text_area :comment, type: "text", class: "form-control", row: 2
   	h3 align="center" Результат тестирования
     div.col-lg-12
       = f.text_area :comment, type: "text", class: "form-control", rows: 10

@@ -36,9 +36,24 @@ class ResultsController < ApplicationController
   # GET /suites/1
   # GET /suites/1.json
   def show
-  	@types = ExecutionTypes.all
+    @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
     @execution = Execution.find_by_id(params[:id])
+    array = [['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат']]
+    @execution = Execution.find_by_id(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = Prawn::Document.new(page_layout: :landscape)
+        @execution.results.each_with_index do |r, index|
+          pdf.font '/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf'
+          array << ["#{index+1}", "#{r.check_list.title}", "#{r.check_list.description}", "#{r.check_list.suite.title}", "#{r.check_list.priority}", "#{r.results}"]
+        end
+        pdf.text "#{@project_state}: чек-листы", align: :center, size: 16
+        pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
+        send_data pdf.render, filename: 'r.pdf', type: 'application/pdf', disposition: 'inline'
+      end
+    end
   end
 
   # GET /suites/new
