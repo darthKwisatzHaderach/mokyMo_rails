@@ -44,8 +44,11 @@ div.bord.row
                       div Выполнен
                       = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
                       div Не запускался
-  				      /input id="#{c.id}" type="checkbox" Выполнен
-    = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
+  	h3 align="center" Результат тестирования
+    div.col-lg-12
+      = f.text_area :comment, type: "text", class: "form-control", rows: 10
+    div.col-lg-12 style="padding-top: 20px;"
+      = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
 //script
 //	|$("tr").click(function() {
 //	|    var checkbox = $(this).find("input[type='checkbox']");

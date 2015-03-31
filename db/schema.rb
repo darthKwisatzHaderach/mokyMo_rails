@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 111) do
     t.integer  "test_object_id"
     t.integer  "execution_types_id"
     t.string   "status"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

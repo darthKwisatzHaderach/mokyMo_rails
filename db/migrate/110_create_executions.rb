@@ -4,6 +4,7 @@ class CreateExecutions < ActiveRecord::Migration
       t.belongs_to :test_object
       t.belongs_to :execution_types
       t.string :status
+      t.text :comment
       t.timestamps
     end
   end

@@ -17,7 +17,7 @@ Component.create(id: 3, title: "Мобильное приложение", projec
 CurrentState.create(id: 1, project: 1, component: 1)
 
 TestObject.create(id: 1, name: "Реестр структур ЭД", version: "24.11", project_id: 1)
-TestObject.create(id: 2, name: "арм Администратора", version: "1.33.11", project_id: 1)
+TestObject.create(id: 2, name: "АРМ Администратора", version: "1.33.11", project_id: 1)
 TestObject.create(id: 3, name: "Мобильный каталог", version: "0.4.2", project_id: 1)
 
 Suite.create(id: 1, title: "Переход на главную страницу", priority: "Высокий", component_id: 1)
