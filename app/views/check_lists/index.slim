@@ -12,23 +12,29 @@ div.bord-nontop.row
     div.col-lg-2
       = link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"
   div.row
-    div.col-lg-12
-      - @suites_list.each do |s|
-        h3 = s.title
-        table.table.table-condensed.table-hover
-          thead
-            tr
-              th.col-lg-8 Название чек-листа
-              th.col-lg-2 Приоритет
-              th.col-lg-1
-              th.col-lg-1
-          tbody
-            - s.check_lists.each do |c|
+    div.col-lg-12      
+      table.table.table-condensed.table-hover
+        thead
+          tr
+            th.col-lg-1 №
+            th.col-lg-5 Название чек-листа
+            th.col-lg-3 Комплект
+            th.col-lg-2 Приоритет            
+            th.col-lg-1
+        tbody
+          - count = 0 
+          - @suites_list.each do |s|                                
+            - s.check_lists.each_with_index do |c, index|
               tr
+                td = (count + index)
                 td = c.title
+                td = s.title
                 td = c.priority
-                td = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
-                td = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}
+                td 
+                  = link_to '', edit_check_list_path(c.id), class: "glyphicon glyphicon-pencil edit-case", style: "padding-right: 30px;"                  
+                  = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}            
+
+            - count = count + s.check_lists.count
 
 script
   |$('a[href="/docs"]').parent().addClass('active');
