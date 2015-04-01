@@ -12,9 +12,10 @@ class ResultsController < ApplicationController
     results = []
     test_objects.each do |t|
       t.executions.each do |e|
-        pass = e.results.select { |item| item[:results] == true }.count
-        fail = e.results.select { |item| item[:results] == false }.count
-        not_implemented = e.results.select { |item| item[:implemented] == false }.count
+        r = e.results
+        pass = r.select { |item| item[:results] == true }.count
+        fail = r.select { |item| item[:results] == false }.count
+        not_implemented = r.select { |item| item[:implemented] == false }.count
         result = ["#{t.version}", pass, fail, not_implemented]
         results << result
       end
@@ -58,7 +59,8 @@ class ResultsController < ApplicationController
           else
             res = 'Провален'
           end
-          pdf.font '/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf'
+          font = '/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf'
+          pdf.font font
           array << [
             "#{index + 1}",
             "#{result.check_list.title}",
@@ -68,14 +70,30 @@ class ResultsController < ApplicationController
             "#{res}"
           ]
         end
-        pdf.text 'Отчет о тестировании', align: :center, size: 16        
-        pdf.text "Выполнены успешно: #{pass}"
-        pdf.text "Провалены: #{fail}"
-        pdf.text "Не запускались: #{not_implemented}"
-        pdf.text "Всего: #{pass + fail}"
-        pdf.text "#{@project_state}: чек-листы", align: :center, size: 16
+        pdf.text 'Отчет о тестировании', align: :center, size: 20
+        pdf.table([
+          ["Объект тестирования:", "#{@execution.test_object.name}", '', "Выполнены успешно:", "#{pass}"],
+          ["Версия:", "#{@execution.test_object.version}", '', "Провалены:", "#{fail}"],
+          ["Проект:", "#{@execution.test_object.project.title}", '', "Не запускались:", "#{not_implemented}"],
+          ["Дата:", "#{r[0].created_at}", '', "Всего:", "#{pass + fail}"]
+          ], column_widths: [140, 180, 180, 150, 50], cell_style: {border_width: 0})
+        pdf.text ' '
+        pdf.text "Список чек-листов", align: :center, size: 16
         pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
-        send_data pdf.render, filename: 'r.pdf', type: 'application/pdf', disposition: 'inline'
+=begin
+        do |variable|
+          values = cells.columns(1..-1).rows(1..-1)
+          bad_sales = values.filter do |cell|
+            cell.content.to_i < 40
+          end
+          bad_sales.background_color = 'FFAAAA'
+          good_sales = values.filter do |cell|
+            cell.content.to_i > 70
+          end
+          good_sales.background_color = 'AAFFAA'
+        end
+=end
+        send_data pdf.render, filename: "#{@execution.test_object.name} - #{@execution.test_object.version}. Результат тестирования.pdf", type: 'application/pdf', disposition: 'inline'
       end
     end
   end
