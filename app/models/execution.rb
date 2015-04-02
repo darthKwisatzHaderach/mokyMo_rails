@@ -1,6 +1,7 @@
 class Execution < ActiveRecord::Base
-  belongs_to :execution_types
-  belongs_to :test_object
+  acts_as_paranoid
+  belongs_to :execution_types, -> { with_deleted }
+  belongs_to :test_object, -> { with_deleted }
   has_many :results
   has_many :check_lists, through: :results
   accepts_nested_attributes_for :results

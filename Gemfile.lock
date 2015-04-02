@@ -38,8 +38,12 @@ GEM
     coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.1.0)
+    foreigner (1.7.4)
+      activerecord (>= 3.0.0)
     hike (1.2.3)
     i18n (0.6.9)
+    immigrant (0.3.1)
+      activerecord (>= 3.0)
     jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -54,6 +58,8 @@ GEM
     mime-types (1.25.1)
     minitest (5.3.4)
     multi_json (1.10.1)
+    paranoia (2.1.1)
+      activerecord (~> 4.0)
     pdf-core (0.5.1)
     polyglot (0.3.5)
     prawn (2.0.0)
@@ -129,8 +135,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  foreigner
+  immigrant
   jbuilder (~> 2.0)
   jquery-rails
+  paranoia (~> 2.0)
   prawn
   prawn-table
   rails (= 4.1.1)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 111) do
+ActiveRecord::Schema.define(version: 113) do
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -42,12 +42,18 @@ ActiveRecord::Schema.define(version: 111) do
     t.integer  "suite_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
+  add_index "check_lists", ["deleted_at"], name: "index_check_lists_on_deleted_at"
+
   create_table "components", force: true do |t|
-    t.string  "title"
-    t.integer "project_id"
+    t.string   "title"
+    t.integer  "project_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "components", ["deleted_at"], name: "index_components_on_deleted_at"
 
   create_table "current_states", force: true do |t|
     t.integer "project"
@@ -65,11 +71,17 @@ ActiveRecord::Schema.define(version: 111) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
+  add_index "executions", ["deleted_at"], name: "index_executions_on_deleted_at"
+
   create_table "projects", force: true do |t|
-    t.string "title"
+    t.string   "title"
+    t.datetime "deleted_at"
   end
+
+  add_index "projects", ["deleted_at"], name: "index_projects_on_deleted_at"
 
   create_table "results", force: true do |t|
     t.boolean  "results"
@@ -79,7 +91,10 @@ ActiveRecord::Schema.define(version: 111) do
     t.integer  "check_list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "results", ["deleted_at"], name: "index_results_on_deleted_at"
 
   create_table "suites", force: true do |t|
     t.string   "title"
@@ -88,12 +103,18 @@ ActiveRecord::Schema.define(version: 111) do
     t.integer  "component_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
+  add_index "suites", ["deleted_at"], name: "index_suites_on_deleted_at"
+
   create_table "test_objects", force: true do |t|
-    t.string  "name"
-    t.string  "version"
-    t.integer "project_id"
+    t.string   "name"
+    t.string   "version"
+    t.integer  "project_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "test_objects", ["deleted_at"], name: "index_test_objects_on_deleted_at"
 
 end

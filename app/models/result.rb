@@ -1,5 +1,6 @@
 class Result < ActiveRecord::Base
-  belongs_to :execution
-  belongs_to :check_list
+  acts_as_paranoid
+  belongs_to :execution, -> { with_deleted }
+  belongs_to :check_list, -> { with_deleted }
   accepts_nested_attributes_for :check_list
 end
