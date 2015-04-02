@@ -4,19 +4,19 @@ class ExecutionsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-  	@executions = Execution.all.order('created_at DESC')
+    @executions = Execution.all.order('created_at DESC')
   end
 
   # GET /suites/1
   # GET /suites/1.json
   def show
-  	@types = ExecutionTypes.all
+    @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
   end
 
   # GET /suites/new
   def new
-    @execution = Execution.new    
+    @execution = Execution.new
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
     @component = Component.find_by(id: @current_state.component)
@@ -24,6 +24,9 @@ class ExecutionsController < ApplicationController
 
   # GET /suites/1/edit
   def edit
+    @types = ExecutionTypes.all
+    @test_objects = TestObject.where(project_id: @current_state.project)
+    @component = Component.find_by(id: @current_state.component)
   end
 
   # POST /suites
@@ -47,7 +50,7 @@ class ExecutionsController < ApplicationController
   def update
     respond_to do |format|
       if @execution.update(execution_params)
-        format.html { redirect_to result_path(@execution.id), notice: 'Тестирование успешно обновлено.' }
+        format.html { redirect_to executions_path, notice: 'Тестирование успешно обновлено.' }
         format.json { render :show, status: :ok, location: @execution }
       else
         format.html { render :edit }

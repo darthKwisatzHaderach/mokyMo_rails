@@ -14,5 +14,7 @@ class AddDeletedAt < ActiveRecord::Migration
     add_index :results, :deleted_at
     add_column :executions, :deleted_at, :datetime
     add_index :executions, :deleted_at
+    add_column :execution_types, :deleted_at, :datetime
+    add_index :execution_types, :deleted_at
   end
 end

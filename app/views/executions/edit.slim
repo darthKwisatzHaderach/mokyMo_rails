@@ -1,0 +1,37 @@
+div.bord.row
+  h2 Редактирование
+  = form_for(@execution) do |f|
+	  - if @execution.errors.any?
+	    div#error_explanation
+	      h2 #{pluralize(@execution.errors.count, "error")} prohibited this execution from being saved:
+	      ul
+	      - @execution.errors.full_messages.each do |message|
+	        li = message
+	  div.col-lg-12
+	    div.row
+	      div.col-lg-3
+	        h4 align="right" Объект тестирования:
+	      div.col-lg-9
+	        = f.select :test_object_id, @test_objects.all.collect {|t| [ "#{t.name}: версия #{t.version}", t.id ]}, {}, {class: "form-control"}
+	    div.row
+	      div.col-lg-3
+	        h4 align="right" Тип:
+	      div.col-lg-9
+	        = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
+	    div.row
+	      div.col-lg-12
+	        h4 align="center" Список чек-листов для выполнения        
+	        - @component.suites.each do |s|            
+	          h4 = s.title
+	          div style="padding-left: 25px;"
+	            - s.check_lists.each do |l|
+	              = f.fields_for :results, @execution.results.where(check_list: l).first do |result|
+	              	/= result.hidden_field :deleted_at, value: DateTime.now
+	                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil                
+	                div = l.title                
+	    div.row
+	      div.col-lg-8
+	      div.col-lg-2
+	        = link_to 'Назад', executions_path, class: "btn btn-default col-lg-12"
+	      div.col-lg-2
+	        = f.submit 'Сохранить', class: "btn btn-success col-lg-12"

@@ -61,8 +61,11 @@ ActiveRecord::Schema.define(version: 113) do
   end
 
   create_table "execution_types", force: true do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "deleted_at"
   end
+
+  add_index "execution_types", ["deleted_at"], name: "index_execution_types_on_deleted_at"
 
   create_table "executions", force: true do |t|
     t.integer  "test_object_id"
