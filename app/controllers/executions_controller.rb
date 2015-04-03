@@ -11,7 +11,7 @@ class ExecutionsController < ApplicationController
   # GET /suites/1.json
   def show
     @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)
+    @test_objects = TestObject.where(project_id: @current_state.project)    
   end
 
   # GET /suites/new
@@ -19,14 +19,14 @@ class ExecutionsController < ApplicationController
     @execution = Execution.new
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
-    @component = Component.find_by(id: @current_state.component)
+    @component = Component.find_by(id: @current_state.component)    
   end
 
   # GET /suites/1/edit
   def edit
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
-    @component = Component.find_by(id: @current_state.component)
+    @component = Component.find_by(id: @current_state.component)    
   end
 
   # POST /suites
@@ -47,7 +47,7 @@ class ExecutionsController < ApplicationController
 
   # PATCH/PUT /suites/1
   # PATCH/PUT /suites/1.json
-  def update
+  def update    
     respond_to do |format|
       if @execution.update(execution_params)
         format.html { redirect_to executions_path, notice: 'Тестирование успешно обновлено.' }
@@ -56,6 +56,9 @@ class ExecutionsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @execution.errors, status: :unprocessable_entity }
       end
+    end
+    Result.where(check_list_id: 0).each do |r|
+      r.really_destroy!
     end
   end
 

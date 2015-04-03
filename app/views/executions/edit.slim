@@ -27,7 +27,7 @@ div.bord.row
 	            - s.check_lists.each do |l|
 	              = f.fields_for :results, @execution.results.where(check_list: l).first do |result|
 	              	/= result.hidden_field :deleted_at, value: DateTime.now
-	                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil                
+	                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", 0
 	                div = l.title                
 	    div.row
 	      div.col-lg-8
