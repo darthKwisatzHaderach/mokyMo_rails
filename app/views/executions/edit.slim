@@ -21,14 +21,11 @@ div.bord.row
 	    div.row
 	      div.col-lg-12
 	        h4 align="center" Список чек-листов для выполнения        
-	        - @component.suites.each do |s|            
-	          h4 = s.title
-	          div style="padding-left: 25px;"
-	            - s.check_lists.each do |l|
-	              = f.fields_for :results, @execution.results.where(check_list: l).first do |result|
-	              	/= result.hidden_field :deleted_at, value: DateTime.now
-	                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", 0
-	                div = l.title                
+	        - @execution.results.each do |r|            	          
+	          div style="padding-left: 25px;"	            
+	            = f.fields_for :results, r do |result|	              	
+	              = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{r.check_list.id}", 0
+	              div = r.check_list.title                
 	    div.row
 	      div.col-lg-8
 	      div.col-lg-2
