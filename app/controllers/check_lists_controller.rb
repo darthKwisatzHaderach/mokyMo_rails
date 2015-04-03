@@ -2,7 +2,7 @@ class CheckListsController < ApplicationController
   before_action :set_check_list, only: [:show, :edit, :update, :destroy]
 
   def index
-    @suites_list = Suite.where(component_id: @component_state)
+    @suites_list = Suite.where(component_id: @current_state.component.id)
   end
 
   def show
@@ -11,12 +11,12 @@ class CheckListsController < ApplicationController
   # GET /projects/new
   def new
     @check_list = CheckList.new
-    @suites_list = Suite.where(component_id: @component_state)
+    @suites_list = Suite.where(component_id: @current_state.component.id)
   end
 
   # GET /projects/1/edit
   def edit
-    @suites_list = Suite.where(component_id: @component_state)
+    @suites_list = Suite.where(component_id: @current_state.component.id)
   end
 
   # POST /projects

@@ -51,6 +51,6 @@ class CurrentStateController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def current_state_params
-      params.require(:current_state).permit(:project, :component)            
+      params.require(:current_state).permit(:project_id, :component_id)
     end
 end

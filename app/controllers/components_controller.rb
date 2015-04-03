@@ -2,7 +2,7 @@ class ComponentsController < ApplicationController
   before_action :set_component, only: [:show, :edit, :update, :destroy]
 
   def index
-    @components = Component.all
+    @components = Component.where(project_id: @current_state.project)
   end
 
   def show

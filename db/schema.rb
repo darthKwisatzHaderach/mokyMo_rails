@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 113) do
   add_index "components", ["deleted_at"], name: "index_components_on_deleted_at"
 
   create_table "current_states", force: true do |t|
-    t.integer "project"
-    t.integer "component"
+    t.integer "project_id"
+    t.integer "component_id"
   end
 
   create_table "execution_types", force: true do |t|

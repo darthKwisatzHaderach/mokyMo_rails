@@ -8,17 +8,27 @@
 
 Project.create(id: 1, title: 'Реестр структур ЭД')
 Project.create(id: 2, title: 'АС ЭК')
-Project.create(id: 3, title: 'Мобильный каталог')
 
 Component.create(id: 1, title: 'Web-приложение', project_id: 1)
-Component.create(id: 2, title: 'Desktop-приложение', project_id: 2)
-Component.create(id: 3, title: 'Мобильное приложение', project_id: 3)
+Component.create(id: 2, title: 'АРМ члена Коллегии', project_id: 2)
+Component.create(id: 3, title: 'АРМ презентации', project_id: 2)
+Component.create(id: 4, title: 'АРМ управления заседанием', project_id: 2)
+Component.create(id: 5, title: 'АРМ Администратора', project_id: 2)
+Component.create(id: 6, title: 'АРМ Руководителя', project_id: 2)
 
-CurrentState.create(id: 1, project: 1, component: 1)
+CurrentState.create(id: 1, project_id: 1, component_id: 1)
 
 TestObject.create(id: 1, name: 'Реестр структур ЭД', version: '24.11', project_id: 1)
-TestObject.create(id: 2, name: 'АРМ Администратора', version: '1.33.11', project_id: 1)
-TestObject.create(id: 3, name: 'Мобильный каталог', version: '0.4.2', project_id: 1)
+TestObject.create(id: 2, name: 'АРМ члена Коллегии', version: '1.33.16', project_id: 2)
+TestObject.create(id: 3, name: 'АРМ презентации', version: '1.33.16', project_id: 2)
+TestObject.create(id: 4, name: 'АРМ управления заседанием', version: '1.33.16', project_id: 2)
+TestObject.create(id: 5, name: 'АРМ Администратора', version: '1.33.16', project_id: 2)
+TestObject.create(id: 6, name: 'АРМ Руководителя', version: '1.33.16', project_id: 2)
+TestObject.create(id: 7, name: 'АРМ члена Коллегии', version: '1.33.17', project_id: 2)
+TestObject.create(id: 8, name: 'АРМ презентации', version: '1.33.17', project_id: 2)
+TestObject.create(id: 9, name: 'АРМ управления заседанием', version: '1.33.17', project_id: 2)
+TestObject.create(id: 10, name: 'АРМ Администратора', version: '1.33.17', project_id: 2)
+TestObject.create(id: 11, name: 'АРМ Руководителя', version: '1.33.17', project_id: 2)
 
 Suite.create(id: 1, title: 'Переход на главную страницу', priority: 'Высокий', component_id: 1)
 Suite.create(id: 2, title: 'Открытие карточки СЭД', priority: 'Высокий', component_id: 1)
