@@ -11,7 +11,7 @@ class ExecutionsController < ApplicationController
   # GET /suites/1.json
   def show
     @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)    
+    @test_objects = TestObject.where(project_id: @current_state.project)
   end
 
   # GET /suites/new
@@ -19,21 +19,20 @@ class ExecutionsController < ApplicationController
     @execution = Execution.new
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
-    @component = Component.find_by(id: @current_state.component)    
+    @component = Component.find_by(id: @current_state.component)
   end
 
   # GET /suites/1/edit
   def edit
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(project_id: @current_state.project)
-    @component = Component.find_by(id: @current_state.component)    
+    @component = Component.find_by(id: @current_state.component)
   end
 
   # POST /suites
   # POST /suites.json
   def create
     @execution = Execution.new(execution_params)
-
     respond_to do |format|
       if @execution.save
         format.html { redirect_to executions_path, notice: 'Тестирование успешно создано.' }
@@ -47,7 +46,7 @@ class ExecutionsController < ApplicationController
 
   # PATCH/PUT /suites/1
   # PATCH/PUT /suites/1.json
-  def update    
+  def update
     respond_to do |format|
       if @execution.update(execution_params)
         format.html { redirect_to executions_path, notice: 'Тестирование успешно обновлено.' }
@@ -73,13 +72,14 @@ class ExecutionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_execution
-      @execution = Execution.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def execution_params
-      params.require(:execution).permit!#(:test_object_id, :execution_types_id, results_attributes: [:id, :_destroy, :check_list_id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_execution
+    @execution = Execution.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def execution_params
+    params.require(:execution).permit!#(:test_object_id, :execution_types_id, results_attributes: [:id, :_destroy, :check_list_id])
+  end
 end

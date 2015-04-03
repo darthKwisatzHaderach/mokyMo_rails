@@ -2,7 +2,7 @@ class CurrentStateController < ApplicationController
   before_action :set_current_state, only: [:show, :edit, :update, :destroy]
 
   def show
-  	@current_state = CurrentState.first
+    @current_state = CurrentState.first
   end
 
   def create
@@ -44,13 +44,14 @@ class CurrentStateController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_current_state
-      @current_state = CurrentState.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def current_state_params
-      params.require(:current_state).permit(:project_id, :component_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_current_state
+    @current_state = CurrentState.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def current_state_params
+    params.require(:current_state).permit(:project_id, :component_id)
+  end
 end

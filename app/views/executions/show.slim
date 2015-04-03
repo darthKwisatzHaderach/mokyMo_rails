@@ -35,7 +35,7 @@ div.bord.row
               td = r.check_list.description
               td = r.check_list.priority
               td                                  
-                = f.fields_for :results, Result.where(check_list_id: r.id, execution_id: @execution.id) do |result|
+                = f.fields_for :results, Result.where(check_list_id: r.check_list.id, execution_id: @execution.id) do |result|
                   = result.hidden_field :results, value: false
                   = result.hidden_field :implemented, value: true
                   = result.check_box :results, {style: "float: left; margin-right: 2px;"}, true, false

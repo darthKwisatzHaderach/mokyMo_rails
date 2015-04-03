@@ -14,12 +14,12 @@ class CaseStepsController < ApplicationController
 
   # GET /case_steps/new
   def new
-    @case_step = CaseStep.new()
+    @case_step = CaseStep.new
   end
 
   # GET /case_steps/1/edit
   def edit
-    @steps = CaseStep.where(:id => params[:id])
+    @steps = CaseStep.where(id: params[:id])
   end
 
   # POST /case_steps
@@ -63,13 +63,14 @@ class CaseStepsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_case_step
-      @case_step = CaseStep.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def case_step_params
-      params.require(:case_step).permit(:step, :step_result, :case_id)      
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_case_step
+    @case_step = CaseStep.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def case_step_params
+    params.require(:case_step).permit(:step, :step_result, :case_id)
+  end
 end

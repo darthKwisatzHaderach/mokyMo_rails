@@ -4,7 +4,7 @@ class SuitesController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-    @suites = Suite.where(component_id: @component_state)
+    @suites = Suite.where(component_id: @current_state.component)
   end
 
   # GET /suites/1
@@ -15,12 +15,12 @@ class SuitesController < ApplicationController
   # GET /suites/new
   def new
     @suite = Suite.new
-    @components = Component.where(project_id: Project.where(id: CurrentState.first.project).first)
+    @components = Component.where(project_id: @current_state.project)
   end
 
   # GET /suites/1/edit
   def edit
-    @components = Component.where(project_id: Project.where(id: CurrentState.first.project).first)
+    @components = Component.where(project_id: @current_state.project)
   end
 
   # POST /suites
@@ -64,13 +64,14 @@ class SuitesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_suite
-      @suite = Suite.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def suite_params
-      params.require(:suite).permit(:title, :priority, :tags, :component_id)            
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_suite
+    @suite = Suite.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def suite_params
+    params.require(:suite).permit(:title, :priority, :tags, :component_id)
+  end
 end

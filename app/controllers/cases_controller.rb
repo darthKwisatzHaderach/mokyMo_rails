@@ -14,8 +14,8 @@ class CasesController < ApplicationController
   end
 
   def case_with_steps
-    @case = Case.where(:id => params[:id]).first
-    @steps = CaseStep.where(:case_id => @case.id)
+    @case = Case.where(id: params[:id]).first
+    @steps = CaseStep.where(case_id: @case.id)
   end
 
   # GET /cases/new
@@ -70,22 +70,31 @@ class CasesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_case
-      @case = Case.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def case_params
-      params.require(:case).permit(:title, :priority, :tags, :objective, :test_data, :preconditions, :comment, :suite_id)      
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_case
+    @case = Case.find(params[:id])
+  end
 
-    def suites_list
-      suites_list = []
-      suites = Suite.all
-      suites.each do |suite|
-        suites_list << [suite.title, suite.id]
-      end
-      return suites_list
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def case_params
+    params.require(:case).permit(
+      :title,
+      :priority,
+      :tags,
+      :objective,
+      :test_data,
+      :preconditions,
+      :comment,
+      :suite_id)
+  end
+
+  def suites_list
+    suites_list = []
+    suites = Suite.all
+    suites.each do |suite|
+      suites_list << [suite.title, suite.id]
     end
+    suites_list
+  end
 end

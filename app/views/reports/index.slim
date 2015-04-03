@@ -9,8 +9,8 @@ div.bord.row
             th Версия
             th Тип
             th Статус
-            th
-            th
+            /th
+            /th
         tbody
           - @executions.each do |e|            
               tr onclick="window.document.location='#{result_path(e.id)}';"
@@ -23,9 +23,9 @@ div.bord.row
                 - else
                   td 
                     span.label.label-success Выполнено
-                td              
-                  =link_to edit_execution_path(e)
-                    span.glyphicon.glyphicon-pencil.edit-case
-                td
-                  =link_to execution_path(e), method: "delete"
-                    span.glyphicon.glyphicon-remove.edit-case
+                /td              
+                  /=link_to edit_execution_path(e)
+                  /  span.glyphicon.glyphicon-pencil.edit-case
+                /td
+                  /=link_to execution_path(e), method: "delete"
+                  /  span.glyphicon.glyphicon-remove.edit-case

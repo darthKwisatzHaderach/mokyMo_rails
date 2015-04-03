@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def current_state        
+  def current_state
     @current_state = CurrentState.first
   end
 end

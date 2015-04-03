@@ -17,8 +17,8 @@ div.bord.row
         div.col-lg-9
           h4 = @test_object.project.title
       div.row
-        div.col-lg-8
-        div.col-lg-2
-          = link_to 'Тест-комплекты', "/admin", class: "btn btn-default col-lg-12"
+        div.col-lg-7
+        div.col-lg-3
+          = link_to 'Объекты тестирования', "/admin", class: "btn btn-default col-lg-12"
         div.col-lg-2
           = link_to 'Редактировать', edit_test_object_path(@test_object), class: "btn btn-default col-lg-12"

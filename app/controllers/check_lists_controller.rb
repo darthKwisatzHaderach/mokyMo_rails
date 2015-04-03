@@ -60,13 +60,19 @@ class CheckListsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_check_list
-      @check_list = CheckList.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def check_list_params
-      params.require(:check_list).permit(:title, :priority, :tags, :description, :suite_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_check_list
+    @check_list = CheckList.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def check_list_params
+    params.require(:check_list).permit(
+      :title,
+      :priority,
+      :tags,
+      :description,
+      :suite_id)
+  end
 end
