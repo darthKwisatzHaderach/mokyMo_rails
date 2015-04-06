@@ -4,7 +4,13 @@ class ExecutionsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-    @executions = Execution.all.order('created_at DESC')
+    @test_objects = TestObject.where(component_id: @current_state.component)
+    @executions = []
+    @test_objects.each do |t|
+      t.executions.each do |e|
+        @executions << e
+      end
+    end
   end
 
   # GET /suites/1
