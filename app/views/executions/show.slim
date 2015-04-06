@@ -1,6 +1,7 @@
 div.bord.row
-  h3 Тестирование
+  h3 align="center" Тестирование
   div.col-lg-12
+    hr
     div.row
       div.col-lg-3
         h4 align="right" Объект тестирования:
@@ -16,11 +17,12 @@ div.bord.row
         h4 align="right" Тип:
       div.col-lg-9
         h4 = @execution.execution_types.name
+    hr
 
-  = form_for(@execution) do |f|      
-    h3 Сценарии
+  = form_for(@execution) do |f|          
+    h3 align="center" Сценарии тестирования    
     div.col-lg-12
-      table.table.table-bordered.table-hover
+      table.table.table-condensed.table-hover
         thead
           tr
             th.col-lg-2 Название чек-листа

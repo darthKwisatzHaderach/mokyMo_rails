@@ -20,13 +20,25 @@
     div.row
       div.col-lg-12
         h3 align="center" Список чек-листов для выполнения        
-        - @component.suites.each do |s|            
-          h4 = s.title
-          div style="padding-left: 25px;"
-            - s.check_lists.each do |l|
-              = f.fields_for :results, @execution.results.build(check_list: l) do |result|                                      
-                = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil                
-                div = l.title                
+        - @component.suites.each_with_index do |s, index|
+          - if (index - 1).even?            
+            div.row
+              div.col-lg-6
+                h4 = s.title
+                div style="padding-left: 25px;"
+                  - s.check_lists.each do |l|
+                    = f.fields_for :results, @execution.results.build(check_list: l) do |result|                                      
+                      = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil                
+                      div = l.title                        
+          - else
+              div.col-lg-6
+                h4 = s.title
+                div style="padding-left: 25px;"
+                  - s.check_lists.each do |l|
+                    = f.fields_for :results, @execution.results.build(check_list: l) do |result|                                      
+                      = result.check_box :check_list_id, {style: "float: left; margin-right: 2px;"}, "#{l.id}", nil                
+                      div = l.title
+    hr
     div.row
       div.col-lg-8
       div.col-lg-2
