@@ -20,7 +20,7 @@
       div.col-lg-4
         h4 align="right" Проект:
       div.col-lg-8
-        = f.select :project_id, @projects.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
+        = f.select :component_id, @components.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
     div.row
       div.col-lg-8
       div.col-lg-2

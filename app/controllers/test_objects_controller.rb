@@ -15,12 +15,12 @@ class TestObjectsController < ApplicationController
   # GET /suites/new
   def new
     @test_object = TestObject.new
-    @projects = Project.all
+    @components = Component.where(project_id: @current_state.project)
   end
 
   # GET /suites/1/edit
   def edit
-    @projects = Project.all
+    @components = Component.where(project_id: @current_state.project)
   end
 
   # POST /suites
