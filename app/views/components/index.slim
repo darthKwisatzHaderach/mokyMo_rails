@@ -20,20 +20,20 @@ div.bord-nontop.row
       table.table.table-condensed.table-hover
         thead
           tr
-            th Название компонента
-            th Проект
-            th
-            th
+            th.col-lg-2 Название компонента            
+            th.col-lg-7 Описание
+            th.col-lg-2 Проект          
+            th.col-lg-1
         tbody
           - @components.each do |c|
             tr
-              td = c.title
+              td = c.title              
+              td = c.description
               td = c.project.title
               td              
                 =link_to edit_component_path(c)
-                  span.glyphicon.glyphicon-pencil.edit-case
-              td
-                =link_to component_path(c), method: "delete"
+                  span.glyphicon.glyphicon-pencil.edit-case              
+                =link_to component_path(c), method: "delete", style: "padding-left: 30px;"
                   span.glyphicon.glyphicon-remove.edit-case
 
 script
