@@ -1,31 +1,32 @@
 div.bord.row
-  h3 Тестирование
+  h3 align="center" Тестирование
+  hr
   div.row
     div.col-lg-8
       div.row
-        div.col-lg-3
+        div.col-lg-4
           h4 align="right" Объект тестирования:
-        div.col-lg-9
+        div.col-lg-8
           h4 = @execution.test_object.name    
       div.row
-        div.col-lg-3
+        div.col-lg-4
           h4 align="right" Версия:
-        div.col-lg-9
+        div.col-lg-8
           h4 = @execution.test_object.version
       div.row
-        div.col-lg-3
+        div.col-lg-4
           h4 align="right" Тип:
-        div.col-lg-9
+        div.col-lg-8
           h4 = @execution.execution_types.name
     div.col-lg-3
       div.row
         = link_to("Сохранить в pdf", "/results/#{@execution.id}.pdf", {class: "btn btn-default col-lg-12", :target => "_blank"})
-  
+  hr
   div.row
     div.col-lg-12
-      h3 Сценарии
+      h3 align="center" Сценарии тестирования
       div.col-lg-12
-        table.table.table-bordered
+        table.table.table-condensed
           thead
             tr
               th.col-lg-3 Название чек-листа
