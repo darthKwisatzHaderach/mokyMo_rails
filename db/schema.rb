@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 113) do
 
   create_table "components", force: true do |t|
     t.string   "title"
+    t.text     "description"
     t.integer  "project_id"
     t.datetime "deleted_at"
   end
@@ -114,7 +115,7 @@ ActiveRecord::Schema.define(version: 113) do
   create_table "test_objects", force: true do |t|
     t.string   "name"
     t.string   "version"
-    t.integer  "project_id"
+    t.integer  "component_id"
     t.datetime "deleted_at"
   end
 

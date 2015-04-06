@@ -11,21 +11,21 @@ class ExecutionsController < ApplicationController
   # GET /suites/1.json
   def show
     @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)
+    @test_objects = TestObject.where(component_id: @current_state.component)
   end
 
   # GET /suites/new
   def new
     @execution = Execution.new
     @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)
+    @test_objects = TestObject.where(component_id: @current_state.component)
     @component = Component.find_by(id: @current_state.component)
   end
 
   # GET /suites/1/edit
   def edit
     @types = ExecutionTypes.all
-    @test_objects = TestObject.where(project_id: @current_state.project)
+    @test_objects = TestObject.where(component_id: @current_state.component)
     @component = Component.find_by(id: @current_state.component)
   end
 

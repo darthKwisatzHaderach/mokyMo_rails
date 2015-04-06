@@ -3,7 +3,7 @@ class CreateTestObjects < ActiveRecord::Migration
     create_table :test_objects do |t|
       t.string :name
       t.string :version
-      t.belongs_to :project
+      t.belongs_to :component
     end
   end
 end

@@ -8,7 +8,7 @@ class ResultsController < ApplicationController
   end
 
   def results_by_versions
-    test_objects = TestObject.where(project_id: @current_state.project)
+    test_objects = TestObject.where(component_id: @current_state.component)
     results = []
     test_objects.each do |t|
       t.executions.each do |e|
@@ -24,7 +24,7 @@ class ResultsController < ApplicationController
   end
 
   def last_execution
-    test_object = TestObject.where(project_id: @current_state.project).last
+    test_objects = TestObject.where(component_id: @current_state.component)
     execution = test_object.executions.last
     r = execution.results
     pass = r.select { |item| item[:results] == true }.count

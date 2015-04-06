@@ -4,7 +4,7 @@ class TestObjectsController < ApplicationController
   # GET /suites
   # GET /suites.json
   def index
-    @test_objects = TestObject.where(project_id: @current_state.project)
+    @test_objects = TestObject.where(component_id: @current_state.component)
   end
 
   # GET /suites/1
@@ -72,6 +72,6 @@ class TestObjectsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def test_object_params
-    params.require(:test_object).permit(:name, :version, :project_id)
+    params.require(:test_object).permit(:name, :version, :component_id)
   end
 end

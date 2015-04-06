@@ -22,7 +22,7 @@ div.bord-nontop.row
           tr
             th Название объекта тестирования
             th Версия
-            th Проект
+            th Компонент
             th
             th
         tbody
@@ -30,7 +30,7 @@ div.bord-nontop.row
             tr
               td = c.name
               td = c.version
-              td = c.project.title
+              td = c.component.title
               td = link_to '', edit_test_object_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
               td = link_to '', test_object_path(c.id), method: :delete, class: "glyphicon glyphicon-remove edit-case", data: {confirm: "Вы уверены, что хотите удалить объект тестирования \"" + c.name + "\"?"}
 
