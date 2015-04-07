@@ -74,9 +74,14 @@ class ResultsController < ApplicationController
         pdf.table([
           ["Объект тестирования:", "#{@execution.test_object.name}", '', "Выполнены успешно:", "#{pass}"],
           ["Версия:", "#{@execution.test_object.version}", '', "Провалены:", "#{fail}"],
-          ["Проект:", "#{@execution.test_object.project.title}", '', "Не запускались:", "#{not_implemented}"],
-          ["Дата:", "#{r[0].created_at}", '', "Всего:", "#{pass + fail}"]
+          ["Компонент:", "#{@execution.test_object.component.title}", '', "Не запускались:", "#{not_implemented}"],
+          ["Проект:", "#{@execution.test_object.component.project.title}", '', "Всего:", "#{pass + fail}"],
+          ["Дата:", "#{r[0].created_at}", '', '']
           ], column_widths: [140, 180, 180, 150, 50], cell_style: {border_width: 0})
+        pdf.text ' '
+        pdf.text ' '
+        pdf.text "#{@execution.comment}"
+        pdf.text ' '
         pdf.text ' '
         pdf.text "Список чек-листов", align: :center, size: 16
         pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
