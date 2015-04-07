@@ -8,17 +8,20 @@
   div.col-lg-12
     div.row
       div.col-lg-4
-        h4 align="right" Название объекта тестирования:
+        h4 align="right"
+          b Название объекта тестирования:
       div.col-lg-8
         = f.text_field :name, type: "text", class: "form-control", placeholder: "Название объекта тестирования"
     div.row
       div.col-lg-4
-        h4 align="right" Версия:
+        h4 align="right"
+          b Версия:
       div.col-lg-8
         = f.text_field :version, type: "text", class: "form-control", placeholder: "Версия продукта"
     div.row
       div.col-lg-4
-        h4 align="right" Проект:
+        h4 align="right"
+          b Компонент:
       div.col-lg-8
         = f.select :component_id, @components.all.collect {|p| [ p.title, p.id ]}, {}, {class: "form-control"}
     div.row

@@ -2,20 +2,23 @@ div.bord.row
 	h4#notice = notice
     div.col-lg-12
       div.row
-        div.col-lg-3
-          h4 align="right" Название объекта тестирования:
-        div.col-lg-9
+        div.col-lg-4
+          h4 align="right" 
+            b Название объекта тестирования:
+        div.col-lg-8
           h4 = @test_object.name
       div.row
-        div.col-lg-3
-          h4 align="right" Версия:
-        div.col-lg-9
+        div.col-lg-4
+          h4 align="right"
+            b Версия:
+        div.col-lg-8
           h4 = @test_object.version
       div.row
-        div.col-lg-3
-          h4 align="right" Проект:
-        div.col-lg-9
-          h4 = @test_object.project.title
+        div.col-lg-4
+          h4 align="right"
+            b Компонент:
+        div.col-lg-8
+          h4 = @test_object.component.title
       div.row
         div.col-lg-7
         div.col-lg-3
