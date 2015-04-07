@@ -59,7 +59,7 @@ class ResultsController < ApplicationController
           else
             res = 'Провален'
           end
-          font = '/home/dmitriy/RubymineProjects/mokyMo/app/assets/fonts/pfdintextpro-regular.ttf'
+          font = "#{Rails.root}/app/assets/fonts/pfdintextpro-regular.ttf"
           pdf.font font
           array << [
             "#{index + 1}",
