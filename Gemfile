@@ -41,6 +41,9 @@ gem 'immigrant'
 
 # Soft delete
 gem "paranoia", "~> 2.0"
+
+# Debugger
+gem 'byebug'
 # Use unicorn as the app server
 # gem 'unicorn'
 

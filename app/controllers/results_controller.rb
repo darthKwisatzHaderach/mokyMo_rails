@@ -80,19 +80,6 @@ class ResultsController < ApplicationController
         pdf.text ' '
         pdf.text "Список чек-листов", align: :center, size: 16
         pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
-=begin
-        do |variable|
-          values = cells.columns(1..-1).rows(1..-1)
-          bad_sales = values.filter do |cell|
-            cell.content.to_i < 40
-          end
-          bad_sales.background_color = 'FFAAAA'
-          good_sales = values.filter do |cell|
-            cell.content.to_i > 70
-          end
-          good_sales.background_color = 'AAFFAA'
-        end
-=end
         send_data pdf.render, filename: "#{@execution.test_object.name} - #{@execution.test_object.version}. Результат тестирования.pdf", type: 'application/pdf', disposition: 'inline'
       end
     end
@@ -113,7 +100,6 @@ class ResultsController < ApplicationController
   # POST /suites.json
   def create
     @result = Result.new(result_params)
-
     respond_to do |format|
       if @result.save
         format.html { redirect_to @result, notice: 'Тестирование успешно создано.' }

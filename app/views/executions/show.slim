@@ -4,17 +4,20 @@ div.bord.row
     hr
     div.row
       div.col-lg-3
-        h4 align="right" Объект тестирования:
+        h4 align="right"
+          b Объект тестирования:
       div.col-lg-9
         h4 = @execution.test_object.name
     div.row
       div.col-lg-3
-        h4 align="right" Версия:
+        h4 align="right"
+          b Версия:
       div.col-lg-9
         h4 = @execution.test_object.version
     div.row
       div.col-lg-3
-        h4 align="right" Тип:
+        h4 align="right"
+          b Тип:
       div.col-lg-9
         h4 = @execution.execution_types.name
     hr
