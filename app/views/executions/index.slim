@@ -17,15 +17,15 @@ div.bord.row
             th
         tbody
           - @executions.each do |e|            
-              tr onclick="window.document.location='#{execution_path(e)}';"
-                td = e.test_object.name
-                td = e.test_object.version
-                td = e.execution_types.name
+              tr
+                td onclick="window.document.location='#{execution_path(e)}';" = e.test_object.name
+                td onclick="window.document.location='#{execution_path(e)}';" = e.test_object.version
+                td onclick="window.document.location='#{execution_path(e)}';" = e.execution_types.name
                 - if e.results.select{|item| item[:implemented] == nil}.count > 1
-                  td 
+                  td onclick="window.document.location='#{execution_path(e)}';"
                     span.label.label-default Не выполнялось
                 - else
-                  td 
+                  td onclick="window.document.location='#{execution_path(e)}';"
                     span.label.label-success Выполнено
                 td              
                   = link_to edit_execution_path(e)
