@@ -5,18 +5,37 @@
       ul
       - @execution.errors.full_messages.each do |message|
         li = message
-  div.col-lg-12
-    div.row
-      div.col-lg-3
-        h4 align="right" Объект тестирования:
-      div.col-lg-9
-        = f.select :test_object_id, @test_objects.all.collect {|t| [ "#{t.name}: версия #{t.version}", t.id ]}, {}, {class: "form-control"}
-    div.row
-      div.col-lg-3
-        h4 align="right" Тип:
-      div.col-lg-9
-        = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}    
-    hr
+  div.row
+    div.col-lg-12
+      div.row        
+        div.col-lg-3
+          h4.compact align="right" Объект тестирования:
+        div.col-lg-9
+          = f.select :test_object_id, @test_objects.all.collect {|t| [ "#{t.name}: версия #{t.version}", t.id ]}, {}, {class: "form-control"}
+      div.row
+        div.col-lg-3
+          h4.compact align="right" Тип:
+        div.col-lg-9
+          = f.select :execution_types_id, @types.all.collect {|t| [ t.name, t.id ]}, {}, {class: "form-control"}
+      div.row
+        div.col-lg-6
+          div.col-lg-6
+            h4.compact align="right" Операционная система:
+          div.col-lg-6 style="padding-right: 0px;"
+            = f.select :operating_system, @operating_systems.all.collect {|t| [ t.name, t.name ]}, {}, {class: "form-control"}
+        div.col-lg-6 style="padding-left: 0px;"
+          div.col-lg-6 style="padding-left: 0px;"
+            = f.text_field :operating_system_version, class: "form-control", placeholder: "Версия операционной системы"
+      div.row
+        div.col-lg-6
+          div.col-lg-6
+            h4.compact align="right" Браузер:
+          div.col-lg-6 style="padding-right: 0px;"
+            = f.select :browser, @browsers.all.collect {|t| [ t.name, t.name ]}, {}, {class: "form-control"}
+        div.col-lg-6 style="padding-left: 0px;"          
+          div.col-lg-6 style="padding-left: 0px;"
+            = f.text_field :browser_version, class: "form-control", placeholder: "Версия браузера"
+      hr
     div.row
       div.col-lg-12
         h3 align="center" Список чек-листов для выполнения        

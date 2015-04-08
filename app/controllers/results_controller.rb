@@ -79,12 +79,13 @@ class ResultsController < ApplicationController
           ["Дата:", "#{r[0].created_at}", '', '']
           ], column_widths: [140, 180, 180, 150, 50], cell_style: {border_width: 0})
         pdf.text ' '
-        pdf.text ' '
-        pdf.text "#{@execution.comment}"
-        pdf.text ' '
+        pdf.text "Операционная система: #{@execution.operating_system} - #{@execution.operating_system_version}"
+        pdf.text "Браузер: #{@execution.browser} - #{@execution.browser_version}"
         pdf.text ' '
         pdf.text "Список чек-листов", align: :center, size: 16
         pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
+        pdf.text ' '
+        pdf.text "Тестирование выполнил: #{@execution.tester}", align: :right
         send_data pdf.render, filename: "#{@execution.test_object.name} - #{@execution.test_object.version}. Результат тестирования.pdf", type: 'application/pdf', disposition: 'inline'
       end
     end

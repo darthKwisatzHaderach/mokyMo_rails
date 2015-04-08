@@ -1,26 +1,40 @@
 div.bord.row
-  h3 align="center" Тестирование
-  div.col-lg-12
-    hr
-    div.row
-      div.col-lg-3
-        h4 align="right"
-          b Объект тестирования:
-      div.col-lg-9
-        h4 = @execution.test_object.name
-    div.row
-      div.col-lg-3
-        h4 align="right"
-          b Версия:
-      div.col-lg-9
-        h4 = @execution.test_object.version
-    div.row
-      div.col-lg-3
-        h4 align="right"
-          b Тип:
-      div.col-lg-9
-        h4 = @execution.execution_types.name
-    hr
+  h3 align="center" Тестирование  
+  hr
+  div.row
+    div.col-lg-6
+      div.row
+        div.col-lg-6
+          h5 align="right"
+            b Объект тестирования:
+        div.col-lg-6
+          h5 = @execution.test_object.name
+      div.row
+        div.col-lg-6
+          h5 align="right"
+            b Версия:
+        div.col-lg-6
+          h5 = @execution.test_object.version
+      div.row
+        div.col-lg-6
+          h5 align="right"
+            b Тип:
+        div.col-lg-6
+          h5 = @execution.execution_types.name
+    div.col-lg-6
+      div.row
+        div.col-lg-5
+          h5 align="right"
+            b Операционная система:
+        div.col-lg-7
+          h5 #{@execution.operating_system} - #{@execution.operating_system_version}
+      div.row
+        div.col-lg-5
+          h5 align="right"
+            b Браузер:
+        div.col-lg-7
+          h5 #{@execution.browser} - #{@execution.browser_version}
+  hr
 
   = form_for(@execution) do |f|          
     h3 align="center" Сценарии тестирования    
@@ -34,9 +48,11 @@ div.bord.row
             th.col-lg-2 Результат
             th.col-lg-2 Комментарий
         tbody
-          - @execution.results.each do |r|
+          - @execution.results.each_with_index do |r, index|
             tr
-              td = r.check_list.title
+              td 
+                b #{(index + 1)}. 
+                span #{r.check_list.title}
               td = r.check_list.description
               td = r.check_list.priority
               td                                  
@@ -47,10 +63,18 @@ div.bord.row
                   div Выполнен
                   = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
                   div Не запускался                  
-                  td = result.text_area :comment, type: "text", class: "form-control", row: 2
-  	h3 align="center" Результат тестирования
-    div.col-lg-12
-      = f.text_area :comment, type: "text", class: "form-control", rows: 10, value: "Операционная система: Windows 8.1\nБраузер: Google Chrome\nВерсия браузера: 38.0.2125.111\nМетодика тестирования: последовательное выполнение сценариев, описанных в чек-листах."      
+                  td = result.text_area :comment, type: "text", class: "form-control", row: 2  	
+      hr
+    div.row
+      div.col-lg-3
+        h4 align="right" Комментарий:
+      div.col-lg-8
+        = f.text_area :comment, type: "text", class: "form-control", rows: 2
+    div.row style="padding-top: 5px;"
+      div.col-lg-3
+        h4 align="right" Тестирование выполнил:
+      div.col-lg-8
+        = f.text_field :tester, type: "text", class: "form-control"   
     div.col-lg-12 style="padding-top: 20px;"
       = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
 //script

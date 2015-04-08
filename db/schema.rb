@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 113) do
+ActiveRecord::Schema.define(version: 115) do
+
+  create_table "browsers", force: true do |t|
+    t.string "name"
+  end
 
   create_table "case_steps", force: true do |t|
     t.text     "step"
@@ -71,7 +75,12 @@ ActiveRecord::Schema.define(version: 113) do
   create_table "executions", force: true do |t|
     t.integer  "test_object_id"
     t.integer  "execution_types_id"
+    t.string   "operating_system"
+    t.string   "operating_system_version"
+    t.string   "browser"
+    t.string   "browser_version"
     t.string   "status"
+    t.string   "tester"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -79,6 +88,10 @@ ActiveRecord::Schema.define(version: 113) do
   end
 
   add_index "executions", ["deleted_at"], name: "index_executions_on_deleted_at"
+
+  create_table "operating_systems", force: true do |t|
+    t.string "name"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "title"

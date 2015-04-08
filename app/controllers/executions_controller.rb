@@ -26,6 +26,8 @@ class ExecutionsController < ApplicationController
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(component_id: @current_state.component)
     @component = Component.find_by(id: @current_state.component)
+    @operating_systems = OperatingSystem.all
+    @browsers = Browser.all
   end
 
   # GET /suites/1/edit
@@ -33,6 +35,8 @@ class ExecutionsController < ApplicationController
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(component_id: @current_state.component)
     @component = Component.find_by(id: @current_state.component)
+    @operating_systems = OperatingSystem.all
+    @browsers = Browser.all
   end
 
   # POST /suites

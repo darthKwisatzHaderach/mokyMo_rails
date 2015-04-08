@@ -23,10 +23,33 @@ div.bord.row
           h4 = @execution.execution_types.name
     div.col-lg-3
       div.row
-        a href="/results/#{@execution.id}.pdf" class="btn btn-default col-lg-12" target="_blank"
-          i.glyphicon.glyphicon-floppy-save style="top:2px; right: 5px;"
-          span Сохранить в pdf
-        /= link_to("Сохранить в pdf", "/results/#{@execution.id}.pdf", {class: "btn btn-default col-lg-12", :target => "_blank"})
+        a href="/results/#{@execution.id}.pdf" class="btn btn-default col-lg-12" target="_blank" style="height: 70px;"          
+          h4 style="padding-top: 7px;"
+            i.glyphicon.glyphicon-floppy-save style="top:2px; right: 5px;" 
+            | Сохранить в pdf
+        /= link_to("Сохранить в pdf", "/results/#{@execution.id}.pdf", {class: "btn btn-default col-lg-12", :target => "_blank"})  
+  div.row    
+    div.col-lg-8   
+      div.row
+        div.col-lg-4
+          h4 align="right"
+            b Операционная система:
+        div.col-lg-8
+          h4 #{@execution.operating_system} - #{@execution.operating_system_version}
+      div.row
+        div.col-lg-4
+          h4 align="right"
+            b Браузер:
+        div.col-lg-8
+          h4 #{@execution.browser} - #{@execution.browser_version}
+  hr
+  div.row
+    div.col-lg-8
+      div.col-lg-4
+        h4 align="right"
+          b Выполнил:
+      div.col-lg-8
+        h4 = @execution.tester
   hr
   div.row
     div.col-lg-12
@@ -55,10 +78,7 @@ div.bord.row
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
                     - else
-                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален
-      h3 align="center" Результат тестирования
-      div.col-lg-12
-        = @execution.comment
+                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален      
 
 script
   |$(document).ready(function() {
