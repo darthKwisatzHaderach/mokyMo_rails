@@ -11,18 +11,21 @@ div.row
 
 div.bord-nontop.row
   div.row
-    div.col-lg-10
+    div.col-lg-9
       h3 align="center" style="margin-top: 0px;" Проекты
-    div.col-lg-2
-      = link_to 'Добавить проект', new_project_path, class: "btn btn-default col-lg-12"
+    div.col-lg-3
+      a href="#{new_project_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить проект
+      /= link_to 'Добавить проект', new_project_path, class: "btn btn-default col-lg-12"
   div.row
     div.col-lg-12
       table.table.table-condensed.table-hover
         thead
           tr
-            th Название проекта
-            th
-            th
+            th.col-lg-10 Название проекта
+            th.col-lg-1
+            th.col-lg-1
         tbody
           - @projects.each do |p|
             tr
@@ -32,7 +35,7 @@ div.bord-nontop.row
                   span.glyphicon.glyphicon-pencil.edit-case
               td
                 =link_to project_path(p), method: "delete"
-                  span.glyphicon.glyphicon-remove.edit-case
+                  span.glyphicon.glyphicon-trash.edit-case
 
 script
   |$('a[href="/admin"]').parent().addClass('active');

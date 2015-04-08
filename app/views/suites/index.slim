@@ -10,7 +10,10 @@ div.bord-nontop.row
     div.col-lg-9
       h3 align="center" style="margin-top: 0px;" Тест-комплекты
     div.col-lg-3
-      = link_to 'Добавить тест-комплект', new_suite_path, class: "btn btn-default col-lg-12"
+      a href="#{new_suite_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить тест-комплект
+      /= link_to 'Добавить тест-комплект', new_suite_path, class: "btn btn-default col-lg-12"
   div.row    
     div.col-lg-12  
       table.table.table-condensed.table-hover
@@ -30,7 +33,7 @@ div.bord-nontop.row
                   span.glyphicon.glyphicon-pencil.edit-case
               td
                 = link_to suite_path(s), method: "delete"
-                  span.glyphicon.glyphicon-remove.edit-case
+                  span.glyphicon.glyphicon-trash.edit-case
 
 script
   |$('a[href="/docs"]').parent().addClass('active');

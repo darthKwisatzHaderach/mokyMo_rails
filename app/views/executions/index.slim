@@ -2,8 +2,10 @@ div.bord.row
   div.row
     div.col-lg-9
       h3 align="center" style="margin-top: 0px;" Тестирования
-    div.col-lg-3
-      = link_to 'Добавить тестирование', new_execution_path, class: "btn btn-default col-lg-12", style: "margin-bottom: 10px;"
+    div.col-lg-3      
+      a href="#{new_execution_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить тестирование      
   div.row
     div.col-lg-12
       table.table.table-condensed.table-hover
@@ -21,7 +23,7 @@ div.bord.row
                 td onclick="window.document.location='#{execution_path(e)}';" = e.test_object.name
                 td onclick="window.document.location='#{execution_path(e)}';" = e.test_object.version
                 td onclick="window.document.location='#{execution_path(e)}';" = e.execution_types.name
-                - if e.results.select{|item| item[:implemented] == nil}.count > 1
+                - if e.status == "Не выполнялось"
                   td onclick="window.document.location='#{execution_path(e)}';"
                     span.label.label-default Не выполнялось
                 - else
@@ -32,4 +34,4 @@ div.bord.row
                     span.glyphicon.glyphicon-pencil.edit-case
                 td
                   =link_to execution_path(e), method: "delete"
-                    span.glyphicon.glyphicon-remove.edit-case
+                    span.glyphicon.glyphicon-trash.edit-case

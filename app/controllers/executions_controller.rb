@@ -48,6 +48,7 @@ class ExecutionsController < ApplicationController
         format.json { render json: @execution.errors, status: :unprocessable_entity }
       end
     end
+    update_status(@execution)
   end
 
   # PATCH/PUT /suites/1
@@ -65,6 +66,7 @@ class ExecutionsController < ApplicationController
     Result.where(check_list_id: 0).each do |r|
       r.really_destroy!
     end
+    update_status(@execution)
   end
 
   # DELETE /suites/1
@@ -87,5 +89,13 @@ class ExecutionsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def execution_params
     params.require(:execution).permit!#(:test_object_id, :execution_types_id, results_attributes: [:id, :_destroy, :check_list_id])
+  end
+
+  def update_status(e)
+    if e.results.select{|item| item[:implemented] == nil}.count > 1
+      e.update(status: "Не выполнялось")
+    else
+      e.update(status: "Выполнено")
+    end
   end
 end
