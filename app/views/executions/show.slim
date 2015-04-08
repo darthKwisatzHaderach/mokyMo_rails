@@ -42,11 +42,11 @@ div.bord.row
               td                                  
                 = f.fields_for :results, Result.where(check_list_id: r.check_list.id, execution_id: @execution.id) do |result|
                   = result.hidden_field :results, value: false
-                  = result.hidden_field :implemented, value: true
+                  = result.hidden_field :implemented, value: true                  
                   = result.check_box :results, {style: "float: left; margin-right: 2px;"}, true, false
                   div Выполнен
                   = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
-                  div Не запускался
+                  div Не запускался                  
                   td = result.text_area :comment, type: "text", class: "form-control", row: 2
   	h3 align="center" Результат тестирования
     div.col-lg-12

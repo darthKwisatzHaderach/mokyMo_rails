@@ -1,11 +1,7 @@
 div.bord.row
   div.row
-    div.col-lg-9
+    div.col-lg-12
       h3 align="center" style="margin-top: 0px;" Тестирования
-    div.col-lg-3      
-      a href="#{new_execution_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
-        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
-        span Добавить тестирование      
   div.row
     div.col-lg-12
       table.table.table-condensed.table-hover
@@ -35,3 +31,9 @@ div.bord.row
                 td
                   =link_to execution_path(e), method: "delete"
                     span.glyphicon.glyphicon-trash.edit-case
+  div.row
+      div.col-lg-9      
+      div.col-lg-3      
+        a href="#{new_execution_path}" class="btn btn-success col-lg-12" style="margin-bottom: 10px;"
+          i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+          span Добавить тестирование 

@@ -11,13 +11,8 @@ div.row
 
 div.bord-nontop.row
   div.row
-    div.col-lg-9
-      h3 align="center" style="margin-top: 0px;" Объекты тестирования
-    div.col-lg-3
-      a href="#{new_test_object_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
-        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
-        span Добавить объект тестирования
-      /= link_to 'Добавить объект тестирования', new_test_object_path, class: "btn btn-default col-lg-12"
+    div.col-lg-12
+      h3 align="center" style="margin-top: 0px;" Объекты тестирования    
   div.row
     div.col-lg-12
       table.table.table-condensed.table-hover
@@ -36,6 +31,12 @@ div.bord-nontop.row
               td = c.component.title
               td = link_to '', edit_test_object_path(c.id), class: "glyphicon glyphicon-pencil edit-case"
               td = link_to '', test_object_path(c.id), method: :delete, class: "glyphicon glyphicon-trash edit-case", data: {confirm: "Вы уверены, что хотите удалить объект тестирования \"" + c.name + "\"?"}
-
+  div.row
+    div.col-lg-9      
+    div.col-lg-3
+      a href="#{new_test_object_path}" class="btn btn-success col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить объект тестирования
+      /= link_to 'Добавить объект тестирования', new_test_object_path, class: "btn btn-default col-lg-12"
 script
   |$('a[href="/admin"]').parent().addClass('active');

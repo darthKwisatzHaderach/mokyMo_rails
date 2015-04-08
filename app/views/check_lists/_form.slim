@@ -36,6 +36,7 @@ div.row
       div.row
         div.col-lg-8
         div.col-lg-2
-          = link_to 'Назад', check_lists_path, class: "btn btn-default col-lg-12"
+          a href="#{check_lists_path}" data-no-turbolink="true" class="btn btn-default col-lg-12" Назад
+          /= link_to 'Назад', check_lists_path, class: "btn btn-default col-lg-12"
         div.col-lg-2
           = f.submit 'Сохранить чек-лист', class: "btn btn-success col-lg-12"

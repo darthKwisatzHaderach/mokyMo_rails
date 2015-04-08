@@ -5,22 +5,28 @@ div.bord.row
     div.col-lg-8
       div.row
         div.col-lg-4
-          h4 align="right" Объект тестирования:
+          h4 align="right"
+            b Объект тестирования:
         div.col-lg-8
           h4 = @execution.test_object.name    
       div.row
         div.col-lg-4
-          h4 align="right" Версия:
+          h4 align="right"
+            b Версия:
         div.col-lg-8
           h4 = @execution.test_object.version
       div.row
         div.col-lg-4
-          h4 align="right" Тип:
+          h4 align="right"
+            b Тип:
         div.col-lg-8
           h4 = @execution.execution_types.name
     div.col-lg-3
       div.row
-        = link_to("Сохранить в pdf", "/results/#{@execution.id}.pdf", {class: "btn btn-default col-lg-12", :target => "_blank"})
+        a href="/results/#{@execution.id}.pdf" class="btn btn-default col-lg-12" target="_blank"
+          i.glyphicon.glyphicon-floppy-save style="top:2px; right: 5px;"
+          span Сохранить в pdf
+        /= link_to("Сохранить в pdf", "/results/#{@execution.id}.pdf", {class: "btn btn-default col-lg-12", :target => "_blank"})
   hr
   div.row
     div.col-lg-12
@@ -30,21 +36,29 @@ div.bord.row
           thead
             tr
               th.col-lg-3 Название чек-листа
-              th.col-lg-5 Описание
+              th.col-lg-7 Описание
               th.col-lg-1 Приоритет
-              th.col-lg-1 Результат
-              th.col-lg-2 Комментарий
+              th.col-lg-1 Результат              
           tbody
-            - @execution.results.each do |r|          	
+            - @execution.results.each_with_index do |r, index|
               tr
                 td = r.check_list.title
                 td = r.check_list.description
                 td = r.check_list.priority
                 - if r.results == true
-                  td Выполнен
+                  td 
+                    span.label.label-success Выполнен
                 - else
-                  td.danger Провален
-                td = r.comment
+                  td
+                    - if r.comment == '' or r.comment.nil?
+                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
+                    - else
+                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален
       h3 align="center" Результат тестирования
       div.col-lg-12
         = @execution.comment
+
+script
+  |$(document).ready(function() {
+  |  $("body").popover({ selector: '[data-toggle=popover]' });
+  |});

@@ -11,13 +11,8 @@ div.row
 
 div.bord-nontop.row
   div.row
-    div.col-lg-9
+    div.col-lg-12
       h3 align="center" style="margin-top: 0px;" Проекты
-    div.col-lg-3
-      a href="#{new_project_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
-        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
-        span Добавить проект
-      /= link_to 'Добавить проект', new_project_path, class: "btn btn-default col-lg-12"
   div.row
     div.col-lg-12
       table.table.table-condensed.table-hover
@@ -36,6 +31,12 @@ div.bord-nontop.row
               td
                 =link_to project_path(p), method: "delete"
                   span.glyphicon.glyphicon-trash.edit-case
-
+  div.row
+    div.col-lg-9      
+    div.col-lg-3
+      a href="#{new_project_path}" class="btn btn-success col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить проект
+      /= link_to 'Добавить проект', new_project_path, class: "btn btn-default col-lg-12"
 script
   |$('a[href="/admin"]').parent().addClass('active');

@@ -7,16 +7,11 @@ div.row
 
 div.bord-nontop.row
   div.row
-    div.col-lg-9
-      h3 align="center" style="margin-top: 0px;" Чек-листы
-    div.col-lg-3
-      a href="#{new_check_list_path}" class="btn btn-default col-lg-12" style="margin-bottom: 10px;"
-        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
-        span Добавить чек-лист
-      /= link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"            
+    div.col-lg-12
+      h3 align="center" style="margin-top: 0px;" Чек-листы    
   div.row style="padding-top: 10px;"
     div.col-lg-12      
-      table data-toggle="table" data-pagination="true" data-height="600"
+      table data-toggle="table" data-pagination="true" data-height="500"
         thead
           tr
             th.col-lg-1 data-sortable="true" №
@@ -38,6 +33,13 @@ div.bord-nontop.row
                   = link_to '', check_list_path(c.id), method: :delete, class: "glyphicon glyphicon-trash edit-case", data: {confirm: "Вы уверены, что хотите удалить чек-лист \"" + c.title + "\"?"}            
 
             - count = count + s.check_lists.count
+  div.row
+    div.col-lg-9
+    div.col-lg-3
+      a href="#{new_check_list_path}" class="btn btn-success col-lg-12" style="margin-bottom: 10px;"
+        i.glyphicon.glyphicon-plus style="top:2px; right: 7px;"        
+        span Добавить чек-лист
+      /= link_to 'Добавить чек-лист', new_check_list_path, class: "btn btn-default col-lg-12"
 
 script
   |function queryParams() {
