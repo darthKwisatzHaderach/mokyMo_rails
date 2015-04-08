@@ -42,7 +42,9 @@ div.bord.row
           tbody
             - @execution.results.each_with_index do |r, index|
               tr
-                td = r.check_list.title
+                td 
+                  b #{(index + 1)}. 
+                  span #{r.check_list.title}
                 td = r.check_list.description
                 td = r.check_list.priority
                 - if r.results == true
