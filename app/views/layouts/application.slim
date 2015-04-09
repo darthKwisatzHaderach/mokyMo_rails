@@ -2,10 +2,11 @@
 html style="overflow-y: overlay"
   head
 	title MokyMo
-	script type="text/javascript" src="https://www.google.com/jsapi"
-	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+	script type="text/javascript" src="https://www.google.com/jsapi"	
 	= csrf_meta_tags
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= yield :head
+	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
   body#main-window
 	= render 'top_menu'
 	div#main_container.container.container-fluid

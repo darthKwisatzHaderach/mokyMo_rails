@@ -24,7 +24,7 @@ div.row style="padding-top: 40px;"
         td = @not_implemented
   div.col-lg-6
   	h4 Описание ПО
-  	p = @test_object.component.description
+  	p = @description
 
 div.row style="padding-top: 40px;"
 
@@ -32,3 +32,11 @@ div.row
   div.col-lg-12
   	h4 Отчет о тестировании
   	p = @comment
+
+- content_for :head do
+  = javascript_include_tag "column_chart"
+
+/script
+/  |$("#main-page").click(function(){
+/  |   drawColumn();
+/ |})

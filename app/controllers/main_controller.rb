@@ -1,8 +1,13 @@
 class MainController < ApplicationController
   def index
     test_objects = TestObject.where(component_id: @current_state.component)
-    @test_object = test_objects.last
-    @execution = test_objects.last.executions.last
+    if @test_objects.nil?
+      @description = 'Отсутствует'
+    else
+      @test_object = test_objects.last
+      @description = @test_object.component.description
+      @execution = test_objects.last.executions.last
+    end
     if @execution.nil?
       @pass = 'Нет данных'
       @fail = 'Нет данных'

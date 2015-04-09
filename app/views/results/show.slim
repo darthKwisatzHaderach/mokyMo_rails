@@ -5,22 +5,22 @@ div.bord.row
     div.col-lg-8
       div.row
         div.col-lg-4
-          h4 align="right"
+          h5 align="right"
             b Объект тестирования:
         div.col-lg-8
-          h4 = @execution.test_object.name    
+          h5 = @execution.test_object.name    
       div.row
         div.col-lg-4
-          h4 align="right"
+          h5 align="right"
             b Версия:
         div.col-lg-8
-          h4 = @execution.test_object.version
+          h5 = @execution.test_object.version
       div.row
         div.col-lg-4
-          h4 align="right"
+          h5 align="right"
             b Тип:
         div.col-lg-8
-          h4 = @execution.execution_types.name
+          h5 = @execution.execution_types.name
     div.col-lg-3
       div.row
         a href="/results/#{@execution.id}.pdf" class="btn btn-default col-lg-12" target="_blank" style="height: 70px;"          
@@ -32,24 +32,24 @@ div.bord.row
     div.col-lg-8   
       div.row
         div.col-lg-4
-          h4 align="right"
+          h5 align="right"
             b Операционная система:
         div.col-lg-8
-          h4 #{@execution.operating_system} - #{@execution.operating_system_version}
+          h5 #{@execution.operating_system} - #{@execution.operating_system_version}
       div.row
         div.col-lg-4
-          h4 align="right"
+          h5 align="right"
             b Браузер:
         div.col-lg-8
-          h4 #{@execution.browser} - #{@execution.browser_version}
+          h5 #{@execution.browser} - #{@execution.browser_version}
   hr
   div.row
     div.col-lg-8
       div.col-lg-4
-        h4 align="right"
+        h5 align="right"
           b Выполнил:
       div.col-lg-8
-        h4 = @execution.tester
+        h5 = @execution.tester
   hr
   div.row
     div.col-lg-12
