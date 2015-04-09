@@ -44,6 +44,10 @@ gem "paranoia", "~> 2.0"
 
 # Debugger
 gem 'byebug'
+
+# Visualization
+gem "chartkick"
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

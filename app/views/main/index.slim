@@ -4,7 +4,9 @@ div.row
 
 div.row  
   div.col-lg-12
-    div#chart_div style="width: 100%; height: 300px;"
+    /div#chart_div style="width: 100%; height: 300px;"
+    = column_chart @data
+
 
 div.row style="padding-top: 40px;"
   div.col-lg-6
@@ -34,7 +36,7 @@ div.row
   	p = @comment
 
 - content_for :head do
-  = javascript_include_tag "column_chart"
+  = javascript_include_tag "//www.google.com/jsapi", "chartkick"
 
 /script
 /  |$("#main-page").click(function(){
