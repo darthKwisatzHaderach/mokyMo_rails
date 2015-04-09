@@ -32,9 +32,10 @@ class MainController < ApplicationController
         @results << result
       end
     end
+    header = ['Выполнено', 'Провалено', 'Не выполнялось']
     @data = (1..3).map do |i|
       {
-        name: @results[i-1].first,
+        name: header[i - 1],
         data: @results[0..-1].map { |x| [x[0], x[i]] }
       }
     end
