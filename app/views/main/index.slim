@@ -10,30 +10,20 @@ hr
 
 div.row style="padding-top: 40px;"
   div.col-lg-6
-    h4 Результат тестирования версии
-    table.table.table-hover    	  
-      tr
-        th Результат
-        th Количество сценариев
-      tr
-        td Выполнено:
-        td = @pass
-      tr
-        td Провалено:
-        td = @fail
-      tr
-        td Пропущено:
-        td = @not_implemented
+    h4 Результат тестирования версии #{@test_object.version}
+    = pie_chart @pie
   div.col-lg-6
   	h4 Описание ПО
-  	p = @description
+    p = @description
 
 div.row style="padding-top: 40px;"
 
 div.row
-  div.col-lg-12
+  div.col-lg-6
   	h4 Отчет о тестировании
   	p = @comment
+  div.col-lg-6
+    
 
 - content_for :head do
   = javascript_include_tag "//www.google.com/jsapi", "chartkick"

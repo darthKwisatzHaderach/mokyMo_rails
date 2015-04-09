@@ -20,6 +20,7 @@ class MainController < ApplicationController
       @not_implemented = r.select { |item| item[:implemented] == false }.count
       @comment = @execution.comment
     end
+    @pie = [['Выполнено', @pass], ['Провалено', @fail], ['Не выполнялось', @not_implemented]]
 
     @results = []
     @test_objects.each do |t|
