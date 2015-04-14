@@ -53,7 +53,7 @@ div.bord.row
               td 
                 b #{(index + 1)}. 
                 span #{r.check_list.title}
-              td = r.check_list.description
+              td = simple_format(r.check_list.description)
               td = r.check_list.priority
               td                                  
                 = f.fields_for :results, Result.where(check_list_id: r.check_list.id, execution_id: @execution.id) do |result|

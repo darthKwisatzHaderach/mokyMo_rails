@@ -10,20 +10,14 @@ hr
 
 div.row style="padding-top: 40px;"
   div.col-lg-6
-    h4 Результат тестирования версии #{@test_object.version}
+    h4 Результат тестирования версии #{@version}
     = pie_chart @pie
   div.col-lg-6
   	h4 Описание ПО
     p = @description
-
-div.row style="padding-top: 40px;"
-
-div.row
-  div.col-lg-6
-  	h4 Отчет о тестировании
-  	p = @comment
-  div.col-lg-6
-    
+    hr
+    h4 Отчет о тестировании
+    p = @comment
 
 - content_for :head do
   = javascript_include_tag "//www.google.com/jsapi", "chartkick"

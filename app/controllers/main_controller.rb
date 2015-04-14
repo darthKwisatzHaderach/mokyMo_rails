@@ -1,25 +1,28 @@
 class MainController < ApplicationController
   def index
     @test_objects = TestObject.where(component_id: @current_state.component)
-    if @test_objects.nil?
+    if @test_objects.count == 0
       @description = 'Отсутствует'
     else
       @test_object = @test_objects.last
       @description = @test_object.component.description
-      @execution = @test_objects.last.executions.last
+      @execution = @test_object.executions.last
+      if @test_object.executions.count == 0
+        @pass = 'Нет данных'
+        @fail = 'Нет данных'
+        @not_implemented = 'Нет данных'
+        @comment = 'Нет данных'
+        @version = '-'
+      else
+        r = @execution.results
+        @pass = r.select { |item| item[:results] == true }.count
+        @fail = r.select { |item| item[:results] == false }.count
+        @not_implemented = r.select { |item| item[:implemented] == false }.count
+        @comment = @execution.comment
+        @version = @test_object.version
+      end
     end
-    if @execution.nil?
-      @pass = 'Нет данных'
-      @fail = 'Нет данных'
-      @not_implemented = 'Нет данных'
-      @comment = 'Нет данных'
-    else
-      r = @execution.results
-      @pass = r.select { |item| item[:results] == true }.count
-      @fail = r.select { |item| item[:results] == false }.count
-      @not_implemented = r.select { |item| item[:implemented] == false }.count
-      @comment = @execution.comment
-    end
+
     @pie = [['Выполнено', @pass], ['Провалено', @fail], ['Не выполнялось', @not_implemented]]
 
     @results = []
