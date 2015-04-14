@@ -1,35 +1,41 @@
 div.bord.row  
 	h4#notice = notice
-    h2 Чек-лист
+    h2 align="center" Чек-лист
+    hr
     div.col-lg-12
       div.row
         div.col-lg-3
-          h4 align="right" Название:
+          h4 align="right"
+            b Название:
         div.col-lg-9
           h4 = @check_list.title
       div.row
         div.col-lg-3
-          h4 align="right" Тест-комплект:
+          h4 align="right"
+            b Тест-комплект:
         div.col-lg-9
           h4 = @check_list.suite.title
       div.row
         div.col-lg-3
-          h4 align="right" Приоритет:
+          h4 align="right"
+            b Приоритет:
         div.col-lg-9
           h4 = @check_list.priority
       div.row
         div.col-lg-3
-          h4 align="right" Тэги:
+          h4 align="right"
+            b Тэги:
         div.col-lg-9
           h4 = @check_list.tags      
       div.row style="padding-bottom:5px"
         div.col-lg-3
-          h4 align="right" Описание:
+          h4 align="right"
+            b Описание:
         div.col-lg-9
           h4 = simple_format(@check_list.description)
       div.row
-        div.col-lg-6
+        div.col-lg-8
         div.col-lg-2
-          = link_to 'Назад', check_lists_path, class: "btn btn-default col-lg-12"
+          a href="#{check_lists_path}" data-no-turbolink="true" class="btn btn-default col-lg-12" Назад
         div.col-lg-2
           = link_to 'Редактировать', edit_check_list_path(@check_list), class: "btn btn-default col-lg-12"        

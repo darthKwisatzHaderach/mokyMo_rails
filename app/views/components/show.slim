@@ -1,19 +1,23 @@
 div.bord.row 
 	h4#notice = notice
+    h2 align="center" Компонент
+    hr
     div.col-lg-12
       div.row
         div.col-lg-3
-          h4 align="right" Название компонента:
+          h4 align="right" 
+            b Название компонента:
         div.col-lg-9
           h4 = @component.title
       div.row
         div.col-lg-3
-          h4 align="right" Проект:
+          h4 align="right"
+            b Проект:
         div.col-lg-9
           h4 = @component.project.title
       div.row
         div.col-lg-8
         div.col-lg-2
-          = link_to 'Администрирование', admin_path, class: "btn btn-default col-lg-12"
+          = link_to 'Администрирование', components_path, class: "btn btn-default col-lg-12"
         div.col-lg-2
           = link_to 'Редактировать', edit_component_path(@component), class: "btn btn-default col-lg-12"
