@@ -70,11 +70,8 @@ div.bord.row
         h4 align="right" Комментарий:
       div.col-lg-8
         = f.text_area :comment, type: "text", class: "form-control", rows: 2
-    div.row style="padding-top: 5px;"
-      div.col-lg-3
-        h4 align="right" Тестирование выполнил:
-      div.col-lg-8
-        = f.text_field :tester, type: "text", class: "form-control"   
+    div.row style="padding-top: 5px;"      
+        = f.hidden_field :tester, value: current_user.full_name
     div.col-lg-12 style="padding-top: 20px;"
       = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
 //script
