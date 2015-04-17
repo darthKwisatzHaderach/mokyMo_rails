@@ -1,6 +1,9 @@
 class MainController < ApplicationController
   def index
-    @test_objects = TestObject.where(component_id: @current_state.component)
+    if current_user.current_state.nil?
+      CurrentState.create(project_id: 1, component_id: 1, user_id: current_user.id)
+    end
+    @test_objects = TestObject.where(component_id: current_state.component)
     if @test_objects.count == 0
       @description = 'Отсутствует'
     else
@@ -20,9 +23,6 @@ class MainController < ApplicationController
         @not_implemented = r.select { |item| item[:implemented] == false }.count
         @comment = @execution.comment
         @version = @test_object.version
-      end
-      if current_user.current_state == nil
-        CurrentState.create(project_id: 1, component_id: 1, user_id: current_user.id)
       end
     end
 
