@@ -21,8 +21,12 @@ nav.navbar-inverse.navbar-default role="navigation"
         li
           a href="/admin" Администрирование
       ul.nav.navbar-nav.navbar-right
+        li style=" padding-top: 14px;"
+          span style="color: #fff;" = current_user.full_name
         li
-          a href="" = current_user
+          a href="#{destroy_user_session_path}" data-method="delete"
+            i.glyphicon.glyphicon-off
+            /= link_to('Logout', destroy_user_session_path, :method => :delete)
         li
           a#projects-button.btn.btn-primary style="padding: 4px 10px; line-height: 1.4285714285714; color: #ffffff; background-color: #3b7fc4; margin: 10px 10px 0 10px;" data-toggle="modal" data-target="#project-modal" #{@current_state.project.title}: #{@current_state.component.title}
 
