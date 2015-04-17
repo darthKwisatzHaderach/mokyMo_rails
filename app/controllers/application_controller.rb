@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   private
 
   def current_state
-    @current_state = CurrentState.first
+  	if current_user == nil
+      @current_state = CurrentState.first
+    else
+      @current_state = current_user.current_state
+  	end
   end
 end

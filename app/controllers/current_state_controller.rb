@@ -10,7 +10,7 @@ class CurrentStateController < ApplicationController
 
     respond_to do |format|
       if @current_state.save
-        format.html { redirect_to root_path, notice: 'CurrentState was successfully created.' }
+        format.html { redirect_to "/", notice: 'CurrentState was successfully created.' }
         format.json { render :root, status: :created, location: @current_state }
       else
         format.html { render :new }
@@ -24,7 +24,7 @@ class CurrentStateController < ApplicationController
   def update
     respond_to do |format|
       if @current_state.update(current_state_params)
-        format.html { redirect_to root_path, notice: 'CurrentState was successfully updated.' }
+        format.html { redirect_to "/", notice: 'CurrentState was successfully updated.' }
         format.json { render :root, status: :ok, location: @current_state }
       else
         format.html { render :edit }

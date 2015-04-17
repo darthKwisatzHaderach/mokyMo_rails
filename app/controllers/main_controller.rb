@@ -21,6 +21,9 @@ class MainController < ApplicationController
         @comment = @execution.comment
         @version = @test_object.version
       end
+      if current_user.current_state == nil
+        CurrentState.create(project_id: 1, component_id: 1, user_id: current_user.id)
+      end
     end
 
     @pie = [['Выполнено', @pass], ['Провалено', @fail], ['Не выполнялось', @not_implemented]]
