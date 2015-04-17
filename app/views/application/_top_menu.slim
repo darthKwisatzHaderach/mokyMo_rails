@@ -11,7 +11,7 @@ nav.navbar-inverse.navbar-default role="navigation"
     div#bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul#navigation.nav.navbar-nav
         li          
-          a href="#{root_path}" data-no-turbolink="true" Сводная информация
+          a href="/" data-no-turbolink="true" Сводная информация
         li
           a href="/docs" data-no-turbolink="true" Документация
         li
@@ -22,7 +22,7 @@ nav.navbar-inverse.navbar-default role="navigation"
           a href="/admin" Администрирование
       ul.nav.navbar-nav.navbar-right
         li
-          a href="#" 
+          a href="" = current_user
         li
           a#projects-button.btn.btn-primary style="padding: 4px 10px; line-height: 1.4285714285714; color: #ffffff; background-color: #3b7fc4; margin: 10px 10px 0 10px;" data-toggle="modal" data-target="#project-modal" #{@current_state.project.title}: #{@current_state.component.title}
 

@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: "users/sessions" }
+  devise_scope :user do
+    authenticated :user do
+      root 'main#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+
   get 'projects/list' => 'projects#list'
   get 'project/:id/components' => 'projects#components'
   resources :executions
@@ -17,12 +28,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'main#index'
   get 'admin' => 'admin#index'
   get 'docs' => 'check_lists#index'
 
   get 'results-by-versions' => 'results#results_by_versions'
   get 'last-execution' => 'results#last_execution'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
