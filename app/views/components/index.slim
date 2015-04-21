@@ -26,7 +26,7 @@ div.bord-nontop.row
           - @components.each do |c|
             tr
               td = c.title              
-              td = c.description
+              td = simple_format(c.description)
               td = c.project.title
               td              
                 =link_to edit_component_path(c)

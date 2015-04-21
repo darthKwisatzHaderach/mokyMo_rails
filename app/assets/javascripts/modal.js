@@ -23,3 +23,9 @@ $(document).on("click", "#projects", function () {
 	}
 	
 });
+
+$(document).on("click", "#select-project", function () {
+  if (document.getElementById("components") == 'none' ) {
+  alert('Select something !');
+  }
+});

@@ -14,7 +14,7 @@ div.row style="padding-top: 40px;"
     = pie_chart @pie
   div.col-lg-6
   	h4 Описание ПО
-    p = @description
+    p = simple_format(@description)
     hr
     h4 Отчет о тестировании
     p = @comment

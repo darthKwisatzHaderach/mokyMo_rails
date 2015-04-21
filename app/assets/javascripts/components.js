@@ -14,7 +14,7 @@ $(document).on("click", "#projects", function () {
                     title: component.title,
                 });
             });            
-            Dropdown+="<option value='none'>Выберите компонент</option>";
+            //Dropdown+="<option value='1'>Выберите компонент</option>";
             for(i=0;i<components.length;i++){                
                 Dropdown+="<option value='" + data[i].id + "'>" + data[i].title + "</option>";
             }
