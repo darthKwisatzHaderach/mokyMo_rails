@@ -59,7 +59,8 @@ div.bord.row
           thead
             tr
               th.col-lg-3 Название чек-листа
-              th.col-lg-7 Описание
+              th.col-lg-5 Описание
+              th.col-lg-2 Тест-комплект
               th.col-lg-1 Приоритет
               th.col-lg-1 Результат              
           tbody
@@ -69,6 +70,7 @@ div.bord.row
                   b #{(index + 1)}. 
                   span #{r.check_list.title}
                 td = simple_format(r.check_list.description)
+                td = r.check_list.suite.title
                 td = r.check_list.priority
                 td
                   - if r.results == true
