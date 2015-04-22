@@ -59,7 +59,7 @@ class ResultsController < ApplicationController
           elsif result.results == false && result.implemented == true
             res = 'Провален'
           elsif result.results == false && result.implemented == false
-            res = 'Не запускался'
+            res = 'Не выполнялся'
           end
           font = "#{Rails.root}/app/assets/fonts/pfdintextpro-regular.ttf"
           pdf.font font
