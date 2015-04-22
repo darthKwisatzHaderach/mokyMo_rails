@@ -72,17 +72,26 @@ div.bord.row
                 td = r.check_list.priority
                 td
                   - if r.results == true
-                    span.label.label-success Выполнен
+                    - if r.comment == '' or r.comment.nil?
+                      span.label.label-success data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Выполнен
+                    - else
+                      span.label.label-success data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}"
+                        |Выполнен                            
+                        i.glyphicon.glyphicon-comment
                   - elsif r.results == false && r.implemented == true
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
                     - else
-                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален      
+                      span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}"
+                        |Провален      
+                        i.glyphicon.glyphicon-alert
                   - elsif r.results == false && r.implemented == false
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Не выполнялся
                     - else
-                      span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален      
+                      span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" 
+                        |Не выполнялся      
+                        i.glyphicon.glyphicon-alert
 
 script
   |$(document).ready(function() {

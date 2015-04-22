@@ -44,7 +44,7 @@ class ResultsController < ApplicationController
     @execution = Execution.find_by_id(params[:id])
     r = @execution.results
     array = [
-      ['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат']
+      ['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат', 'Комментарий']
     ]
     pass = r.select { |item| item[:results] == true }.count
     fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
@@ -69,7 +69,8 @@ class ResultsController < ApplicationController
             "#{result.check_list.description}",
             "#{result.check_list.suite.title}",
             "#{result.check_list.priority}",
-            "#{res}"
+            "#{res}",
+            "#{result.comment}"
           ]
         end
         pdf.text 'Отчет о тестировании', align: :center, size: 20
@@ -85,7 +86,7 @@ class ResultsController < ApplicationController
         pdf.text "Браузер: #{@execution.browser} - #{@execution.browser_version}"
         pdf.text ' '
         pdf.text "Список чек-листов", align: :center, size: 16
-        pdf.table(array, column_widths: [25, 100, 335, 120, 70, 70])
+        pdf.table(array, column_widths: [25, 100, 250, 100, 70, 75, 100])
         pdf.text ' '
         pdf.text "Тестирование выполнил: #{@execution.tester}", align: :right
         send_data pdf.render, filename: "#{@execution.test_object.name} - #{@execution.test_object.version}. Результат тестирования.pdf", type: 'application/pdf', disposition: 'inline'
