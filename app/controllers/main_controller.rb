@@ -19,7 +19,7 @@ class MainController < ApplicationController
       else
         r = @execution.results
         @pass = r.select { |item| item[:results] == true }.count
-        @fail = r.select { |item| item[:results] == false }.count
+        @fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
         @not_implemented = r.select { |item| item[:implemented] == false }.count
         @comment = @execution.comment
         @version = @test_object.version
@@ -33,7 +33,7 @@ class MainController < ApplicationController
       t.executions.each do |e|
         r = e.results
         pass = r.select { |item| item[:results] == true }.count
-        fail = r.select { |item| item[:results] == false }.count
+        fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
         not_implemented = r.select { |item| item[:implemented] == false }.count
         result = ["#{t.version}", pass, fail, not_implemented]
         @results << result

@@ -14,7 +14,7 @@ class ResultsController < ApplicationController
       t.executions.each do |e|
         r = e.results
         pass = r.select { |item| item[:results] == true }.count
-        fail = r.select { |item| item[:results] == false }.count
+        fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
         not_implemented = r.select { |item| item[:implemented] == false }.count
         result = ["#{t.version}", pass, fail, not_implemented]
         results << result
@@ -28,7 +28,7 @@ class ResultsController < ApplicationController
     execution = test_object.executions.last
     r = execution.results
     pass = r.select { |item| item[:results] == true }.count
-    fail = r.select { |item| item[:results] == false }.count
+    fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
     not_implemented = r.select { |item| item[:implemented] == false }.count
     result = [
       ['Выполнено', pass],
@@ -47,7 +47,7 @@ class ResultsController < ApplicationController
       ['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат']
     ]
     pass = r.select { |item| item[:results] == true }.count
-    fail = r.select { |item| item[:results] == false }.count
+    fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
     not_implemented = r.select { |item| item[:implemented] == false }.count
     respond_to do |format|
       format.html
@@ -56,8 +56,10 @@ class ResultsController < ApplicationController
         r.each_with_index do |result, index|
           if result.results == true
             res = 'Выполнен'
-          else
+          elsif result.results == false && result.implemented == true
             res = 'Провален'
+          elsif result.results == false && result.implemented == false
+            res = 'Не запускался'
           end
           font = "#{Rails.root}/app/assets/fonts/pfdintextpro-regular.ttf"
           pdf.font font
@@ -83,7 +85,7 @@ class ResultsController < ApplicationController
         pdf.text "Браузер: #{@execution.browser} - #{@execution.browser_version}"
         pdf.text ' '
         pdf.text "Список чек-листов", align: :center, size: 16
-        pdf.table(array, column_widths: [25, 100, 345, 120, 65, 65])
+        pdf.table(array, column_widths: [25, 100, 335, 120, 70, 70])
         pdf.text ' '
         pdf.text "Тестирование выполнил: #{@execution.tester}", align: :right
         send_data pdf.render, filename: "#{@execution.test_object.name} - #{@execution.test_object.version}. Результат тестирования.pdf", type: 'application/pdf', disposition: 'inline'

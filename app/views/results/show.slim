@@ -70,15 +70,19 @@ div.bord.row
                   span #{r.check_list.title}
                 td = simple_format(r.check_list.description)
                 td = r.check_list.priority
-                - if r.results == true
-                  td 
+                td
+                  - if r.results == true
                     span.label.label-success Выполнен
-                - else
-                  td
+                  - elsif r.results == false && r.implemented == true
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
                     - else
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален      
+                  - elsif r.results == false && r.implemented == false
+                    - if r.comment == '' or r.comment.nil?
+                      span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
+                    - else
+                      span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" Провален      
 
 script
   |$(document).ready(function() {
