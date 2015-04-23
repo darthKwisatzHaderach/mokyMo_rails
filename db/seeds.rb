@@ -132,3 +132,8 @@ OperatingSystem.create(id: 6, name: 'CentOS')
 OperatingSystem.create(id: 7, name: 'Red Hat Enterprise Linux')
 OperatingSystem.create(id: 8, name: 'iOS')
 OperatingSystem.create(id: 9, name: 'Android')
+
+StatusKind.create(id: 1, name: 'pass')
+StatusKind.create(id: 2, name: 'fail')
+StatusKind.create(id: 3, name: 'not_implemented')
+StatusKind.create(id: 4, name: 'pending')

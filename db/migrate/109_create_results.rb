@@ -1,8 +1,7 @@
 class CreateResults < ActiveRecord::Migration
   def change
     create_table :results do |t|
-      t.boolean :results
-      t.boolean :implemented
+      t.belongs_to :status_kind
       t.text :comment
       t.belongs_to :execution
       t.belongs_to :check_list

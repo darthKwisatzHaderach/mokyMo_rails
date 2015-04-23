@@ -22,9 +22,12 @@ div.bord.row
                 - if e.status == "Не выполнялось"
                   td onclick="window.document.location='#{execution_path(e)}';"
                     span.label.label-default Не выполнялось
-                - else
+                - elsif e.status == "Выполнено"
                   td onclick="window.document.location='#{execution_path(e)}';"
                     span.label.label-success Выполнено
+                - elsif e.status == "В работе"
+                  td onclick="window.document.location='#{execution_path(e)}';"
+                    span.label.label-warning В работе
                 td              
                   = link_to edit_execution_path(e)
                     span.glyphicon.glyphicon-pencil.edit-case

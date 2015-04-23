@@ -73,28 +73,34 @@ div.bord.row
                 td = r.check_list.suite.title
                 td = r.check_list.priority
                 td
-                  - if r.results == true
+                  - if r.status_kind_id == 1
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-success data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Выполнен
                     - else
                       span.label.label-success data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}"
                         |Выполнен                            
                         i.glyphicon.glyphicon-comment
-                  - elsif r.results == false && r.implemented == true
+                  - elsif r.status_kind_id == 2
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Провален
                     - else
                       span.label.label-danger data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}"
                         |Провален      
                         i.glyphicon.glyphicon-alert
-                  - elsif r.results == false && r.implemented == false
+                  - elsif r.status_kind_id == 3
                     - if r.comment == '' or r.comment.nil?
                       span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" Не выполнялся
                     - else
                       span.label.label-warning data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" 
                         |Не выполнялся      
                         i.glyphicon.glyphicon-alert
-
+                  - elsif r.status_kind_id == 4
+                    - if r.comment == '' or r.comment.nil?
+                      span.label.label-default data-container="body" data-toggle="popover" data-placement="right" data-content="Комментарий отсутствует" В работе
+                    - else
+                      span.label.label-default data-container="body" data-toggle="popover" data-placement="right" data-content="#{r.comment}" 
+                        |В работе
+                        i.glyphicon.glyphicon-alert
 script
   |$(document).ready(function() {
   |  $("body").popover({ selector: '[data-toggle=popover]' });

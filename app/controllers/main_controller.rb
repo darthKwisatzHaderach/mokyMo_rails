@@ -14,37 +14,47 @@ class MainController < ApplicationController
         @pass = 'Нет данных'
         @fail = 'Нет данных'
         @not_implemented = 'Нет данных'
+        @pending = 'Нет данных'
         @comment = 'Нет данных'
         @version = '-'
       else
         r = @execution.results
-        @pass = r.select { |item| item[:results] == true }.count
-        @fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
-        @not_implemented = r.select { |item| item[:implemented] == false }.count
+        @pass = r.select { |item| item[:status_kind_id] == 1 }.count
+        @fail = r.select { |item| item[:status_kind_id] == 2 }.count
+        @not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+        @pending = r.select { |item| item[:status_kind_id] == 4 }.count
         @comment = @execution.comment
         @version = @test_object.version
       end
     end
 
-    @pie = [['Выполнено', @pass], ['Провалено', @fail], ['Не выполнялось', @not_implemented]]
+    @pie = [
+      ['Выполнено', @pass],
+      ['Провалено', @fail],
+      ['Не выполнялось', @not_implemented],
+      ['В работе', @pending]
+    ]
 
     @results = []
     @test_objects.each do |t|
       t.executions.each do |e|
         r = e.results
-        pass = r.select { |item| item[:results] == true }.count
-        fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
-        not_implemented = r.select { |item| item[:implemented] == false }.count
-        result = ["#{t.version}", pass, fail, not_implemented]
+        pass = r.select { |item| item[:status_kind_id] == 1 }.count
+        fail = r.select { |item| item[:status_kind_id] == 2 }.count
+        not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+        pending = r.select { |item| item[:status_kind_id] == 4 }.count
+        result = ["#{t.version}", pass, fail, not_implemented, pending]
         @results << result
       end
     end
-    header = ['Выполнено', 'Провалено', 'Не выполнялось']
-    @data = (1..3).map do |i|
+    header = ['Выполнено', 'Провалено', 'Не выполнялось', 'В работе']
+    puts @results
+    @data = (1..4).map do |i|
       {
         name: header[i - 1],
-        data: @results[0..-1].map { |x| [x[0], x[i]] }
+        data: @results[1..-1].map { |x| [x[0], x[i]] }
       }
     end
+    puts @data
   end
 end

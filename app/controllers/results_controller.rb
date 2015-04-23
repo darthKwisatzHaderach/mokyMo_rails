@@ -13,10 +13,11 @@ class ResultsController < ApplicationController
     test_objects.each do |t|
       t.executions.each do |e|
         r = e.results
-        pass = r.select { |item| item[:results] == true }.count
-        fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
-        not_implemented = r.select { |item| item[:implemented] == false }.count
-        result = ["#{t.version}", pass, fail, not_implemented]
+        pass = r.select { |item| item[:status_kind_id] == 1 }.count
+        fail = r.select { |item| item[:status_kind_id] == 2 }.count
+        not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+        pending = r.select { |item| item[:status_kind_id] == 4 }.count
+        result = ["#{t.version}", pass, fail, not_implemented, pending]
         results << result
       end
     end
@@ -27,13 +28,15 @@ class ResultsController < ApplicationController
     test_objects = TestObject.where(component_id: @current_state.component)
     execution = test_object.executions.last
     r = execution.results
-    pass = r.select { |item| item[:results] == true }.count
-    fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
-    not_implemented = r.select { |item| item[:implemented] == false }.count
+    pass = r.select { |item| item[:status_kind_id] == 1 }.count
+    fail = r.select { |item| item[:status_kind_id] == 2 }.count
+    not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+    pending = r.select { |item| item[:status_kind_id] == 4 }.count
     result = [
       ['Выполнено', pass],
       ['Не выполнено', fail],
-      ['Не запускалось', not_implemented]
+      ['Не запускалось', not_implemented],
+      ['В работе', pending]
     ]
     render json: result
   end
@@ -46,20 +49,23 @@ class ResultsController < ApplicationController
     array = [
       ['№', 'Название', 'Описание', 'Комплект', 'Приоритет', 'Результат', 'Комментарий']
     ]
-    pass = r.select { |item| item[:results] == true }.count
-    fail = r.select { |item| item[:results] == false && item[:implemented] == true }.count
-    not_implemented = r.select { |item| item[:implemented] == false }.count
+    pass = r.select { |item| item[:status_kind_id] == 1 }.count
+    fail = r.select { |item| item[:status_kind_id] == 2 }.count
+    not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+    pending = r.select { |item| item[:status_kind_id] == 4 }.count
     respond_to do |format|
       format.html
       format.pdf do
         pdf = Prawn::Document.new(page_layout: :landscape)
         r.each_with_index do |result, index|
-          if result.results == true
+          if result.status_kind_id == 1
             res = 'Выполнен'
-          elsif result.results == false && result.implemented == true
+          elsif result.status_kind_id == 2
             res = 'Провален'
-          elsif result.results == false && result.implemented == false
+          elsif result.status_kind_id == 3
             res = 'Не выполнялся'
+          elsif result.status_kind_id == 4
+            res = 'В работе'
           end
           font = "#{Rails.root}/app/assets/fonts/pfdintextpro-regular.ttf"
           pdf.font font
@@ -78,8 +84,8 @@ class ResultsController < ApplicationController
           ["Объект тестирования:", "#{@execution.test_object.name}", '', "Выполнены успешно:", "#{pass}"],
           ["Версия:", "#{@execution.test_object.version}", '', "Провалены:", "#{fail}"],
           ["Компонент:", "#{@execution.test_object.component.title}", '', "Не запускались:", "#{not_implemented}"],
-          ["Проект:", "#{@execution.test_object.component.project.title}", '', "Всего:", "#{pass + fail}"],
-          ["Дата:", "#{r[0].created_at}", '', '']
+          ["Проект:", "#{@execution.test_object.component.project.title}", '', "В работе:", "#{pending}"],
+          ["Дата:", "#{r[0].created_at}", '', "Всего:", "#{r.count}"]
           ], column_widths: [140, 180, 180, 150, 50], cell_style: {border_width: 0})
         pdf.text ' '
         pdf.text "Операционная система: #{@execution.operating_system} - #{@execution.operating_system_version}"

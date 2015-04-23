@@ -9,23 +9,18 @@ div.bord.row
             th Версия
             th Тип
             th Статус
-            /th
-            /th
         tbody
           - @executions.each do |e|            
               tr onclick="window.document.location='#{result_path(e.id)}';"
                 td = e.test_object.name
                 td = e.test_object.version
                 td = e.execution_types.name
-                - if e.results.select{|item| item[:implemented] == nil}.count > 1
+                - if e.status == "Не выполнялось"
                   td 
                     span.label.label-default Не выполнялось
-                - else
+                - elsif e.status == "Выполнено"
                   td 
                     span.label.label-success Выполнено
-                /td              
-                  /=link_to edit_execution_path(e)
-                  /  span.glyphicon.glyphicon-pencil.edit-case
-                /td
-                  /=link_to execution_path(e), method: "delete"
-                  /  span.glyphicon.glyphicon-remove.edit-case
+                - elsif e.status == "В работе"
+                  td 
+                    span.label.label-warning В работе

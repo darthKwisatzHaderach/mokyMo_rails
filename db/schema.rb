@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 116) do
+ActiveRecord::Schema.define(version: 117) do
 
   create_table "browsers", force: true do |t|
     t.string "name"
@@ -102,8 +102,7 @@ ActiveRecord::Schema.define(version: 116) do
   add_index "projects", ["deleted_at"], name: "index_projects_on_deleted_at"
 
   create_table "results", force: true do |t|
-    t.boolean  "results"
-    t.boolean  "implemented"
+    t.integer  "status_kind_id"
     t.text     "comment"
     t.integer  "execution_id"
     t.integer  "check_list_id"
@@ -113,6 +112,10 @@ ActiveRecord::Schema.define(version: 116) do
   end
 
   add_index "results", ["deleted_at"], name: "index_results_on_deleted_at"
+
+  create_table "status_kinds", force: true do |t|
+    t.string "name"
+  end
 
   create_table "suites", force: true do |t|
     t.string   "title"

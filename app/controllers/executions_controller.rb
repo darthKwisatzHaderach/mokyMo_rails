@@ -96,10 +96,12 @@ class ExecutionsController < ApplicationController
   end
 
   def update_status(e)
-    if e.results.select{|item| item[:implemented] == nil}.count > 1
-      e.update(status: "Не выполнялось")
-    else
-      e.update(status: "Выполнено")
+    if e.results.select { |item| item[:status_kind_id].nil? }.count > 1
+      e.update(status: 'Не выполнялось')
+    elsif e.results.select { |item| item[:status_kind_id] == 4 }.count > 1
+      e.update(status: 'В работе')
+    elsif e.results.select { |item| item[:status_kind_id] == 4 }.count == 0
+      e.update(status: 'Выполнено')
     end
   end
 end

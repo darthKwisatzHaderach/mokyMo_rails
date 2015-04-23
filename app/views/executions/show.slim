@@ -43,7 +43,8 @@ div.bord.row
         thead
           tr
             th.col-lg-2 Название чек-листа
-            th.col-lg-5 Описание
+            th.col-lg-3 Описание
+            th.col-lg-1 Тест-комплект
             th.col-lg-1 Приоритет
             th.col-lg-2 Результат
             th.col-lg-2 Комментарий
@@ -54,16 +55,22 @@ div.bord.row
                 b #{(index + 1)}. 
                 span #{r.check_list.title}
               td = simple_format(r.check_list.description)
+              td = r.check_list.suite.title
               td = r.check_list.priority
               td                                  
-                = f.fields_for :results, Result.where(check_list_id: r.check_list.id, execution_id: @execution.id) do |result|
-                  //= result.hidden_field :results, value: false
-                  = result.hidden_field :implemented, value: true                  
-                  = result.check_box :results, {style: "float: left; margin-right: 2px;"}
-                  div Выполнен
-                  = result.check_box :implemented, {style: "float: left; margin-right: 2px;"}, false, true
-                  div Не запускался                  
-                  td = result.text_area :comment, type: "text", class: "form-control", row: 2  	
+                = f.fields_for :results, Result.where(check_list_id: r.check_list.id, execution_id: @execution.id) do |r|                  
+                  = r.hidden_field :status_kind_id, value: 4
+                  div.field
+                    = r.radio_button :status_kind_id, 1, style: "float: left; margin-right: 2px;"
+                    = r.label :status_kind_id, "Выполнен", :value => "1"
+                    p style="margin: 0px"
+                    = r.radio_button :status_kind_id, 2, style: "float: left; margin-right: 2px;"
+                    = r.label :status_kind_id, "Провален", :value => "2"
+                    p style="margin: 0px"
+                    = r.radio_button :status_kind_id, 3, style: "float: left; margin-right: 2px;"
+                    = r.label :status_kind_id, "Не выполнялся", :value => "3"                    
+       
+                  td = r.text_area :comment, type: "text", class: "form-control", row: 2  	
       hr
     div.row
       div.col-lg-3
