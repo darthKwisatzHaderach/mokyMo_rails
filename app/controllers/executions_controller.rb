@@ -16,6 +16,15 @@ class ExecutionsController < ApplicationController
   # GET /suites/1
   # GET /suites/1.json
   def show
+    @results = {}
+    @execution.results.each do |r|
+      if @results.key?(r.check_list.suite.title)
+        @results[r.check_list.suite.title] << r
+      else
+        @results[r.check_list.suite.title] = [r]
+      end
+    end
+    puts @results
     @types = ExecutionTypes.all
     @test_objects = TestObject.where(component_id: @current_state.component)
   end

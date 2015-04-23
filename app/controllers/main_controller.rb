@@ -47,7 +47,6 @@ class MainController < ApplicationController
         @results << result
       end
     end
-    puts @results
     header = ['Выполнено', 'Провалено', 'Не выполнялось', 'В работе']
     @data = (1..4).map do |i|
       {
@@ -55,6 +54,5 @@ class MainController < ApplicationController
         data: @results.map { |x| [x[0], x[i]] }
       }
     end
-    puts @data
   end
 end
