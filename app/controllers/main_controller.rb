@@ -43,16 +43,16 @@ class MainController < ApplicationController
         fail = r.select { |item| item[:status_kind_id] == 2 }.count
         not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
         pending = r.select { |item| item[:status_kind_id] == 4 }.count
-        result = ["#{t.version}", pass, fail, not_implemented, pending]
+        result = ["#{t.version}\n #{e.created_at.strftime('%d/%m/%Y - %H:%M')}", pass, fail, not_implemented, pending]
         @results << result
       end
     end
-    header = ['Выполнено', 'Провалено', 'Не выполнялось', 'В работе']
     puts @results
+    header = ['Выполнено', 'Провалено', 'Не выполнялось', 'В работе']
     @data = (1..4).map do |i|
       {
         name: header[i - 1],
-        data: @results[1..-1].map { |x| [x[0], x[i]] }
+        data: @results.map { |x| [x[0], x[i]] }
       }
     end
     puts @data
