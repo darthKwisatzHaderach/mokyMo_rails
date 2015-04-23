@@ -1,20 +1,28 @@
 div.row  
   div.col-lg-12
-  h4 Сводная информация
+  h3 align="center" Сводная информация по проекту
 
 div.row  
   div.col-lg-12    
+    = column_chart @g_data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
+hr
+div.col-lg-12
+  h3 align="center" Сводная информация по компоненту
+
+div.row    
+  div.col-lg-8    
+    h4 Статистика по версиям
     = column_chart @data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
+  div.col-lg-4
+    h4 Описание ПО
+    p = simple_format(@description)    
 hr
 
 div.row style="padding-top: 40px;"
   div.col-lg-6
     h4 Результат тестирования версии #{@version}
     = pie_chart @pie
-  div.col-lg-6
-  	h4 Описание ПО
-    p = simple_format(@description)
-    hr
+  div.col-lg-6  	    
     h4 Отчет о тестировании
     p = @comment
 

@@ -71,7 +71,8 @@ div.bord.row
                       = r.label :status_kind_id, "Не выполнялся", :value => "3"                    
          
                     td = r.text_area :comment, type: "text", class: "form-control", row: 2  	
-      hr
+        hr
+
     div.row
       div.col-lg-3
         h4 align="right" Комментарий:
@@ -81,8 +82,3 @@ div.bord.row
         = f.hidden_field :tester, value: current_user.full_name
     div.col-lg-12 style="padding-top: 20px;"
       = f.submit 'Сохранить', class: "btn btn-success col-lg-12"
-//script
-//	|$("tr").click(function() {
-//	|    var checkbox = $(this).find("input[type='checkbox']");
-//	|    checkbox.attr('checked', !checkbox.attr('checked'));
-//	|});
