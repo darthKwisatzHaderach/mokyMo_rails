@@ -7,40 +7,6 @@ class ResultsController < ApplicationController
     @results = Result.all
   end
 
-  def results_by_versions
-    test_objects = TestObject.where(component_id: @current_state.component)
-    results = []
-    test_objects.each do |t|
-      t.executions.each do |e|
-        r = e.results
-        pass = r.select { |item| item[:status_kind_id] == 1 }.count
-        fail = r.select { |item| item[:status_kind_id] == 2 }.count
-        not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
-        pending = r.select { |item| item[:status_kind_id] == 4 }.count
-        result = ["#{t.version}", pass, fail, not_implemented, pending]
-        results << result
-      end
-    end
-    render json: results
-  end
-
-  def last_execution
-    test_objects = TestObject.where(component_id: @current_state.component)
-    execution = test_object.executions.last
-    r = execution.results
-    pass = r.select { |item| item[:status_kind_id] == 1 }.count
-    fail = r.select { |item| item[:status_kind_id] == 2 }.count
-    not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
-    pending = r.select { |item| item[:status_kind_id] == 4 }.count
-    result = [
-      ['Выполнено', pass],
-      ['Не выполнено', fail],
-      ['Не запускалось', not_implemented],
-      ['В работе', pending]
-    ]
-    render json: result
-  end
-
   # GET /suites/1
   # GET /suites/1.json
   def show
