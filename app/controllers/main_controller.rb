@@ -1,4 +1,5 @@
-class MainController < ApplicationController
+class MainController < ApplicationController  
+
   def index
     if current_user.current_state.nil?
       CurrentState.create(
