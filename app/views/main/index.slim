@@ -4,7 +4,7 @@ div.row
 
 div.row  
   div.col-lg-12    
-    = column_chart @g_data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
+    = column_chart @p_data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
 hr
 div.col-lg-12
   h3 align="center" Сводная информация по компоненту
@@ -12,7 +12,7 @@ div.col-lg-12
 div.row    
   div.col-lg-8    
     h4 Статистика по версиям
-    = column_chart @data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
+    = column_chart @c_data, {library: {hAxis: {title: "Версия ПО"}, vAxis: {title: "Сценарии"}}, colors: ["#109618", "#DC3912", "#FF9900", "#990099"]}
   div.col-lg-4
     h4 Описание ПО
     p = simple_format(@description)    
