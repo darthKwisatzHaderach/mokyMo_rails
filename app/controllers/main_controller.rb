@@ -36,15 +36,17 @@ class MainController < ApplicationController
   end
 
   def calculate_result(e)
-    t = e.test_object
-    r = e.results
-    @pass = r.select { |item| item[:status_kind_id] == 1 }.count
-    @fail = r.select { |item| item[:status_kind_id] == 2 }.count
-    @not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
-    @pending = r.select { |item| item[:status_kind_id] == 4 }.count
-    @result = [
-      "#{t.component.title}\n#{t.version}\n#{e.created_at.strftime('%d/%m/%Y - %H:%M')}",
-      @pass, @fail, @not_implemented, @pending]
+    unless e.nil?
+      t = e.test_object
+      r = e.results
+      @pass = r.select { |item| item[:status_kind_id] == 1 }.count
+      @fail = r.select { |item| item[:status_kind_id] == 2 }.count
+      @not_implemented = r.select { |item| item[:status_kind_id] == 3 }.count
+      @pending = r.select { |item| item[:status_kind_id] == 4 }.count
+      @result = [
+        "#{t.component.title}\n#{t.version}\n#{e.created_at.strftime('%d/%m/%Y - %H:%M')}",
+        @pass, @fail, @not_implemented, @pending]
+    end
   end
 
   def to_google_datatable(results)
