@@ -1,25 +1,35 @@
-div.bord
-	div.row style="padding-top: 20px;"
-	  div.col-lg-4 align="center"
-	  	div align="center" style="padding-bottom: 20px;"
-	  	  h3 style="color: #3b7fc4" Webapps  	
-	  	= image_tag 'web.png', style: "height: 150px"
-	  div.col-lg-4 align="center"
+div.row
+  h2 align="center" style="margin-top: 0px;" Справка
+  p Существуют общие подходы к тестированию любого продукта, однако для конкретной технологии возможны свои особенности в тестировании. Справочная информация разбита по разделам, представленным ниже.
+div.row style="padding-top: 20px;"
+  div.col-lg-4 align="center"
+    a href="/webapps" style="text-decoration: none;"
+      div.bord.square      
 	    div align="center" style="padding-bottom: 20px;"
-	  	  h3 style="color: #3b7fc4" Desktop
-	  	= image_tag 'desctop.png', style: "height: 100px"
-	  div.col-lg-4 align="center"
-	    div align="center" style="padding-bottom: 20px;"
-	  	  h3 style="color: #3b7fc4" API, Services
-	  	= image_tag 'service.png', style: "height: 150px"
-	div.row style="padding-top: 60px; padding-bottom: 30px;"
-	  div.col-lg-2
-	  div.col-lg-4 align="center"
-	    div align="center" style="padding-bottom: 20px;"
-	  	  h3 style="color: #3b7fc4" Android
-	  	= image_tag 'android.png', style: "height: 150px"
-	  div.col-lg-4 align="center"
-	    div align="center" style="padding-bottom: 20px;"
-	  	  h3 style="color: #3b7fc4" iPad, iPhone
-	  	= image_tag 'iphone.png', style: "height: 150px"
-	  div.col-lg-2
+	      h3 style="color: #3b7fc4;" Webapps  	
+		= image_tag 'web.png', style: "height: 150px"	  
+  div.col-lg-4 align="center"
+    div.bord.square
+      div align="center" style="padding-bottom: 20px;"
+        h3 style="color: #3b7fc4" Desktop
+      div style="height: 150px"
+      	= image_tag 'desctop.png', style: "height: 100px"
+  div.col-lg-4 align="center"
+    div.bord.square
+      div align="center" style="padding-bottom: 20px;"
+        h3 style="color: #3b7fc4" API, Services
+      = image_tag 'service.png', style: "height: 150px"
+
+div.row style="padding-top: 30px; padding-bottom: 30px;"
+  div.col-lg-2
+  div.col-lg-4 align="center"
+    div.bord.square
+	  div align="center" style="padding-bottom: 20px;"
+	    h3 style="color: #3b7fc4" Android
+	  = image_tag 'android.png', style: "height: 150px"
+  div.col-lg-4 align="center"
+    div.bord.square
+	  div align="center" style="padding-bottom: 20px;"
+	    h3 style="color: #3b7fc4" iPad, iPhone
+	  = image_tag 'iphone.png', style: "height: 150px"
+  div.col-lg-2

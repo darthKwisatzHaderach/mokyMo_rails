@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'last-execution' => 'results#last_execution'
 
   get 'help' => 'articles#index'
+  get 'webapps' => 'articles#webapps'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
