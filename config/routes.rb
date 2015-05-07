@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   get 'results-by-versions' => 'results#results_by_versions'
   get 'last-execution' => 'results#last_execution'
 
+  get 'help' => 'articles#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

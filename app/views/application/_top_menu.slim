@@ -1,4 +1,4 @@
-nav.navbar-inverse.navbar-default role="navigation"
+nav.navbar.navbar-default role="navigation"
   div.container-fluid
     /! Brand and toggle get grouped for better mobile display
     div.navbar-header
@@ -20,6 +20,9 @@ nav.navbar-inverse.navbar-default role="navigation"
           a href="#{reports_path}" Отчетность
         li
           a href="/admin" Администрирование
+        li
+          a href="/help"
+            i.glyphicon.glyphicon-question-sign
       ul.nav.navbar-nav.navbar-right
         li style=" padding-top: 14px;"
           span style="color: #fff;" = current_user.full_name
