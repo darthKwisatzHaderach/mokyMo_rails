@@ -1,0 +1,22 @@
+div.col-lg-12
+  div.row
+    div.col-lg-3
+      h4 align="right" Заголовок:
+    div.col-lg-9
+      h4 = @article.title
+  div.row
+    div.col-lg-3
+      h4 align="right" Группа:
+    div.col-lg-9
+      h4 = @article.group
+  div.row
+    div.col-lg-3
+      h4 align="right" Текст:
+    div.col-lg-9
+      h4 = @article.text
+  div.row style="padding-top: 5px;"
+    div.col-lg-8
+    div.col-lg-2
+      = link_to 'Справка', '/help', class: "btn btn-default col-lg-12"
+    div.col-lg-2
+      = link_to 'Редактировать', edit_article_path(@article), class: "btn btn-default col-lg-12"        

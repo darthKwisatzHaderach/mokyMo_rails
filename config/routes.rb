@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :test_objects
   resources :reports
   resources :results
+  resources :articles
   get '/reports/check-lists.pdf' => 'reports#show'
   get '/admin/export' => 'admin#export'
 

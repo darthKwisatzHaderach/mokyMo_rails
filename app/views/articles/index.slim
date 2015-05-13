@@ -1,5 +1,10 @@
 div.row
-  h2 align="center" style="margin-top: 0px;" Справка
+  div.col-lg-2
+  div.col-lg-8
+    h2 align="center" style="margin-top: 0px;" Справка
+  div.col-lg-2
+  	= link_to 'Добавить заметку', new_article_path, class: "btn btn-default", align: "right"
+div.row  
   p Существуют общие подходы к тестированию любого продукта, однако для конкретной технологии возможны свои особенности в тестировании. Справочная информация разбита по разделам, представленным ниже.
 div.row style="padding-top: 20px;"
   div.col-lg-4 align="center"
