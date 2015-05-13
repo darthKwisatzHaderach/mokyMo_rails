@@ -37,6 +37,10 @@ Rails.application.routes.draw do
 
   get 'help' => 'articles#index'
   get 'webapps' => 'articles#webapps'
+  get 'desktop' => 'articles#desktop'
+  get 'services' => 'articles#services'
+  get 'ios' => 'articles#ios'
+  get 'android' => 'articles#android'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

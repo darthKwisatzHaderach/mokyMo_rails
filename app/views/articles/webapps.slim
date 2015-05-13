@@ -2,8 +2,15 @@ div.row.bord
   h3 align="center" style="margin: 0px 0px 20px 0px;" Тестирование web-приложений
   - @articles.each do |a|
   	div.col-lg-12
-  	b = a.title
-  	p = a.text
+  	  b = a.title  	     	  
+  	  p = a.text
+  	  div.col-lg-11
+  	  div.col-lg-1
+	    span align="right" = link_to '', edit_article_path(a.id), class: "glyphicon glyphicon-pencil edit-case"
+	    span &nbsp&nbsp    
+	    span align="right" = link_to '', article_path(a.id), method: :delete, class: "glyphicon glyphicon-trash edit-case", data: {confirm: "Вы уверены, что хотите удалить заметку \"" + a.title + "\"?"}
+  	  div.col-lg-12
+  	  	hr
 
 script
   |$('a[href="/help"]').parent().addClass('active');

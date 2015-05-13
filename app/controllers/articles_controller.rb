@@ -2,7 +2,23 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def webapps
-  	@articles = Article.where(group: 'Web')
+    @articles = Article.where(group: 'Web')
+  end
+
+  def desktop
+    @articles = Article.where(group: 'Desktop')
+  end
+
+  def services
+    @articles = Article.where(group: 'Services')
+  end
+
+  def ios
+    @articles = Article.where(group: 'iOS')
+  end
+
+  def android
+    @articles = Article.where(group: 'Android')
   end
 
   # GET /articles
