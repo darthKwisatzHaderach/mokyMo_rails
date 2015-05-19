@@ -5,7 +5,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :alias
       t.string :text
       t.string :group      
-      t.timestamps
     end
   end
 end

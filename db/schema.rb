@@ -14,12 +14,10 @@
 ActiveRecord::Schema.define(version: 118) do
 
   create_table "articles", force: true do |t|
-    t.string   "title"
-    t.string   "alias"
-    t.string   "text"
-    t.string   "group"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title"
+    t.string "alias"
+    t.string "text"
+    t.string "group"
   end
 
   create_table "browsers", force: true do |t|

@@ -29,21 +29,25 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @types = ExecutionTypes.all
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+    @types = ExecutionTypes.all
   end
 
   # GET /articles/1/edit
   def edit
+    @types = ExecutionTypes.all
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @types = ExecutionTypes.all
 
     respond_to do |format|
       if @article.save
@@ -59,6 +63,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @types = ExecutionTypes.all
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Заметка успешно обновлена.' }
@@ -75,7 +80,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to aticles_url, notice: 'Заметка успешно удалена.' }
+      format.html { redirect_to "/help", notice: 'Заметка успешно удалена.' }
       format.json { head :no_content }
     end
   end

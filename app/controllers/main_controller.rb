@@ -1,14 +1,13 @@
-class MainController < ApplicationController  
+class MainController < ApplicationController
 
   def index
     if current_user.current_state.nil?
-      CurrentState.create(
+      current_user.current_state = CurrentState.create(
         project_id: 1,
         component_id: 1,
         user_id: current_user.id)
     end
-
-    @description = current_state.component.description
+    @description = current_user.current_state.component.description
 
     test_objects = TestObject.where(component_id: current_state.component)
 
