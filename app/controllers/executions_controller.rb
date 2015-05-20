@@ -5,12 +5,13 @@ class ExecutionsController < ApplicationController
   # GET /suites.json
   def index
     @test_objects = TestObject.where(component_id: @current_state.component)
-    @executions = []
+    @e = []
     @test_objects.each do |t|
       t.executions.each do |e|
-        @executions << e
+        @e << e
       end
     end
+    @executions = @e.sort_by!(&:created_at).reverse
   end
 
   # GET /suites/1

@@ -57,6 +57,7 @@ class ComponentsController < ApplicationController
       format.html { redirect_to projects_url, notice: 'Компонент успешно удален.' }
       format.json { head :no_content }
     end
+    current_user.current_state = CurrentState.first
   end
 
   private
